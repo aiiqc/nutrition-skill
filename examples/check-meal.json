@@ -1,0 +1,28 @@
+{
+  "operation": "check_constraints",
+  "items": [
+    {
+      "food_id": "usda:171477",
+      "quantity": {
+        "amount": "140",
+        "unit": "g"
+      }
+    },
+    {
+      "food_id": "usda:169757",
+      "quantity": {
+        "amount": "200",
+        "unit": "g"
+      }
+    }
+  ],
+  "constraints": {
+    "limits": [
+      {
+        "nutrient": "sodium_mg",
+        "max": "300",
+        "source": "Synthetic QA limit only; not a clinical target"
+      }
+    ]
+  }
+}

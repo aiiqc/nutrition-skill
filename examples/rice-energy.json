@@ -1,0 +1,12 @@
+{
+  "operation": "calculate",
+  "items": [
+    {
+      "food_id": "usda:2512381",
+      "quantity": {
+        "amount": "90",
+        "unit": "g"
+      }
+    }
+  ]
+}

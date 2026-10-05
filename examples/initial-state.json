@@ -1,0 +1,59 @@
+{
+  "revision": 0,
+  "meals": [
+    {
+      "id": "breakfast",
+      "locked": false,
+      "items": [
+        {
+          "food_id": "usda:330137",
+          "quantity": {
+            "amount": "156",
+            "unit": "g"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "locked": false,
+      "items": [
+        {
+          "food_id": "usda:171477",
+          "quantity": {
+            "amount": "180",
+            "unit": "g"
+          }
+        },
+        {
+          "food_id": "usda:169757",
+          "quantity": {
+            "amount": "158",
+            "unit": "g"
+          }
+        }
+      ]
+    },
+    {
+      "id": "dinner",
+      "locked": true,
+      "items": [
+        {
+          "food_id": "usda:171477",
+          "quantity": {
+            "amount": "140",
+            "unit": "g"
+          }
+        },
+        {
+          "food_id": "usda:169757",
+          "quantity": {
+            "amount": "158",
+            "unit": "g"
+          }
+        }
+      ]
+    }
+  ],
+  "actuals": {}
+}

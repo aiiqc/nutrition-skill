@@ -1,0 +1,27 @@
+{
+  "id": "demo-training",
+  "age": 29,
+  "goals": [
+    "muscle_gain"
+  ],
+  "preferences": {
+    "cuisine": "western",
+    "effort": "standard",
+    "scenario": "home",
+    "dislikes": []
+  },
+  "measurements": {
+    "height_cm": "178",
+    "weight_kg": "74",
+    "measured_on": "2026-10-05"
+  },
+  "health": {
+    "allergens": [],
+    "conditions": [],
+    "medications": [],
+    "pregnancy_lactation": false,
+    "eating_disorder_risk": false,
+    "malnutrition_risk": false
+  },
+  "storage": "local"
+}

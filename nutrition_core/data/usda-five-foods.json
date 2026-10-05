@@ -1,0 +1,1585 @@
+{
+  "catalog_version": "usda-five-2026-10-05.1",
+  "foods": {
+    "usda:171077": {
+      "id": "usda:171077",
+      "name": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",
+      "state": "raw",
+      "source": {
+        "publisher": "USDA FoodData Central",
+        "record_id": "171077",
+        "url": "https://fdc.nal.usda.gov/food-details/171077/nutrients",
+        "published_date": "2019-04-01",
+        "retrieved_date": "2026-10-05",
+        "license": "CC0-1.0",
+        "response_sha256": "2769a87322b6ddb2bc7ceb6b450bc440055cf85dbde9d17b4118db49f525de7c",
+        "data_type": "SR Legacy"
+      },
+      "nutrients": {
+        "energy_kcal": {
+          "amount": "120",
+          "unit": "kcal",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1008",
+            "source_nutrient_name": "Energy",
+            "source_amount": "120",
+            "source_unit": "kcal",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1008"
+        },
+        "protein_g": {
+          "amount": "22.5",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1003",
+            "source_nutrient_name": "Protein",
+            "source_amount": "22.5",
+            "source_unit": "g",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "21.88",
+            "max": "23.44",
+            "data_points": 6
+          }
+        },
+        "carbohydrate_g": {
+          "amount": "0",
+          "unit": "g",
+          "status": "assumed_zero",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1005",
+            "source_nutrient_name": "Carbohydrate, by difference",
+            "source_amount": "0",
+            "source_unit": "g",
+            "derivation_code": "Z",
+            "derivation_description": "Assumed zero (Insignificant amount or not naturally occurring in a food, such as fiber in meat)",
+            "data_points": 0
+          }
+        },
+        "fat_g": {
+          "amount": "2.62",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1004",
+            "source_nutrient_name": "Total lipid (fat)",
+            "source_amount": "2.62",
+            "source_unit": "g",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "1.86",
+            "max": "3.45",
+            "data_points": 6
+          }
+        },
+        "fiber_g": {
+          "amount": "0",
+          "unit": "g",
+          "status": "assumed_zero",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1079",
+            "source_nutrient_name": "Fiber, total dietary",
+            "source_amount": "0",
+            "source_unit": "g",
+            "derivation_code": "Z",
+            "derivation_description": "Assumed zero (Insignificant amount or not naturally occurring in a food, such as fiber in meat)",
+            "data_points": 0
+          }
+        },
+        "sodium_mg": {
+          "amount": "45",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1093",
+            "source_nutrient_name": "Sodium, Na",
+            "source_amount": "45",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "38",
+            "max": "52",
+            "data_points": 6
+          }
+        },
+        "potassium_mg": {
+          "amount": "334",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1092",
+            "source_nutrient_name": "Potassium, K",
+            "source_amount": "334",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "321",
+            "max": "343",
+            "data_points": 6
+          }
+        },
+        "phosphorus_mg": {
+          "amount": "213",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1091",
+            "source_nutrient_name": "Phosphorus, P",
+            "source_amount": "213",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "207",
+            "max": "222",
+            "data_points": 6
+          }
+        }
+      },
+      "energy_alternatives": [
+        {
+          "amount": "501",
+          "unit": "kJ",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1062",
+            "source_nutrient_name": "Energy",
+            "source_amount": "501",
+            "source_unit": "kJ",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1062_kj"
+        }
+      ],
+      "portions": {
+        "usda:87919": {
+          "grams": "113",
+          "label": "4 oz",
+          "source": "https://fdc.nal.usda.gov/food-details/171077/nutrients ; foodPortion.id=87919; amount=4; gramWeight=113"
+        },
+        "usda:87921": {
+          "grams": "926",
+          "label": "1 package",
+          "source": "https://fdc.nal.usda.gov/food-details/171077/nutrients ; foodPortion.id=87921; amount=1; gramWeight=926"
+        },
+        "usda:87920": {
+          "grams": "272",
+          "label": "1 piece",
+          "source": "https://fdc.nal.usda.gov/food-details/171077/nutrients ; foodPortion.id=87920; amount=1; gramWeight=272"
+        }
+      },
+      "allergens": {
+        "contains": [],
+        "may_contain": [],
+        "assessment": "unknown",
+        "source": "USDA nutrient record does not establish complete ingredients or cross-contact assessment."
+      }
+    },
+    "usda:171477": {
+      "id": "usda:171477",
+      "name": "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+      "state": "cooked",
+      "source": {
+        "publisher": "USDA FoodData Central",
+        "record_id": "171477",
+        "url": "https://fdc.nal.usda.gov/food-details/171477/nutrients",
+        "published_date": "2019-04-01",
+        "retrieved_date": "2026-10-05",
+        "license": "CC0-1.0",
+        "response_sha256": "8622491a1759d96b371d087e9d75fa1efc60f45c1b3a7a8c93434944a7e6e7fa",
+        "data_type": "SR Legacy"
+      },
+      "nutrients": {
+        "energy_kcal": {
+          "amount": "165",
+          "unit": "kcal",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1008",
+            "source_nutrient_name": "Energy",
+            "source_amount": "165",
+            "source_unit": "kcal",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1008"
+        },
+        "protein_g": {
+          "amount": "31.02",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1003",
+            "source_nutrient_name": "Protein",
+            "source_amount": "31.02",
+            "source_unit": "g",
+            "data_points": 16
+          }
+        },
+        "carbohydrate_g": {
+          "amount": "0",
+          "unit": "g",
+          "status": "assumed_zero",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1005",
+            "source_nutrient_name": "Carbohydrate, by difference",
+            "source_amount": "0",
+            "source_unit": "g",
+            "derivation_code": "Z",
+            "derivation_description": "Assumed zero (Insignificant amount or not naturally occurring in a food, such as fiber in meat)",
+            "data_points": 0
+          }
+        },
+        "fat_g": {
+          "amount": "3.57",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1004",
+            "source_nutrient_name": "Total lipid (fat)",
+            "source_amount": "3.57",
+            "source_unit": "g",
+            "data_points": 16
+          }
+        },
+        "fiber_g": {
+          "amount": "0",
+          "unit": "g",
+          "status": "assumed_zero",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1079",
+            "source_nutrient_name": "Fiber, total dietary",
+            "source_amount": "0",
+            "source_unit": "g",
+            "derivation_code": "Z",
+            "derivation_description": "Assumed zero (Insignificant amount or not naturally occurring in a food, such as fiber in meat)",
+            "data_points": 0
+          }
+        },
+        "sodium_mg": {
+          "amount": "74",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1093",
+            "source_nutrient_name": "Sodium, Na",
+            "source_amount": "74",
+            "source_unit": "mg",
+            "data_points": 16
+          }
+        },
+        "potassium_mg": {
+          "amount": "256",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1092",
+            "source_nutrient_name": "Potassium, K",
+            "source_amount": "256",
+            "source_unit": "mg",
+            "data_points": 16
+          }
+        },
+        "phosphorus_mg": {
+          "amount": "228",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1091",
+            "source_nutrient_name": "Phosphorus, P",
+            "source_amount": "228",
+            "source_unit": "mg",
+            "data_points": 16
+          }
+        }
+      },
+      "energy_alternatives": [
+        {
+          "amount": "690",
+          "unit": "kJ",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1062",
+            "source_nutrient_name": "Energy",
+            "source_amount": "690",
+            "source_unit": "kJ",
+            "data_points": 0
+          },
+          "method": "usda_1062_kj"
+        }
+      ],
+      "portions": {
+        "usda:88817": {
+          "grams": "140",
+          "label": "1 cup, chopped or diced",
+          "source": "https://fdc.nal.usda.gov/food-details/171477/nutrients ; foodPortion.id=88817; amount=1; gramWeight=140"
+        },
+        "usda:88818": {
+          "grams": "52",
+          "label": "1 unit (yield from 1 lb ready-to-cook chicken)",
+          "source": "https://fdc.nal.usda.gov/food-details/171477/nutrients ; foodPortion.id=88818; amount=1; gramWeight=52"
+        },
+        "usda:88819": {
+          "grams": "86",
+          "label": "0.5 breast, bone and skin removed",
+          "source": "https://fdc.nal.usda.gov/food-details/171477/nutrients ; foodPortion.id=88819; amount=0.5; gramWeight=86"
+        }
+      },
+      "allergens": {
+        "contains": [],
+        "may_contain": [],
+        "assessment": "unknown",
+        "source": "USDA nutrient record does not establish complete ingredients or cross-contact assessment."
+      }
+    },
+    "usda:2512381": {
+      "id": "usda:2512381",
+      "name": "Rice, white, long grain, unenriched, raw",
+      "state": "raw",
+      "source": {
+        "publisher": "USDA FoodData Central",
+        "record_id": "2512381",
+        "url": "https://fdc.nal.usda.gov/food-details/2512381/nutrients",
+        "published_date": "2023-04-20",
+        "retrieved_date": "2026-10-05",
+        "license": "CC0-1.0",
+        "response_sha256": "5379f31ce8989845cc56034ccbea9d99942f1334c6c5828d7e8eb9ebac832f3a",
+        "data_type": "Foundation"
+      },
+      "nutrients": {
+        "energy_kcal": {
+          "amount": "369.637321",
+          "unit": "kcal",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "2048",
+            "source_nutrient_name": "Energy (Atwater Specific Factors)",
+            "source_amount": "369.637321",
+            "source_unit": "kcal",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated"
+          },
+          "method": "atwater_specific"
+        },
+        "protein_g": {
+          "amount": "7.03885",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1003",
+            "source_nutrient_name": "Protein",
+            "source_amount": "7.03885",
+            "source_unit": "g",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "min": "5.8905",
+            "max": "8.33",
+            "median": "6.75325"
+          }
+        },
+        "carbohydrate_g": {
+          "amount": "80.31315",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1005",
+            "source_nutrient_name": "Carbohydrate, by difference",
+            "source_amount": "80.31315",
+            "source_unit": "g",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated"
+          }
+        },
+        "fat_g": {
+          "amount": "1.033",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1004",
+            "source_nutrient_name": "Total lipid (fat)",
+            "source_amount": "1.033",
+            "source_unit": "g",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "0.72",
+            "max": "1.45",
+            "median": "1.033",
+            "data_points": 8,
+            "sub_samples": [
+              {
+                "id": "2514424",
+                "scope": "sub_sample",
+                "amount": "0.975",
+                "status": "reported"
+              },
+              {
+                "id": "2514427",
+                "scope": "sub_sample",
+                "amount": "0.85",
+                "status": "reported"
+              },
+              {
+                "id": "2514430",
+                "scope": "sub_sample",
+                "amount": "0.84",
+                "status": "reported"
+              },
+              {
+                "id": "2514433",
+                "scope": "sub_sample",
+                "amount": "1.21",
+                "status": "reported"
+              },
+              {
+                "id": "2514436",
+                "scope": "sub_sample",
+                "amount": "1.13",
+                "status": "reported"
+              },
+              {
+                "id": "2514439",
+                "scope": "sub_sample",
+                "amount": "1.45",
+                "status": "reported"
+              },
+              {
+                "id": "2514442",
+                "scope": "sub_sample",
+                "amount": "0.72",
+                "status": "reported"
+              },
+              {
+                "id": "2514445",
+                "scope": "sub_sample",
+                "amount": "1.09",
+                "status": "reported"
+              }
+            ]
+          }
+        },
+        "fiber_g": {
+          "amount": "0.1488",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1079",
+            "source_nutrient_name": "Fiber, total dietary",
+            "source_amount": "0.1488",
+            "source_unit": "g",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "0",
+            "max": "1.19",
+            "median": "0",
+            "loq": "0.75",
+            "data_points": 8,
+            "sub_samples": [
+              {
+                "id": "2514607",
+                "scope": "sub_sample",
+                "amount": "0",
+                "status": "below_loq",
+                "loq": "0.75"
+              },
+              {
+                "id": "2514608",
+                "scope": "sub_sample",
+                "amount": "0",
+                "status": "below_loq",
+                "loq": "0.75"
+              },
+              {
+                "id": "2514609",
+                "scope": "sub_sample",
+                "amount": "0",
+                "status": "below_loq",
+                "loq": "0.75"
+              },
+              {
+                "id": "2514610",
+                "scope": "sub_sample",
+                "amount": "0",
+                "status": "below_loq",
+                "loq": "0.75"
+              },
+              {
+                "id": "2514611",
+                "scope": "sub_sample",
+                "amount": "0",
+                "status": "below_loq",
+                "loq": "0.75"
+              },
+              {
+                "id": "2514612",
+                "scope": "sub_sample",
+                "amount": "1.19",
+                "status": "reported"
+              },
+              {
+                "id": "2514613",
+                "scope": "sub_sample",
+                "amount": "0",
+                "status": "below_loq",
+                "loq": "0.75"
+              },
+              {
+                "id": "2514614",
+                "scope": "sub_sample",
+                "amount": "0",
+                "status": "below_loq",
+                "loq": "0.75"
+              }
+            ]
+          }
+        },
+        "sodium_mg": {
+          "amount": "0.4625",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1093",
+            "source_nutrient_name": "Sodium, Na",
+            "source_amount": "0.4625",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "0",
+            "max": "3.7",
+            "median": "0",
+            "loq": "2.5",
+            "data_points": 8,
+            "sub_samples": [
+              {
+                "id": "2513100",
+                "scope": "sub_sample",
+                "amount": "0",
+                "status": "below_loq",
+                "loq": "2.5"
+              },
+              {
+                "id": "2513109",
+                "scope": "sub_sample",
+                "amount": "0",
+                "status": "below_loq",
+                "loq": "2.5"
+              },
+              {
+                "id": "2513118",
+                "scope": "sub_sample",
+                "amount": "0",
+                "status": "below_loq",
+                "loq": "2.5"
+              },
+              {
+                "id": "2513127",
+                "scope": "sub_sample",
+                "amount": "0",
+                "status": "below_loq",
+                "loq": "2.5"
+              },
+              {
+                "id": "2513136",
+                "scope": "sub_sample",
+                "amount": "0",
+                "status": "below_loq",
+                "loq": "2.5"
+              },
+              {
+                "id": "2513145",
+                "scope": "sub_sample",
+                "amount": "0",
+                "status": "below_loq",
+                "loq": "2.5"
+              },
+              {
+                "id": "2513154",
+                "scope": "sub_sample",
+                "amount": "3.7",
+                "status": "reported"
+              },
+              {
+                "id": "2513163",
+                "scope": "sub_sample",
+                "amount": "0",
+                "status": "below_loq",
+                "loq": "2.5"
+              }
+            ]
+          }
+        },
+        "potassium_mg": {
+          "amount": "82.26",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1092",
+            "source_nutrient_name": "Potassium, K",
+            "source_amount": "82.26",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "59.5",
+            "max": "107",
+            "median": "76.35",
+            "data_points": 8,
+            "sub_samples": [
+              {
+                "id": "2513099",
+                "scope": "sub_sample",
+                "amount": "73.4",
+                "status": "reported"
+              },
+              {
+                "id": "2513108",
+                "scope": "sub_sample",
+                "amount": "76.5",
+                "status": "reported"
+              },
+              {
+                "id": "2513117",
+                "scope": "sub_sample",
+                "amount": "107",
+                "status": "reported"
+              },
+              {
+                "id": "2513126",
+                "scope": "sub_sample",
+                "amount": "76.2",
+                "status": "reported"
+              },
+              {
+                "id": "2513135",
+                "scope": "sub_sample",
+                "amount": "59.5",
+                "status": "reported"
+              },
+              {
+                "id": "2513144",
+                "scope": "sub_sample",
+                "amount": "98.2",
+                "status": "reported"
+              },
+              {
+                "id": "2513153",
+                "scope": "sub_sample",
+                "amount": "76.1",
+                "status": "reported"
+              },
+              {
+                "id": "2513162",
+                "scope": "sub_sample",
+                "amount": "91.2",
+                "status": "reported"
+              }
+            ]
+          }
+        },
+        "phosphorus_mg": {
+          "amount": "108.2",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1091",
+            "source_nutrient_name": "Phosphorus, P",
+            "source_amount": "108.2",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "75.2",
+            "max": "141",
+            "median": "104.5",
+            "data_points": 8,
+            "sub_samples": [
+              {
+                "id": "2513098",
+                "scope": "sub_sample",
+                "amount": "98.1",
+                "status": "reported"
+              },
+              {
+                "id": "2513107",
+                "scope": "sub_sample",
+                "amount": "99",
+                "status": "reported"
+              },
+              {
+                "id": "2513116",
+                "scope": "sub_sample",
+                "amount": "128",
+                "status": "reported"
+              },
+              {
+                "id": "2513125",
+                "scope": "sub_sample",
+                "amount": "75.2",
+                "status": "reported"
+              },
+              {
+                "id": "2513134",
+                "scope": "sub_sample",
+                "amount": "79.3",
+                "status": "reported"
+              },
+              {
+                "id": "2513143",
+                "scope": "sub_sample",
+                "amount": "141",
+                "status": "reported"
+              },
+              {
+                "id": "2513152",
+                "scope": "sub_sample",
+                "amount": "110",
+                "status": "reported"
+              },
+              {
+                "id": "2513161",
+                "scope": "sub_sample",
+                "amount": "135",
+                "status": "reported"
+              }
+            ]
+          }
+        }
+      },
+      "energy_alternatives": [
+        {
+          "amount": "358.705",
+          "unit": "kcal",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "2047",
+            "source_nutrient_name": "Energy (Atwater General Factors)",
+            "source_amount": "358.705",
+            "source_unit": "kcal",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated"
+          },
+          "method": "atwater_general"
+        }
+      ],
+      "portions": {
+        "usda:312591": {
+          "grams": "45",
+          "label": "1 RACC",
+          "source": "https://fdc.nal.usda.gov/food-details/2512381/nutrients ; foodPortion.id=312591; amount=1; gramWeight=45"
+        }
+      },
+      "allergens": {
+        "contains": [],
+        "may_contain": [],
+        "assessment": "unknown",
+        "source": "USDA nutrient record does not establish complete ingredients or cross-contact assessment."
+      }
+    },
+    "usda:169757": {
+      "id": "usda:169757",
+      "name": "Rice, white, long-grain, regular, unenriched, cooked without salt",
+      "state": "cooked",
+      "source": {
+        "publisher": "USDA FoodData Central",
+        "record_id": "169757",
+        "url": "https://fdc.nal.usda.gov/food-details/169757/nutrients",
+        "published_date": "2019-04-01",
+        "retrieved_date": "2026-10-05",
+        "license": "CC0-1.0",
+        "response_sha256": "d51327b8af6d7d4acb8579118aadecb72cef1e56e040bf5730eb6e8ddb625639",
+        "data_type": "SR Legacy"
+      },
+      "nutrients": {
+        "energy_kcal": {
+          "amount": "130",
+          "unit": "kcal",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1008",
+            "source_nutrient_name": "Energy",
+            "source_amount": "130",
+            "source_unit": "kcal",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1008"
+        },
+        "protein_g": {
+          "amount": "2.69",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1003",
+            "source_nutrient_name": "Protein",
+            "source_amount": "2.69",
+            "source_unit": "g",
+            "data_points": 20
+          }
+        },
+        "carbohydrate_g": {
+          "amount": "28.17",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1005",
+            "source_nutrient_name": "Carbohydrate, by difference",
+            "source_amount": "28.17",
+            "source_unit": "g",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          }
+        },
+        "fat_g": {
+          "amount": "0.28",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1004",
+            "source_nutrient_name": "Total lipid (fat)",
+            "source_amount": "0.28",
+            "source_unit": "g",
+            "data_points": 6
+          }
+        },
+        "fiber_g": {
+          "amount": "0.4",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1079",
+            "source_nutrient_name": "Fiber, total dietary",
+            "source_amount": "0.4",
+            "source_unit": "g",
+            "data_points": 0
+          }
+        },
+        "sodium_mg": {
+          "amount": "1",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1093",
+            "source_nutrient_name": "Sodium, Na",
+            "source_amount": "1",
+            "source_unit": "mg",
+            "data_points": 13
+          }
+        },
+        "potassium_mg": {
+          "amount": "35",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1092",
+            "source_nutrient_name": "Potassium, K",
+            "source_amount": "35",
+            "source_unit": "mg",
+            "data_points": 34
+          }
+        },
+        "phosphorus_mg": {
+          "amount": "43",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1091",
+            "source_nutrient_name": "Phosphorus, P",
+            "source_amount": "43",
+            "source_unit": "mg",
+            "data_points": 27
+          }
+        }
+      },
+      "energy_alternatives": [
+        {
+          "amount": "544",
+          "unit": "kJ",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1062",
+            "source_nutrient_name": "Energy",
+            "source_amount": "544",
+            "source_unit": "kJ",
+            "data_points": 0
+          },
+          "method": "usda_1062_kj"
+        }
+      ],
+      "portions": {
+        "usda:85462": {
+          "grams": "158",
+          "label": "1 cup",
+          "source": "https://fdc.nal.usda.gov/food-details/169757/nutrients ; foodPortion.id=85462; amount=1; gramWeight=158"
+        }
+      },
+      "allergens": {
+        "contains": [],
+        "may_contain": [],
+        "assessment": "unknown",
+        "source": "USDA nutrient record does not establish complete ingredients or cross-contact assessment."
+      }
+    },
+    "usda:330137": {
+      "id": "usda:330137",
+      "name": "Yogurt, Greek, plain, nonfat",
+      "state": "processed",
+      "source": {
+        "publisher": "USDA FoodData Central",
+        "record_id": "330137",
+        "url": "https://fdc.nal.usda.gov/food-details/330137/nutrients",
+        "published_date": "2019-04-01",
+        "retrieved_date": "2026-10-05",
+        "license": "CC0-1.0",
+        "response_sha256": "93ffa33e41d0aca4dba57569efa2d852a165f9d5831f6aa69d4c515ae7e80990",
+        "data_type": "Foundation"
+      },
+      "nutrients": {
+        "energy_kcal": {
+          "amount": "61",
+          "unit": "kcal",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1008",
+            "source_nutrient_name": "Energy",
+            "source_amount": "61",
+            "source_unit": "kcal",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated"
+          },
+          "method": "usda_1008"
+        },
+        "protein_g": {
+          "amount": "10.3",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1003",
+            "source_nutrient_name": "Protein",
+            "source_amount": "10.3",
+            "source_unit": "g",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "min": "6.89",
+            "max": "12.2",
+            "median": "10.4"
+          }
+        },
+        "carbohydrate_g": {
+          "amount": "3.64",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1005",
+            "source_nutrient_name": "Carbohydrate, by difference",
+            "source_amount": "3.64",
+            "source_unit": "g",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated"
+          }
+        },
+        "fat_g": {
+          "amount": "0.37",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1004",
+            "source_nutrient_name": "Total lipid (fat)",
+            "source_amount": "0.37",
+            "source_unit": "g",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "0.23",
+            "max": "0.61",
+            "median": "0.34",
+            "data_points": 18,
+            "sub_samples": [
+              {
+                "id": "329836",
+                "scope": "sub_sample",
+                "amount": "0.61",
+                "status": "reported"
+              },
+              {
+                "id": "329845",
+                "scope": "sub_sample",
+                "amount": "0.42",
+                "status": "reported"
+              },
+              {
+                "id": "329852",
+                "scope": "sub_sample",
+                "amount": "0.24",
+                "status": "reported"
+              },
+              {
+                "id": "329869",
+                "scope": "sub_sample",
+                "amount": "0.45",
+                "status": "reported"
+              },
+              {
+                "id": "329873",
+                "scope": "sub_sample",
+                "amount": "0.31",
+                "status": "reported"
+              },
+              {
+                "id": "329882",
+                "scope": "sub_sample",
+                "amount": "0.41",
+                "status": "reported"
+              },
+              {
+                "id": "329902",
+                "scope": "sub_sample",
+                "amount": "0.31",
+                "status": "reported"
+              },
+              {
+                "id": "329931",
+                "scope": "sub_sample",
+                "amount": "0.26",
+                "status": "reported"
+              },
+              {
+                "id": "329949",
+                "scope": "sub_sample",
+                "amount": "0.3",
+                "status": "reported"
+              },
+              {
+                "id": "329970",
+                "scope": "sub_sample",
+                "amount": "0.43",
+                "status": "reported"
+              },
+              {
+                "id": "329990",
+                "scope": "sub_sample",
+                "amount": "0.38",
+                "status": "reported"
+              },
+              {
+                "id": "330007",
+                "scope": "sub_sample",
+                "amount": "0.55",
+                "status": "reported"
+              },
+              {
+                "id": "330017",
+                "scope": "sub_sample",
+                "amount": "0.36",
+                "status": "reported"
+              },
+              {
+                "id": "330034",
+                "scope": "sub_sample",
+                "amount": "0.52",
+                "status": "reported"
+              },
+              {
+                "id": "330053",
+                "scope": "sub_sample",
+                "amount": "0.23",
+                "status": "reported"
+              },
+              {
+                "id": "330077",
+                "scope": "sub_sample",
+                "amount": "0.33",
+                "status": "reported"
+              },
+              {
+                "id": "330106",
+                "scope": "sub_sample",
+                "amount": "0.31",
+                "status": "reported"
+              },
+              {
+                "id": "330135",
+                "scope": "sub_sample",
+                "amount": "0.3",
+                "status": "reported"
+              }
+            ]
+          }
+        },
+        "fiber_g": {
+          "amount": null,
+          "unit": "g",
+          "status": "missing",
+          "evidence": {
+            "scope": "not_reported",
+            "source_nutrient_id": "1079",
+            "reason": "No entry for this nutrient in the retrieved USDA response."
+          }
+        },
+        "sodium_mg": {
+          "amount": "36",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1093",
+            "source_nutrient_name": "Sodium, Na",
+            "source_amount": "36",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "33",
+            "max": "39",
+            "median": "35",
+            "data_points": 18,
+            "sub_samples": [
+              {
+                "id": "329835",
+                "scope": "sub_sample",
+                "amount": "34",
+                "status": "reported"
+              },
+              {
+                "id": "329844",
+                "scope": "sub_sample",
+                "amount": "36",
+                "status": "reported"
+              },
+              {
+                "id": "329851",
+                "scope": "sub_sample",
+                "amount": "34",
+                "status": "reported"
+              },
+              {
+                "id": "329868",
+                "scope": "sub_sample",
+                "amount": "36",
+                "status": "reported"
+              },
+              {
+                "id": "329872",
+                "scope": "sub_sample",
+                "amount": "35",
+                "status": "reported"
+              },
+              {
+                "id": "329881",
+                "scope": "sub_sample",
+                "amount": "39",
+                "status": "reported"
+              },
+              {
+                "id": "329892",
+                "scope": "sub_sample",
+                "amount": "35",
+                "status": "reported"
+              },
+              {
+                "id": "329924",
+                "scope": "sub_sample",
+                "amount": "37",
+                "status": "reported"
+              },
+              {
+                "id": "329942",
+                "scope": "sub_sample",
+                "amount": "33",
+                "status": "reported"
+              },
+              {
+                "id": "329961",
+                "scope": "sub_sample",
+                "amount": "35",
+                "status": "reported"
+              },
+              {
+                "id": "329982",
+                "scope": "sub_sample",
+                "amount": "34",
+                "status": "reported"
+              },
+              {
+                "id": "330006",
+                "scope": "sub_sample",
+                "amount": "35",
+                "status": "reported"
+              },
+              {
+                "id": "330016",
+                "scope": "sub_sample",
+                "amount": "34",
+                "status": "reported"
+              },
+              {
+                "id": "330033",
+                "scope": "sub_sample",
+                "amount": "34",
+                "status": "reported"
+              },
+              {
+                "id": "330045",
+                "scope": "sub_sample",
+                "amount": "39",
+                "status": "reported"
+              },
+              {
+                "id": "330067",
+                "scope": "sub_sample",
+                "amount": "38",
+                "status": "reported"
+              },
+              {
+                "id": "330097",
+                "scope": "sub_sample",
+                "amount": "34",
+                "status": "reported"
+              },
+              {
+                "id": "330127",
+                "scope": "sub_sample",
+                "amount": "37",
+                "status": "reported"
+              }
+            ]
+          }
+        },
+        "potassium_mg": {
+          "amount": "141",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1092",
+            "source_nutrient_name": "Potassium, K",
+            "source_amount": "141",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "132",
+            "max": "145",
+            "median": "141",
+            "data_points": 18,
+            "sub_samples": [
+              {
+                "id": "329835",
+                "scope": "sub_sample",
+                "amount": "143",
+                "status": "reported"
+              },
+              {
+                "id": "329844",
+                "scope": "sub_sample",
+                "amount": "141",
+                "status": "reported"
+              },
+              {
+                "id": "329851",
+                "scope": "sub_sample",
+                "amount": "141",
+                "status": "reported"
+              },
+              {
+                "id": "329868",
+                "scope": "sub_sample",
+                "amount": "140",
+                "status": "reported"
+              },
+              {
+                "id": "329872",
+                "scope": "sub_sample",
+                "amount": "142",
+                "status": "reported"
+              },
+              {
+                "id": "329881",
+                "scope": "sub_sample",
+                "amount": "132",
+                "status": "reported"
+              },
+              {
+                "id": "329892",
+                "scope": "sub_sample",
+                "amount": "140",
+                "status": "reported"
+              },
+              {
+                "id": "329924",
+                "scope": "sub_sample",
+                "amount": "142",
+                "status": "reported"
+              },
+              {
+                "id": "329942",
+                "scope": "sub_sample",
+                "amount": "137",
+                "status": "reported"
+              },
+              {
+                "id": "329961",
+                "scope": "sub_sample",
+                "amount": "141",
+                "status": "reported"
+              },
+              {
+                "id": "329982",
+                "scope": "sub_sample",
+                "amount": "141",
+                "status": "reported"
+              },
+              {
+                "id": "330006",
+                "scope": "sub_sample",
+                "amount": "143",
+                "status": "reported"
+              },
+              {
+                "id": "330016",
+                "scope": "sub_sample",
+                "amount": "144",
+                "status": "reported"
+              },
+              {
+                "id": "330033",
+                "scope": "sub_sample",
+                "amount": "145",
+                "status": "reported"
+              },
+              {
+                "id": "330045",
+                "scope": "sub_sample",
+                "amount": "136",
+                "status": "reported"
+              },
+              {
+                "id": "330067",
+                "scope": "sub_sample",
+                "amount": "141",
+                "status": "reported"
+              },
+              {
+                "id": "330097",
+                "scope": "sub_sample",
+                "amount": "142",
+                "status": "reported"
+              },
+              {
+                "id": "330127",
+                "scope": "sub_sample",
+                "amount": "145",
+                "status": "reported"
+              }
+            ]
+          }
+        },
+        "phosphorus_mg": {
+          "amount": "136",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1091",
+            "source_nutrient_name": "Phosphorus, P",
+            "source_amount": "136",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "130",
+            "max": "142",
+            "median": "135",
+            "data_points": 18,
+            "sub_samples": [
+              {
+                "id": "329835",
+                "scope": "sub_sample",
+                "amount": "134",
+                "status": "reported"
+              },
+              {
+                "id": "329844",
+                "scope": "sub_sample",
+                "amount": "131",
+                "status": "reported"
+              },
+              {
+                "id": "329851",
+                "scope": "sub_sample",
+                "amount": "134",
+                "status": "reported"
+              },
+              {
+                "id": "329868",
+                "scope": "sub_sample",
+                "amount": "134",
+                "status": "reported"
+              },
+              {
+                "id": "329872",
+                "scope": "sub_sample",
+                "amount": "135",
+                "status": "reported"
+              },
+              {
+                "id": "329881",
+                "scope": "sub_sample",
+                "amount": "137",
+                "status": "reported"
+              },
+              {
+                "id": "329892",
+                "scope": "sub_sample",
+                "amount": "133",
+                "status": "reported"
+              },
+              {
+                "id": "329924",
+                "scope": "sub_sample",
+                "amount": "135",
+                "status": "reported"
+              },
+              {
+                "id": "329942",
+                "scope": "sub_sample",
+                "amount": "133",
+                "status": "reported"
+              },
+              {
+                "id": "329961",
+                "scope": "sub_sample",
+                "amount": "130",
+                "status": "reported"
+              },
+              {
+                "id": "329982",
+                "scope": "sub_sample",
+                "amount": "134",
+                "status": "reported"
+              },
+              {
+                "id": "330006",
+                "scope": "sub_sample",
+                "amount": "140",
+                "status": "reported"
+              },
+              {
+                "id": "330016",
+                "scope": "sub_sample",
+                "amount": "137",
+                "status": "reported"
+              },
+              {
+                "id": "330033",
+                "scope": "sub_sample",
+                "amount": "137",
+                "status": "reported"
+              },
+              {
+                "id": "330045",
+                "scope": "sub_sample",
+                "amount": "137",
+                "status": "reported"
+              },
+              {
+                "id": "330067",
+                "scope": "sub_sample",
+                "amount": "136",
+                "status": "reported"
+              },
+              {
+                "id": "330097",
+                "scope": "sub_sample",
+                "amount": "142",
+                "status": "reported"
+              },
+              {
+                "id": "330127",
+                "scope": "sub_sample",
+                "amount": "142",
+                "status": "reported"
+              }
+            ]
+          }
+        }
+      },
+      "energy_alternatives": [
+        {
+          "amount": "256",
+          "unit": "kJ",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1062",
+            "source_nutrient_name": "Energy",
+            "source_amount": "256",
+            "source_unit": "kJ",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated"
+          },
+          "method": "usda_1062_kj"
+        }
+      ],
+      "portions": {
+        "usda:119735": {
+          "grams": "156",
+          "label": "1 container",
+          "source": "https://fdc.nal.usda.gov/food-details/330137/nutrients ; foodPortion.id=119735; amount=1; gramWeight=156"
+        },
+        "usda:312634": {
+          "grams": "170",
+          "label": "1 RACC",
+          "source": "https://fdc.nal.usda.gov/food-details/330137/nutrients ; foodPortion.id=312634; amount=1; gramWeight=170"
+        }
+      },
+      "allergens": {
+        "contains": [],
+        "may_contain": [],
+        "assessment": "unknown",
+        "source": "USDA nutrient record does not establish complete ingredients or cross-contact assessment."
+      }
+    }
+  }
+}

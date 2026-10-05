@@ -1,0 +1,44 @@
+{
+  "operation": "weekly_review",
+  "profile": {
+    "id": "demo-office",
+    "age": 34,
+    "goals": [
+      "fat_loss"
+    ],
+    "preferences": {
+      "cuisine": "chinese",
+      "effort": "lazy",
+      "scenario": "takeaway",
+      "dislikes": [
+        "香菜"
+      ]
+    },
+    "measurements": {
+      "height_cm": "175",
+      "weight_kg": "84",
+      "measured_on": "2026-10-05"
+    },
+    "health": {
+      "allergens": [],
+      "conditions": [],
+      "medications": [],
+      "pregnancy_lactation": false,
+      "eating_disorder_risk": false,
+      "malnutrition_risk": false
+    },
+    "storage": "local"
+  },
+  "as_of": "2026-10-12",
+  "feedback": {
+    "days_observed": 5,
+    "adherence": "mixed",
+    "hunger": "hungry",
+    "energy": "normal",
+    "training": "normal",
+    "health_changed": false,
+    "appetite_declined": false,
+    "unintentional_weight_loss": false,
+    "returning_after_gap": false
+  }
+}

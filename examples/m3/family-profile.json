@@ -1,0 +1,26 @@
+{
+  "id": "demo-father",
+  "age": 58,
+  "goals": [
+    "wellbeing"
+  ],
+  "preferences": {
+    "cuisine": "chinese",
+    "effort": "lazy",
+    "scenario": "home",
+    "dislikes": []
+  },
+  "health": {
+    "allergens": [
+      "peanut"
+    ],
+    "conditions": [
+      "chronic_kidney_disease"
+    ],
+    "medications": [],
+    "pregnancy_lactation": false,
+    "eating_disorder_risk": false,
+    "malnutrition_risk": false
+  },
+  "storage": "local"
+}

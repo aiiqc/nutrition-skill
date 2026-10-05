@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nutrition-skill-core"
+version = "0.2.0.dev1"
+description = "Offline, traceable nutrition arithmetic and meal-state primitives"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT AND CC0-1.0"
+license-files = ["LICENSE", "THIRD-PARTY-NOTICES.md"]
+dependencies = []
+
+[project.scripts]
+nutrition-core = "nutrition_core.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["nutrition_core*"]
+
+[tool.setuptools.package-data]
+nutrition_core = ["data/*.json", "data/source-responses/*.json"]

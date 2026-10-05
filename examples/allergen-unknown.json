@@ -1,0 +1,17 @@
+{
+  "operation": "check_constraints",
+  "items": [
+    {
+      "food_id": "usda:330137",
+      "quantity": {
+        "amount": "156",
+        "unit": "g"
+      }
+    }
+  ],
+  "constraints": {
+    "allergens": [
+      "milk"
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "日常饮食助手"
+  short_description: "安排中西式日常饮食、记录实际执行，并按个人与家庭情况整理反馈"
+  default_prompt: "使用 $nutrition-skill，根据我的饮食偏好和生活条件安排下一餐，并整理实际饮食记录。"

@@ -1,0 +1,128 @@
+{
+  "schema_version": "m3-templates-1",
+  "source": {
+    "title": "WHO Healthy diet",
+    "url": "https://www.who.int/news-room/fact-sheets/detail/healthy-diet",
+    "authorship": "项目自编的食物结构与准备说明，未复制来源菜单。",
+    "scope": "参考一般健康饮食中的食物多样性；不证明单餐营养达标、过敏安全或个人医学适用性。"
+  },
+  "templates": [
+    {
+      "id": "cn-soy-egg-breakfast", "title": "豆浆、熟鸡蛋与主食",
+      "cuisines": ["chinese", "mixed"], "efforts": ["lazy", "standard"],
+      "scenarios": ["home", "takeaway", "no_cook"], "meal_ids": ["breakfast"],
+      "foods": ["无糖豆浆", "熟鸡蛋", "馒头", "水果"],
+      "aliases": ["豆制品", "大豆", "soy", "鸡蛋", "egg", "小麦", "wheat", "fruit"],
+      "preparation": "购买豆浆、已经熟制的鸡蛋、馒头和水果；在家可使用现有熟食，按包装说明保存与食用。",
+      "portion_note": "份量沿用已确认且仍适用的个人计划；没有份量安排时先补充，不自行推算热量。"
+    },
+    {
+      "id": "west-yogurt-oat-breakfast", "title": "原味酸奶、即食燕麦与水果",
+      "cuisines": ["western", "mixed"], "efforts": ["lazy", "standard"],
+      "scenarios": ["home", "takeaway", "no_cook"], "meal_ids": ["breakfast"],
+      "foods": ["原味希腊酸奶", "可直接食用的即食燕麦", "水果"],
+      "aliases": ["乳制品", "牛奶", "milk", "yogurt", "燕麦", "oats", "fruit"],
+      "preparation": "选择按包装可直接食用的燕麦，与原味酸奶和水果组合；店购版本先看配料，不把甜味或加糖产品视为同一种食物。",
+      "portion_note": "份量沿用已确认且仍适用的个人计划；没有份量安排时先补充，不自行推算热量。"
+    },
+    {
+      "id": "cn-milk-sweetpotato-breakfast", "title": "牛奶、熟红薯与鸡蛋",
+      "cuisines": ["chinese", "mixed"], "efforts": ["lazy", "standard"],
+      "scenarios": ["home", "takeaway", "no_cook"], "meal_ids": ["breakfast"],
+      "foods": ["原味牛奶", "熟红薯", "熟鸡蛋"],
+      "aliases": ["乳制品", "milk", "地瓜", "sweet potato", "鸡蛋", "egg"],
+      "preparation": "购买原味牛奶、已经熟制的红薯和鸡蛋；提前备好的食物按保存及加热要求处理。",
+      "portion_note": "份量沿用已确认且仍适用的个人计划；没有份量安排时先补充，不自行推算热量。"
+    },
+    {
+      "id": "west-egg-sandwich-breakfast", "title": "鸡蛋全麦三明治与水果",
+      "cuisines": ["western", "mixed"], "efforts": ["lazy", "standard"],
+      "scenarios": ["home", "takeaway", "no_cook"], "meal_ids": ["breakfast"],
+      "foods": ["全麦面包", "熟鸡蛋", "可生食蔬菜", "水果"],
+      "aliases": ["小麦", "wheat", "bread", "鸡蛋", "egg", "vegetables", "fruit"],
+      "preparation": "用购买的熟鸡蛋与清洗后可生食的蔬菜组装三明治，或购买配料明确的现成版本；水果单独带走。",
+      "portion_note": "份量沿用已确认且仍适用的个人计划；没有份量安排时先补充，不自行推算热量。"
+    },
+    {
+      "id": "cn-chicken-rice", "title": "鸡肉、米饭与蔬菜便当",
+      "cuisines": ["chinese", "mixed"], "efforts": ["lazy", "standard"],
+      "scenarios": ["home", "takeaway", "no_cook"], "meal_ids": ["lunch", "dinner"],
+      "foods": ["熟制鸡肉", "米饭", "熟制蔬菜"],
+      "aliases": ["鸡胸肉", "鸡腿肉", "chicken", "rice", "vegetables"],
+      "preparation": "购买鸡肉饭并搭配蔬菜，酱汁按需要另放；在家可分装已熟制的鸡肉、米饭与蔬菜，食用时按要求处理。",
+      "portion_note": "份量沿用已确认且仍适用的个人计划；没有份量安排时先补充，不自行推算热量。"
+    },
+    {
+      "id": "west-chicken-sandwich", "title": "鸡肉全麦三明治与蔬菜",
+      "cuisines": ["western", "mixed"], "efforts": ["lazy", "standard"],
+      "scenarios": ["home", "takeaway", "no_cook"], "meal_ids": ["lunch", "dinner"],
+      "foods": ["全麦面包", "熟制鸡肉", "可生食蔬菜"],
+      "aliases": ["小麦", "wheat", "bread", "鸡胸肉", "鸡腿肉", "chicken", "vegetables"],
+      "preparation": "购买配料明确的鸡肉三明治并搭配蔬菜，或用熟鸡肉和清洗后的可生食蔬菜组装；酱料单独准备。",
+      "portion_note": "份量沿用已确认且仍适用的个人计划；没有份量安排时先补充，不自行推算热量。"
+    },
+    {
+      "id": "cn-tofu-rice", "title": "豆腐、米饭与蔬菜组合",
+      "cuisines": ["chinese", "mixed"], "efforts": ["lazy", "standard"],
+      "scenarios": ["home", "takeaway", "no_cook"], "meal_ids": ["lunch", "dinner"],
+      "foods": ["熟制豆腐", "米饭", "熟制蔬菜"],
+      "aliases": ["大豆", "豆制品", "soy", "tofu", "rice", "vegetables"],
+      "preparation": "点选熟豆腐、米饭与蔬菜，核对菜肴中额外肉类和酱料；也可使用适合直接食用或已熟制的包装豆腐组合备餐。",
+      "portion_note": "份量沿用已确认且仍适用的个人计划；豆腐与肉类不能按相同重量直接宣称营养等价。"
+    },
+    {
+      "id": "west-bean-salad-bread", "title": "熟豆类沙拉与全麦面包",
+      "cuisines": ["western", "mixed"], "efforts": ["lazy", "standard"],
+      "scenarios": ["home", "takeaway", "no_cook"], "meal_ids": ["lunch", "dinner"],
+      "foods": ["可直接食用的熟鹰嘴豆", "可生食蔬菜", "全麦面包"],
+      "aliases": ["鹰嘴豆", "豆类", "chickpea", "legume", "vegetables", "小麦", "wheat", "bread"],
+      "preparation": "选择可直接食用的熟豆类，与清洗后的可生食蔬菜组合，搭配全麦面包；店购时确认豆类及酱料配料。",
+      "portion_note": "份量沿用已确认且仍适用的个人计划；没有份量安排时先补充，不自行推算热量。"
+    },
+    {
+      "id": "cn-fish-rice", "title": "熟鱼肉、米饭与蔬菜",
+      "cuisines": ["chinese", "mixed"], "efforts": ["lazy", "standard"],
+      "scenarios": ["home", "takeaway", "no_cook"], "meal_ids": ["lunch", "dinner"],
+      "foods": ["熟制鱼肉", "米饭", "熟制蔬菜"],
+      "aliases": ["鱼", "fish", "rice", "vegetables"],
+      "preparation": "购买或准备已经熟制的鱼肉，搭配米饭与蔬菜；确认鱼种、鱼刺处理和酱料，不把生鱼片直接视为同一准备方式。",
+      "portion_note": "份量沿用已确认且仍适用的个人计划；没有份量安排时先补充，不自行推算热量。"
+    },
+    {
+      "id": "west-fish-potato", "title": "熟鱼肉、土豆与蔬菜",
+      "cuisines": ["western", "mixed"], "efforts": ["lazy", "standard"],
+      "scenarios": ["home", "takeaway", "no_cook"], "meal_ids": ["lunch", "dinner"],
+      "foods": ["熟制鱼肉", "熟土豆", "蔬菜配菜"],
+      "aliases": ["鱼", "fish", "马铃薯", "potato", "vegetables"],
+      "preparation": "购买已经熟制的鱼肉、土豆和蔬菜组合；家里已有备餐时分别取用，避免将未知配方的薯泥当作单一土豆食材。",
+      "portion_note": "份量沿用已确认且仍适用的个人计划；没有份量安排时先补充，不自行推算热量。"
+    },
+    {
+      "id": "mixed-egg-corn", "title": "熟鸡蛋、玉米与蔬菜组合",
+      "cuisines": ["mixed", "chinese", "western"], "efforts": ["lazy", "standard"],
+      "scenarios": ["home", "takeaway", "no_cook"], "meal_ids": ["lunch", "dinner"],
+      "foods": ["熟鸡蛋", "熟玉米", "蔬菜配菜"],
+      "aliases": ["鸡蛋", "egg", "corn", "vegetables"],
+      "preparation": "选择已经熟制的鸡蛋和玉米，另配蔬菜；查看现成蔬菜配菜的酱料与保存要求。",
+      "portion_note": "这是备用食物结构，不代表完整日摄入已达标；份量与其他餐次衔接需依据适用计划。"
+    },
+    {
+      "id": "snack-yogurt-fruit", "title": "原味酸奶与水果",
+      "cuisines": ["chinese", "western", "mixed"], "efforts": ["lazy", "standard"],
+      "scenarios": ["home", "takeaway", "no_cook"], "meal_ids": ["snack"],
+      "foods": ["原味酸奶", "水果"],
+      "aliases": ["牛奶", "乳制品", "milk", "yogurt", "fruit"],
+      "preparation": "按现有加餐安排购买原味酸奶与水果；是否需要加餐以及份量沿用适用计划。",
+      "portion_note": "加餐并非人人必需；不因展示此结构自动增加总摄入。"
+    },
+    {
+      "id": "snack-soy-fruit", "title": "无糖豆浆与水果",
+      "cuisines": ["chinese", "western", "mixed"], "efforts": ["lazy", "standard"],
+      "scenarios": ["home", "takeaway", "no_cook"], "meal_ids": ["snack"],
+      "foods": ["无糖豆浆", "水果"],
+      "aliases": ["大豆", "豆制品", "soy", "fruit"],
+      "preparation": "按现有加餐安排选择配料明确的无糖豆浆和水果；不把豆浆与牛奶按体积直接认定营养等价。",
+      "portion_note": "加餐并非人人必需；不因展示此结构自动增加总摄入。"
+    }
+  ]
+}

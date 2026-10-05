@@ -1,0 +1,29 @@
+{
+  "id": "demo-office",
+  "age": 34,
+  "goals": [
+    "fat_loss"
+  ],
+  "preferences": {
+    "cuisine": "chinese",
+    "effort": "lazy",
+    "scenario": "takeaway",
+    "dislikes": [
+      "香菜"
+    ]
+  },
+  "measurements": {
+    "height_cm": "175",
+    "weight_kg": "84",
+    "measured_on": "2026-10-05"
+  },
+  "health": {
+    "allergens": [],
+    "conditions": [],
+    "medications": [],
+    "pregnancy_lactation": false,
+    "eating_disorder_risk": false,
+    "malnutrition_risk": false
+  },
+  "storage": "local"
+}
