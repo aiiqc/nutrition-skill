@@ -1,8 +1,8 @@
-# 本地验收与M4发布准备记录
+# 本地验收与M4首发验证记录
 
 日期：2026-10-05。软件版本：0.2.0.dev1。数值规则：m2-2026-10-05.1；工作流规则：m3-2026-10-05.2；食品目录：usda-five-2026-10-05.1；档案文件格式：nutrition-record-v2。
 
-结论：当前启用的M0–M3本地功能通过相应验收，包括Skill源文件、确定性核心、结构化日常流程与显式本地存储。M4新增的项目范围发现与发布准备证据单列。以下证据不等于全部22条产品条件、个人全局安装、模型自然选择、专业营养审阅或健康效果通过。
+结论：当前启用的M0–M3本地功能通过相应验收，包括Skill源文件、确定性核心、结构化日常流程与显式本地存储。M4新增的项目范围发现与首次公开发布、四组远端CI证据单列。以下证据不等于全部22条产品条件、个人全局安装、模型自然选择、专业营养审阅或健康效果通过。
 
 ## 实际运行
 
@@ -66,7 +66,7 @@ python3 -B -m nutrition_core --input examples/allergen-unknown.json
 
 三条代理旅程本身未执行删除；单成员删除、旧请求拒绝与隔离由专门合成存储测试验证。代理显式读取源文件不等于宿主安装后自动发现。
 
-## M4本地安装与发布准备
+## M4本地安装与首次公开发布
 
 本轮新增安装/发布说明、CONTRIBUTING与GitHub Actions。安装副本旅程发现没有训练无法忠实记录，已追加not_training状态和说明；软件递增至0.2.0.dev1，工作流版本递增，数值营养规则保持不变。本地检索核对Codex CLI 0.157.1及[官方技能路径说明](https://learn.chatgpt.com/docs/build-skills)，不根据旧安装习惯推断当前路径。
 
@@ -86,7 +86,13 @@ python3 -B -m nutrition_core --input examples/allergen-unknown.json
 
 源包中不包含上述测试项目、运行时档案、原始prompt或开发工具依赖；这轮源码用于开发者预览，尚不代表M4全部通过。
 
-首次公开检查（2026-10-05）：范围为59个已检查的0.2.0.dev1项目文件、初始提交及CI。仓库创建与目标核对PASS：已实际创建并核对aiiqc/nutrition-skill为Public，目前为空仓库。本文保留首次源文件上传前验收快照，提交和CI尚待执行；上传后应核对具体提交，实时CI结果以[GitHub Actions](https://github.com/aiiqc/nutrition-skill/actions)为准。
+首次公开检查（2026-10-05）：0.2.0.dev1已发布至Public仓库aiiqc/nutrition-skill的main，初始提交为[91ab29f03a20208f406e4a05e55b22543956ab4a](https://github.com/aiiqc/nutrition-skill/commit/91ab29f03a20208f406e4a05e55b22543956ab4a)。以下结果对应该初始提交；后续状态见[GitHub Actions](https://github.com/aiiqc/nutrition-skill/actions)。
+
+| 检查 | 结果 | 实际证据与边界 |
+|---|---|---|
+| 公开仓库与源文件 | PASS | 已核对所有者、名称、Public可见性及main初始提交；远端59个文件的Git blob SHA与本地发布树逐项一致 |
+| 首发远端CI | PASS | [运行37304774493](https://github.com/aiiqc/nutrition-skill/actions/runs/37304774493)为completed/success；Ubuntu/macOS × Python 3.11/3.14四组日志均为Ran 166 tests，unit/integration与demo步骤均success |
+| 发布形态 | 已公开源码预览 | 未创建tag或GitHub Release；CI只验证测试与演示，不证明模型自然选择、桌面UI兼容或健康效果 |
 
 ## 未运行与能力边界
 
@@ -95,11 +101,10 @@ python3 -B -m nutrition_core --input examples/allergen-unknown.json
 | 个人全局安装、模型自然选择、桌面UI完整兼容 | NOT RUN | 项目目录发现单独PASS；未以这些路径作实际验收 |
 | 自动TDEE/减脂/增肌目标、数值周调整、断食、中医处方 | NOT RUN | 适用规则和参数未完成审阅，相关入口明确unsupported |
 | 真实照片识别与用户确认闭环 | NOT RUN | 仅定义宿主可选降级和确认行为，没有本轮真实图片验收 |
-| Python 3.11、Linux与其他宿主 | NOT RUN | 本轮实际在macOS的3.12.14与3.14.3运行，不外推兼容结论 |
+| 其他宿主与未覆盖的操作系统 | NOT RUN | Ubuntu/macOS × Python 3.11/3.14已由上述远端CI覆盖；未对其他宿主或操作系统实测，不外推兼容结论 |
 | Windows持久存储 | NOT APPLICABLE | 当前存储实现不支持Windows，入口受控返回unsupported；不是已验证Windows兼容 |
 | 营养专业审核、临床效果与真实用户试用 | NOT RUN | 尚无对应专业或用户证据；专业摘要的结构校验不证明医学适用性 |
 | 长期连续使用 | NOT RUN | 每成员最多50次修订、4MiB，达到上限拒绝新写入；长期容量和历史保留方案待定 |
 | 加密和共享系统账号内家庭访问控制 | NOT APPLICABLE | 当前没有实现，不把文件分开和权限检查宣传为这些能力 |
-| 首次远端文件及CI核对 | NOT RUN（首次上传前快照） | aiiqc/nutrition-skill公开仓库已创建，首次源文件提交和CI尚待执行；须在上传后的具体提交上检查，不能以创建成功或本机PASS替代 |
 
 核心与CLI没有运行时第三方依赖或联网请求；宿主模型的数据传输与聊天留存属于宿主边界，不能宣称整个Skill离线或零留存。版本修订、餐次state.revision与存储record_id分别承担不同职责，调用者必须按契约使用。

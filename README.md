@@ -1,10 +1,12 @@
 # Nutrition Skill
 
+[![CI](https://github.com/aiiqc/nutrition-skill/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/aiiqc/nutrition-skill/actions/workflows/ci.yml)
+
 可供智能助手使用、也可被未来 App 复用的饮食 Skill 与独立计算核心。当前版本为 `0.2.0.dev1`。M0–M3本地实现已通过当前启用范围的验收，包括主Skill、日常工作流与显式本地保存；具体证据和边界见验收记录。
 
 完整产品方向见 [唯一产品规格](docs/product-spec.md)。主入口为[SKILL.md](SKILL.md)，按[Agent Skills格式](https://agentskills.io/specification)组织。精确食品库目前只有五条资料；中西餐建议是项目自编的餐食结构，明确标为qualitative_only，不表示已满足个人热量或临床目标。
 
-首次试用见[项目内安装说明](docs/installation.md)；参与开发见[贡献说明](CONTRIBUTING.md)。本项目为开发者预览版，公开仓库为[aiiqc/nutrition-skill](https://github.com/aiiqc/nutrition-skill)。[发布检查](docs/release-readiness.md)列出首发范围与验收边界；远端自动检查以对应提交的[GitHub Actions](https://github.com/aiiqc/nutrition-skill/actions)结果为准。
+首次试用见[项目内安装说明](docs/installation.md)；参与开发见[贡献说明](CONTRIBUTING.md)。本项目已作为开发者预览版公开于[aiiqc/nutrition-skill](https://github.com/aiiqc/nutrition-skill)。[首发CI](https://github.com/aiiqc/nutrition-skill/actions/runs/37304774493)已通过Ubuntu/macOS × Python 3.11/3.14四组检查，每组166项测试及演示通过；[发布记录](docs/release-readiness.md)列出范围与验收边界。顶部徽章显示main的最新检查状态，首发结果以固定链接为准。
 
 ## 立即运行
 
@@ -85,4 +87,4 @@ assert result["totals"]["energy_kcal"]["amount"] == "297"
 
 ## 下一阶段
 
-M4提供项目范围安装步骤、贡献说明，以及固定官方Action提交的Linux/macOS测试矩阵。Codex目录发现、安装后的完整对话、远端CI和公开发布分别验收，证据见[验收记录](docs/verification.md)。项目名为Nutrition Skill，首发目标为aiiqc/nutrition-skill；首次公开检查包括源文件核对和对应提交的CI运行。营养目标、食品覆盖及长期留存仍按产品规格处理。
+M4提供项目范围安装步骤、贡献说明，以及固定官方Action提交的Linux/macOS测试矩阵。Codex目录发现、安装后的完整对话、远端CI和公开发布分别验收，证据见[验收记录](docs/verification.md)。首次公开源码的59个文件已核对，四组远端CI通过。建议下一步在有限开发者试用中补足真实宿主完整旅程；该验证尚未启动。营养目标、食品覆盖及长期留存仍按产品规格处理。
