@@ -31,6 +31,7 @@ JSON
 | `aggregate_shopping` | `member_meals` | 汇总已量化的可食克重，保留逐人、生熟与来源；不是原料购买毛重。 |
 | `calculate` | `items` | 展示已核对食物的计算量；检查各营养素 `complete`、`known_amount` 与状态。 |
 | `check_constraints` | `items`, `constraints` | 仅使用明确给定、适用于此次检查的限制；`ok`不是医学安全证明。 |
+| `check_day_plan` | `state`, `constraints`, `coverage` | 合计计划而非实吃；`coverage`含`expected_meal_ids`与`confirmed`。以`plan_complete`和状态为准，不把漏餐小计当全天，也不自行生成目标。 |
 | `record_actual` | `state`, `meal_id`, `actual` | 只更新实吃；把返回 `state` 放回当前成员对应日期。 |
 | `summarize_actuals` | `state` | 未记录餐次单列；`day_complete`只覆盖 `listed_meals`，不是系统知道所有零食和饮料。 |
 | `replace_meal` | `state`, `meal_id`, `items`, `constraints` | 只接受成功返回的新计划；锁定和已记录餐受保护。 |

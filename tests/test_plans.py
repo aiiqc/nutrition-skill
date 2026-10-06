@@ -139,6 +139,55 @@ class PlanTests(unittest.TestCase):
                 self.assertEqual(failed["state"], state)
                 self.assertEqual(state, before)
 
+    def test_restore_cannot_change_or_unlock_currently_locked_meal(self):
+        for change in ("content", "lock", "both"):
+            with self.subTest(change=change):
+                state = day()
+                state["revision"] = 4
+                state["meals"][2]["items"] = [item("100")]
+                state["actuals"]["breakfast"] = {"status": "partial", "items": [item("50")]}
+                previous = deepcopy(state["meals"])
+                previous[1]["items"] = [item("125")]
+                if change in {"content", "both"}:
+                    previous[2]["items"] = [item("200")]
+                if change in {"lock", "both"}:
+                    previous[2]["locked"] = False
+                before = deepcopy((state, previous))
+                result = restore_plan(state, previous, {}, self.catalog)
+                self.assertEqual(result["status"], "conflict")
+                self.assertEqual(result["state"], state)
+                self.assertEqual(result["state"]["revision"], 4)
+                self.assertIn({"code": "locked_meal_changed", "meal_id": "dinner", "scope": "meal",
+                               "message": "Restoration cannot change a currently locked meal's plan entry"},
+                              result["issues"])
+                result["state"]["meals"][1]["items"][0]["quantity"]["amount"] = "1"
+                result["state"]["actuals"]["breakfast"]["items"][0]["quantity"]["amount"] = "1"
+                self.assertEqual((state, previous), before)
+
+    def test_restore_allows_unchanged_locked_meal_while_changing_another_meal(self):
+        state = day()
+        previous = deepcopy(state["meals"])
+        previous[1]["items"] = [item("125")]
+        before = deepcopy((state, previous))
+        result = restore_plan(state, previous, {}, self.catalog)
+        self.assertEqual(result["status"], "ok")
+        self.assertEqual(result["state"]["meals"], previous)
+        self.assertEqual(result["state"]["meals"][2], state["meals"][2])
+        self.assertEqual(result["state"]["revision"], 1)
+        self.assertEqual((state, previous), before)
+
+    def test_restore_allows_change_after_current_meal_is_explicitly_unlocked(self):
+        state = day()
+        state["meals"][2]["locked"] = False
+        previous = deepcopy(state["meals"])
+        previous[2]["items"] = [item("200")]
+        before = deepcopy((state, previous))
+        result = restore_plan(state, previous, {}, self.catalog)
+        self.assertEqual(result["status"], "ok")
+        self.assertEqual(result["state"]["meals"], previous)
+        self.assertEqual(result["state"]["revision"], 1)
+        self.assertEqual((state, previous), before)
+
     def test_unknown_allergen_evidence_cannot_commit_replacement_or_restore(self):
         state = day()
         before = deepcopy(state)

@@ -1,6 +1,6 @@
-# M0–M2 数据与函数契约
+# 计算与餐次状态契约
 
-本页描述纯计算与餐次状态操作；M3档案、周反馈和显式文件读写见[m3-contracts.md](m3-contracts.md)。它们共用CLI，但持久化副作用只属于明确的存储操作。
+本页描述M0–M2纯计算、餐次状态以及dev2新增的全天计划核对；M3档案、周反馈和显式文件读写见[m3-contracts.md](m3-contracts.md)。它们共用CLI，但持久化副作用只属于明确的存储操作。
 
 状态：本地开发契约。Python 3.11+，无第三方运行依赖。数值输入使用十进制字符串或整数，输出统一使用十进制字符串；不接受 Python float 或 JSON 小数（写成字符串即可）。字符串只接受无符号的普通十进制写法（不支持科学记数或空白），至多18位有效数字、12位小数，数量必须为正。所有计算在独立 Decimal 上下文使用 precision=80；不取整内部合计。
 
@@ -40,16 +40,48 @@ state 为 `{"revision":0,"meals":[{"id":"breakfast","locked":false,"items":[item
 
 `plans.replace_meal(state, meal_id, items, constraints, catalog) -> dict`：纯函数，仅校验后替换目标餐次；不改变其他餐次和任何actuals。`plans.record_actual(state, meal_id, actual, catalog) -> dict`：纯函数；只更新实际记录；不改计划；revision递增。`plans.summarize_actuals(state, catalog) -> dict`：明确已吃合计与未知餐次，全天完整性独立表达。
 
-`plans.revalidate_plan(state, constraints, catalog) -> dict`：全部餐次（包括locked）重新检查，constraints作用于每个餐次，非全天目标。`plans.restore_plan(state, previous_meals, constraints, catalog) -> dict`：按当前约束重新校验上一版所有计划餐，保留当前actuals；若任一餐不是ok，不提交恢复。包含已食用餐次时不得改写这些餐次的计划条目。
+`plans.revalidate_plan(state, constraints, catalog) -> dict`：全部餐次（包括locked）重新检查，constraints作用于每个餐次，非全天目标。`plans.restore_plan(state, previous_meals, constraints, catalog) -> dict`：按当前约束重新校验上一版所有计划餐，保留当前actuals；若任一餐不是ok，不提交恢复。包含已食用餐次时不得改写这些餐次的计划条目。当前locked=true的餐次若与旧条目不同，包括只撤销锁定，也返回locked_meal_changed冲突，整个state及revision保持原样；相同锁定条目可保留。用户明确解锁后，才可按未锁定餐规则恢复，已记录餐保护仍适用。
 
 变更函数统一返回 `{status, state, issues, ...}`。失败时返回原state的深拷贝；输入对象永不被原地修改。锁定/已食用冲突为conflict；配料或营养缺失为needs_information。非法结构使用NutritionError。历史版本保管、对话确认、专业规则及持久化在M3处理。
 
 summarize_actuals的`day_complete`仅对应`coverage_scope=listed_meals`，不代表系统知道未列入state的零食或其他餐次。空meals不完整。恢复计划必须保留相同meal_id集合，不能借恢复增删餐次或产生孤儿实际记录。
 
+## 全天计划核对
+
+`plans.check_day_plan(state, constraints, coverage, catalog) -> dict`是dev2新增纯函数。CLI请求必须含`operation=check_day_plan`、`state`、`constraints`、`coverage`，不能包含其他请求字段。复用上文state和constraints格式；limits的单位按nutrient决定，作用于传入的整天计划，不自动生成目标。调用者必须先确认目标来源、适用对象和当前有效性；接口只验证来源字符串存在，不认证其真实性、专业资格或医学适用性。
+
+coverage必须是`{"expected_meal_ids":["breakfast","lunch","dinner"],"confirmed":true}`这样的对象，不允许额外字段。expected_meal_ids为1–1000个唯一、非空且长度至多1000的字符串，与meal.id精确匹配，顺序不限；confirmed必须为布尔值。餐次名称和数量不固定；全部食物可以按用户实际餐次分组，不据此启用断食策略。
+
+confirmed表示用户已明确确认传入计划覆盖同一成员同一天的全部计划摄入，包括餐间食物、饮料和用油；不是模型猜测，也不是实际食用确认。尚未匹配或量化的项目不能删掉后设true。只有confirmed=true、预期与实际meal.id集合完全一致、每个餐组items非空时，plan_complete才为true。空计划或空餐不能当作完整的零摄入日；需要明确无该餐时，从用户确认的预期计划中正确表达餐次安排，不能用缺餐推断禁食。
+
+函数将全部计划items合并一次交给现有check_constraints；actuals仅按原state契约验证，不计入合计。包括locked餐次，输入及返回state中的revision、meals和actuals均不改变。它不自动接受换餐；调用者须先处理replace_meal/restore_plan结果，再对候选计划重新检查。原逐餐操作继续只接受每餐限制，不能将全天限制传给它们。
+
+| 返回字段 | 含义 |
+|---|---|
+| `status`、`issues` | ok / needs_information / conflict；已证明的冲突优先。coverage不足时有day_plan_coverage_incomplete。 |
+| `scope`、`intake_basis` | 固定为day_plan、planned，不能作为已吃合计。 |
+| `coverage_scope`、`plan_complete` | user_declared_day与用户声明范围内的计划覆盖状态；不等于营养资料完整或医学适用。 |
+| `coverage` | confirmed、expected_meal_ids、listed_meal_ids、missing_meal_ids、unexpected_meal_ids、empty_meal_ids。 |
+| `calculation_scope`、`calculation` | listed_plan_meals及其计算结果；覆盖不全时为已列食物小计，各营养complete另行检查。 |
+| `constraints_check` | 合并后的限制检查，scope=day_plan，status与顶层一致；含相关营养和过敏不确定性。 |
+| `supplied_constraints` | 给定约束及source的深拷贝，不产生或认证目标。 |
+| `deferred_minimum_checks` | 覆盖不全时延后的nutrient_below_min原始信息，附reason=incomplete_day_coverage；不能称为已经证明全天不足。 |
+| `state`、`rule_version`、`day_plan_version` | 原state深拷贝，已有算术规则版本与本接口m5-2026-10-06.1。 |
+
+已列小计低于最低值，只有覆盖完整才可形成nutrient_below_min冲突。覆盖不全时仍保留确定部分超最大值、已知过敏原及约束交集为空的冲突；不删除min来绕过约束矛盾。unknown、标签舍入、推定零与LOQ沿用原有不确定性处理，不将known_amount当作确定下界。没有给定营养或过敏约束时，ok仅说明覆盖和计算有效，不能称目标或过敏安全已经验证。
+
+复现合成算术例子：
+
+```sh
+python3 -B -m nutrition_core --input examples/check-day-plan.json
+```
+
+该例沿用initial-state中的五食品测试材料，source明确标注非个人或临床目标；confirmed只针对合成夹具，不表示这是可推荐的完整饮食。把confirmed改为false时应返回needs_information，不能继续称全天通过。
+
 ## CLI 边界
 
 从项目目录运行`python3 -m nutrition_core --input examples/calculate.json`，也可从stdin读取。一次读一个JSON对象，上限1MiB，拒绝重复JSON键、非有限值和未知字段。CLI不联网；本页的M2操作不写入档案，M3的save_record/delete_record则按显式目录和确认参数修改受管文件。若用户自行重定向stdout，保存位置由用户控制。
 
-退出码：0=ok；1=输入、资料或读取错误；2=needs_information或conflict（细分状态在JSON中）；3=尚未启用的能力。operation=describe列出当前能力。automatic_targets、weekly_adjustment、fasting、tcm、save_profile均明确unsupported；不是让语言模型补算的入口。
+退出码：0=ok；1=输入、资料或读取错误；2=needs_information或conflict（细分状态在JSON中）；3=尚未启用的能力。operation=describe列出当前能力，并通过operation_scopes区分meal、day_plan与supplied_items；保留的limits_scope=meal是旧版餐次操作字段，不能覆盖新操作声明。automatic_targets、weekly_adjustment、fasting、tcm、save_profile均明确unsupported；不是让语言模型补算的入口。
 
 Python API可传入自定义catalog，调用者负责真实来源与授权。字段验证和SHA256只能发现格式问题或比较固定快照，不能证明第三方的声明真实，也不能防止有权限修改源数据的调用者伪造资料。

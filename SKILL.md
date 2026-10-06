@@ -14,6 +14,7 @@ description: Help users choose daily Chinese or Western meals, record actual eat
 - 菜式模板是 `qualitative_only` 的结构建议，可按中式／西式／混合、懒人／普通、在家／外卖／免烹饪筛选。模板不是已经算好份量或满足增肌减脂目标的处方。
 - 精确计算只覆盖随包提供的五条 USDA 食品及其明确份量。没有豆浆、鸡蛋、豆腐、所有外卖或任意包装食品的完整计算库；不能拿近似名称静默替代。
 - 自动热量、蛋白质目标和进食时间策略尚未启用。`weekly_review` 改善执行方式，不能偷偷调整数值目标。中医入口仅提供普通食材与文化信息，见 [健康边界](references/health-boundaries.md)。
+- 用户已给出适用的全天目标时，可用 `check_day_plan`核对已量化计划。先确认目标来源、适用对象和当天有效性，并明确全部餐次、加餐、饮料是否已列入；专业要求有疑义时不自行认定有效。`source`文字和计算成功均不等于专业审核。
 - 没有执行能力时，只给适用的普通饮食帮助并说明未做核心校验；没有文件能力时仅本次使用；没有图片能力时请求文字描述。没有通知能力就由用户发起复盘，不承诺后台提醒。
 
 ## 每次选择正确路径
@@ -22,6 +23,8 @@ description: Help users choose daily Chinese or Western meals, record actual eat
 |---|---|
 | 首次使用、目标或健康情况变化 | 形成最小 `profile`，调用 `assess_profile`；按返回缺项问本轮最重要的1–3项。读 [日常流程](references/daily-workflows.md#建档与选餐)。 |
 | 下一餐、全天安排、某道菜缺货 | 调用 `next_meal`；换结构建议时使用返回的模板ID构造 `excluded_ids`。精确计划换餐使用 `replace_meal`。读 [工具调用](references/tools.md)。 |
+| 锁定、解锁，或换餐／恢复后再改变锁定 | 先读 [锁定与解锁](references/daily-workflows.md#锁定与解锁的明确更改)。组合操作按顺序传递最新返回state，每次实际锁定变化单独递增计划revision；一次保存不合并计划版本。 |
+| 已有明确全天目标，想核对计划是否符合 | 用 `check_day_plan`合计计划，显式提供全天覆盖信息；精确换餐或恢复后重查。不要把全天目标传给逐餐检查。读 [全天计划核对](docs/contracts.md#全天计划核对)。 |
 | 吃了什么、吃了一半、份量不清 | 明确且可量化时用 `record_actual`；未匹配或未量化的整餐用 `record_note`。读 [记录分流](references/daily-workflows.md#计划和实际记录)。 |
 | 每周反馈、断档回来 | 用明确日期调用 `weekly_review`；从下一餐恢复，说明保留或改变什么。读 [周反馈](references/daily-workflows.md#每周反馈与断档)。 |
 | 家庭共餐、备餐与采购 | 成员分别分流与记录；已量化食物调用 `aggregate_shopping`。读 [家庭流程](references/daily-workflows.md#家庭共餐与采购)。 |

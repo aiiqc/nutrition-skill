@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "nutrition-skill-core"
-version = "0.2.0.dev1"
+version = "0.2.0.dev2"
 description = "Offline, traceable nutrition arithmetic and meal-state primitives"
 readme = "README.md"
 requires-python = ">=3.11"

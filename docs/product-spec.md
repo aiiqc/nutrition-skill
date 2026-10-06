@@ -1,15 +1,17 @@
 # 个性化饮食与健康 Skill 开工规格
 
-版本：0.4 开发基准  
-整理日期：2026 年 10 月 5 日  
+版本：0.6 开发基准
+
+整理日期：2026 年 10 月 6 日
+
 定位：公开 GitHub 项目的产品与开发基准  
-当前阶段：M0–M3通过当前启用范围验收；0.2.0.dev1源码开发者预览已公开，首发59文件核对与四组远端CI通过；M4真实宿主完整旅程仍未完成
+当前阶段：0.2.0.dev1源码预览已公开并通过四组CI；本地0.2.0.dev2新增全天计划核对与锁定恢复修复；Codex真实模型主旅程已通过，候选尚未发布
 
 本项目帮助用户用较少的输入，得到能执行的饮食安排，并根据日常变化和每周反馈持续改善建议。首版交付是一个主 Skill、可独立调用的核心、可追溯的食物与规则资料，以及可复现的示例和验收用例。未来 App 可以复用这些能力。
 
-本文件是规划的唯一正文。配套 HTML 只是由本文件生成的阅读版本。后续修改应更新本文件中的当前决定和待定项，而不是另建多个“最新方案”。文档版本0.4与软件版本独立；软件当前公开版本为0.2.0.dev1开发者预览。
+本文件是规划的唯一正文。配套 HTML 只是由本文件生成的阅读版本。后续修改应更新本文件中的当前决定和待定项，而不是另建多个“最新方案”。文档版本0.6与软件版本独立；软件当前公开版本为0.2.0.dev1，0.2.0.dev2为尚未发布的本地候选。
 
-**开发状态：2026年10月5日，M0–M3已完成当前启用范围的本地验收，0.2.0.dev1源码开发者预览已公开于aiiqc/nutrition-skill。main首发59文件逐项核对一致，Ubuntu/macOS × Python 3.11/3.14四组CI通过。自动营养目标参数仍待定；远端CI不替代真实宿主完整旅程、专业营养审阅或健康效果验证。**
+**开发状态：2026年10月6日，公开dev1的59文件核对与四组CI已通过。本地dev2补充按明确外部目标核对全天计划，不生成目标或自动调量。环境权限变化后，Codex CLI 0.157.1的app-server实际模型主旅程已通过，包括自然选用与新会话读取恢复；早期启动BLOCKED保留为历史证据。自动营养目标参数仍待定；旧版CI不代表dev2通过，核心测试不替代真实宿主、专业营养审阅或健康效果证据。**
 
 ## 已确认方向与建议的区别
 
@@ -30,7 +32,7 @@
 | D11 | 用三个完整虚构旅程和图形辅助审阅 | 用例成为后续功能验收基准 |
 | D12 | 项目公开仓库为aiiqc/nutrition-skill | 首发提供0.2.0.dev1已检查源文件与CI；实际远端结果单独验证 |
 
-M0实现选择：工作名Nutrition Skill Core，自有代码MIT，Python 3.11+标准库与JSON契约，无第三方运行依赖；首个计划验收宿主为Codex，真实宿主完整旅程尚未运行。准确输入输出见[contracts.md](contracts.md)，固定数据依据见[data-provenance.md](data-provenance.md)。这些是已授权范围内的可逆工程选择，不等同于对所有健康规则的批准。
+M0实现选择：工作名Nutrition Skill Core，自有代码MIT，Python 3.11+标准库与JSON契约，无第三方运行依赖；首个实际验收宿主为Codex CLI 0.157.1的app-server项目范围安装路径，已取得真实模型旅程证据；桌面GUI及其他宿主另行验证。准确输入输出见[contracts.md](contracts.md)，固定数据依据见[data-provenance.md](data-provenance.md)。这些是已授权范围内的可逆工程选择，不等同于对所有健康规则的批准。
 
 ## 用户问题与首版成功条件
 
@@ -82,6 +84,24 @@ M0实现选择：工作名Nutrition Skill Core，自有代码MIT，Python 3.11+�
 建议优先匹配用户现有食物和当天条件。预算不足、食材缺货或没有厨具时，说明哪项软条件可调整。过敏和适用专业限制不能被预算、口味或“懒人模式”覆盖。
 
 用户明确要求换餐时，直接在当前约束内更新对应的未来餐次；已经吃过的记录保持不变。计划中的替换不自动写入实吃日志。
+
+### 当前可执行的全天核对
+
+dev2的`check_day_plan`落实已有明确目标的核对部分：调用者传入适用的全天约束、同一成员同一天的计划，以及用户确认的完整用餐范围。全部计划食物相加一次；不把每日最低值要求套到每一餐。早餐、午餐、晚餐齐全不等于全部食物已列入，加餐、饮料、用油和目录外食物仍须明确处理。
+
+覆盖不足时只称已列食物的小计，最低量判断延后；已证明的超上限、过敏或限制本身矛盾仍显示冲突。完整覆盖与营养资料完整分开表示；来源文字不能证明专业认可。这个接口不生成菜单份量、不计算个人目标、不改实吃或档案，也不证明健康适用性。换餐或恢复后必须再次核对全天。准确字段见[contracts.md](contracts.md)。
+
+```mermaid
+flowchart TD
+    A[用户给定适用目标和同一天计划] --> B[合计已列计划食物一次]
+    B --> C{已知部分存在明确冲突}
+    C -->|是| D[显示超限 过敏或目标矛盾]
+    C -->|否| E{用户确认全部餐次且食物已量化}
+    E -->|否| F[显示小计和缺项 延后最低量判断]
+    E -->|是| G{相关营养和配料证据足够}
+    G -->|否| H[保留未知 不声称符合]
+    G -->|是| I[核对给定约束 不作医学认证]
+```
 
 ### 记录实际情况
 
@@ -324,7 +344,7 @@ THIRD-PARTY-NOTICES.md    第三方代码与数据义务
 
 ## 开发顺序与阶段产物
 
-以下是阶段顺序。M4中的首次源代码公开发布及对应远端验证已完成，具体证据见本文件末尾当前状态与verification.md；真实宿主完整旅程及其他未覆盖条件仍须单独验收。
+以下是阶段顺序。M4中的首次源代码公开发布及对应远端验证已完成，具体证据见本文件末尾当前状态与verification.md；真实宿主CLI旅程已有证据，桌面GUI及其他未覆盖条件仍须单独验收。
 
 | 阶段 | 目标文件与责任 | 阶段验收 |
 |---|---|---|
@@ -333,6 +353,7 @@ THIRD-PARTY-NOTICES.md    第三方代码与数据义务
 | M2 最小核心 | core计算、候选验证、单餐替换与状态处理；scripts薄入口 | 相关数值及限制用例通过；错误返回可解释，不靠语言模型补算 |
 | M3 Skill完整流程 | SKILL.md、references、档案读写适配、三个完整examples | 建档、每日、换餐、家庭、周反馈、版本恢复及数据管理跑通；有条件功能按条件验收 |
 | M4 宿主与公开发布准备 | tests、README安装与接入说明、兼容矩阵、第三方声明 | 至少一个真实宿主完整旅程通过；从干净环境按说明可复现；临床及兼容声明与证据一致 |
+| M5 已有目标的全天核对 | plans核心、CLI、Skill调用说明与合成例子 | 合计一次；明确全天覆盖；未知不填零；换餐后重算；不生成或擅改目标 |
 
 数值规则的来源和审阅与M1至M3并行；某条规则未定，只限制依赖它的功能，不建立额外服务器或框架绕过问题。语言选择优先满足独立调用、少依赖和易测试，不要求用户先选择技术栈。
 
@@ -342,12 +363,12 @@ THIRD-PARTY-NOTICES.md    第三方代码与数据义务
 
 | 编号 | 还需要确定什么 | 当前处理 | 影响范围 |
 |---|---|---|---|
-| P01 | TDEE模型、初始缺口或盈余、蛋白选择与分层、自动调整观察窗及幅度 | 保留候选证据，不由模型临时生成参数；需形成逐条适用规则和审阅记录 | 阻止相关自动定量目标；不阻止基础食物计算与交互 |
+| P01 | TDEE模型、初始缺口或盈余、蛋白选择与分层、自动调整观察窗及幅度 | 保留候选证据，不由模型临时生成参数；dev2仅核对调用者明确提供的目标，仍需形成自动规则及审阅记录 | 阻止相关自动定量目标；不阻止基础食物计算、已有目标核对与交互 |
 | P02 | 各来源的主能量字段、可食基准、烹调处理与跨来源映射 | M1五条USDA样本固定每100g可食部分；生米采用2048并保留2047，其余1008；更大范围仍待定 | 不阻止这五条资料的指定方法计算；跨来源与烹调换算仍未启用 |
 | P03 | 日常份量库及中文别名对应 | M1仅纳入USDA样本明确的来源份量；不映射任意饭碗、一盒或无密度ml | 通用中文份量与别名待扩充；已有g/kg/mg与指定份量可计算 |
 | P04 | 断食准入、停止、恢复条件与中医食疗具体条目 | 功能保留，未覆盖策略明确说明限制并提供适用常规帮助 | 影响对应策略的启用，不影响普通餐食规划 |
 | P05 | 未来第三方具体文件与数据分发方案 | 已为自有代码落地MIT，样本USDA CC0；TFDA/OFF未打包，未来纳入前逐项复核 | 首发来源义务已列明且源码公开；新增资料仍须逐项验收 |
-| P06 | 尚未覆盖的宿主兼容验证 | 项目名Nutrition Skill与公开目标aiiqc/nutrition-skill已确认；Python 3.11+；Codex项目目录为首个安装范围 | 模型自然选择、桌面界面与其他宿主仍须分别实测；项目名和公开仓库已确定 |
+| P06 | 尚未覆盖的宿主兼容验证 | Codex项目目录发现与CLI 0.157.1 app-server真实模型旅程通过；临时新会话可读取已有档案并恢复计划 | 桌面GUI、个人全局安装及其他宿主仍NOT RUN；不外推所有模型或版本的兼容性 |
 | P07 | 长期档案容量与保留策略、跨平台保护能力 | M3已实现源码外显式目录、结构化JSON导出、单成员删除及record_id/revision并发校验；POSIX权限与路径验收通过 | 当前每成员最多50次修订、4MiB，达到上限拒绝新写入；长期方案待定，无加密或共享账号内访问隔离，Windows存储明确不支持 |
 
 以上没有擅自删去已确认功能。条件尚未满足的能力必须显式说明，不能以含糊的“以后支持”隐藏，也不能当成已通过的能力发布。
@@ -364,9 +385,15 @@ M4本地准备：已提供[项目安装说明](installation.md)、贡献说明�
 
 首次公开源码预览已完成：[aiiqc/nutrition-skill](https://github.com/aiiqc/nutrition-skill)为Public，main初始提交为[91ab29f03a20208f406e4a05e55b22543956ab4a](https://github.com/aiiqc/nutrition-skill/commit/91ab29f03a20208f406e4a05e55b22543956ab4a)。远端59文件的Git blob SHA与本地发布树逐项一致；[首发CI运行](https://github.com/aiiqc/nutrition-skill/actions/runs/37304774493)为completed/success，Ubuntu/macOS × Python 3.11/3.14四组各166项测试与演示步骤全部成功。未创建tag或GitHub Release。
 
-尚未取得的证据：模型自然选择与桌面UI完整旅程、个人全局安装、未覆盖的宿主及操作系统实测、专业营养规则审阅、临床效果验证及真实用户试用。Ubuntu/macOS的Python 3.11/3.14已在首发CI覆盖；后续提交的状态以[对应提交的Actions结果](https://github.com/aiiqc/nutrition-skill/actions)为准。精确食品仍只有五条资料；定量目标、数值周调整、断食与中医策略未启用。定性模板不得宣传为满足个人营养目标。当前档案容量适合有限试用，长期使用需先解决P07。
+尚未取得的证据：桌面UI完整旅程、个人全局安装、未覆盖的宿主及操作系统实测、专业营养规则审阅、临床效果验证及真实用户试用。Ubuntu/macOS的Python 3.11/3.14已在首发CI覆盖；后续提交的状态以[对应提交的Actions结果](https://github.com/aiiqc/nutrition-skill/actions)为准。精确食品仍只有五条资料；定量目标、数值周调整、断食与中医策略未启用。定性模板不得宣传为满足个人营养目标。当前档案容量适合有限试用，长期使用需先解决P07。
 
-唯一下一步（建议，尚未启动）：在有限开发者试用中补足至少一个真实宿主的完整旅程，重点验证自然选用、真实交互中的缺项补齐及保存/恢复。M4不因源码公开和CI通过而自动视为全通过；完整证据见[verification.md](verification.md)。
+2026-10-06续作：最初app-server在模型调用前因进程启动权限受阻；当前环境允许启动后，使用同一官方接口、独立项目安装副本和临时会话完成实际模型旅程。首次请求未点名Skill，宿主自然选用并调用核心，完成渐进建档、选餐、缺货替换、未知份量实吃、完整周反馈和本地保存；新会话从文件恢复上下文并执行计划恢复。未修改全局配置、安装服务或复制凭据。早期BLOCKED及中途客户端中断均保留在验收记录，不能将未完成轮次记为通过。
+
+本地dev2新增纯函数全天计划核对，复用现有Decimal与限制核心，没有新增运行依赖；不生成个人目标。验收同时修复恢复旧计划可改动当前锁定餐的缺陷，并补齐换餐、锁定、解锁和恢复的组合版本说明。两套Python各187项测试通过；安装后的核心及真实宿主结果分别见[verification.md](verification.md)。精确食品仍为五条，原营养规则和存储格式保持不变。
+
+图形阅读版与本规格同步，并保留三个流程图。当前浏览器拒绝本地文件访问，画面验收仍为BLOCKED；只报告静态结构核对，不沿用dev1的画面检查。
+
+唯一下一步：确认本dev2候选的GitHub更新范围，然后提交、推送并核对对应远端CI。当前候选尚未commit、push、打tag或创建新Release；dev1远端结果不代表dev2通过。自动目标、数据扩充、策略和长期留存继续按P01–P07推进，不因一个宿主旅程通过而标记全产品完成。
 
 ## 来源与复查入口
 
@@ -384,6 +411,7 @@ M4本地准备：已提供[项目安装说明](installation.md)、贡献说明�
 - [S10 台湾FDA数据集8543](https://data.gov.tw/dataset/8543)、[CSV资源](https://data.fda.gov.tw/data/opendata/export/20/csv)及[开放资料声明](https://www.fda.gov.tw/TC/opendata.aspx)
 - [S11 Open Food Facts API说明](https://openfoodfacts.github.io/documentation/docs/Product-Opener/api/)及[许可说明](https://openfoodfacts.github.io/openfoodfacts-server/api/tutorials/license-be-on-the-legal-side/)
 - [S12 Agent Skills规范](https://agentskills.io/specification)
+- 2026-10-06聚焦复核：[wger计划营养汇总接口](https://github.com/wger-project/wger/blob/master/wger/nutrition/api/views.py)。参考其单餐与整计划分别汇总的职责划分；本项目已有独立离线核心，直接复用现有实现，不引入wger服务、代码或新增依赖。
 - [S13 Lzheng营养Skill](https://github.com/LZheng0411/Lzheng-fitness/blob/main/skills/lzheng-nutrition-system/SKILL.md)、[第三方声明](https://github.com/LZheng0411/Lzheng-fitness/blob/main/THIRD-PARTY-NOTICES.md)、[H1an1 health-coach](https://github.com/H1an1/health-coach/blob/main/SKILL.md)、[WellAlly营养分析Skill](https://github.com/huifer/WellAlly-health/blob/main/.claude/skills/nutrition-analyzer/SKILL.md)
 - USDA实际样本：[171077](https://api.nal.usda.gov/fdc/v1/food/171077?api_key=DEMO_KEY)、[171477](https://api.nal.usda.gov/fdc/v1/food/171477?api_key=DEMO_KEY)、[2512381](https://api.nal.usda.gov/fdc/v1/food/2512381?api_key=DEMO_KEY)、[169757](https://api.nal.usda.gov/fdc/v1/food/169757?api_key=DEMO_KEY)、[330137](https://api.nal.usda.gov/fdc/v1/food/330137?api_key=DEMO_KEY)。DEMO_KEY是官方公开演示值，不是个人凭据。
 - [Open Food Facts实际商品字段](https://world.openfoodfacts.org/api/v3/product/3017624010701?fields=code,product_name,nutriments,serving_size,serving_quantity)

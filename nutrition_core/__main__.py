@@ -40,7 +40,7 @@ def read_request(stream) -> dict:
 def dispatch(request: dict) -> dict:
     from .catalog import load_catalog
     from .nutrition import calculate, check_constraints
-    from .plans import (record_actual, replace_meal, restore_plan,
+    from .plans import (check_day_plan, record_actual, replace_meal, restore_plan,
                         revalidate_plan, summarize_actuals)
 
     m3_schemas = {
@@ -56,7 +56,7 @@ def dispatch(request: dict) -> dict:
         "delete_record": ({"data_dir", "member_id", "expected_revision", "confirmed", "expected_record_id"},
                           {"data_dir", "member_id", "expected_revision", "confirmed", "expected_record_id"}),
     }
-    allowed = {"operation", "items", "constraints", "state", "meal_id", "actual", "previous_meals"}
+    allowed = {"operation", "items", "constraints", "state", "meal_id", "actual", "previous_meals", "coverage"}
     for _, fields in m3_schemas.values():
         allowed.update(fields)
     require_keys(request, {"operation"}, allowed, "request")
@@ -71,6 +71,7 @@ def dispatch(request: dict) -> dict:
         "record_actual": ({"state", "meal_id", "actual"}, {"state", "meal_id", "actual"}),
         "summarize_actuals": ({"state"}, {"state"}),
         "revalidate_plan": ({"state", "constraints"}, {"state", "constraints"}),
+        "check_day_plan": ({"state", "constraints", "coverage"}, {"state", "constraints", "coverage"}),
         "restore_plan": ({"state", "previous_meals", "constraints"}, {"state", "previous_meals", "constraints"}),
     }
     if operation in m3_schemas:
@@ -118,7 +119,10 @@ def dispatch(request: dict) -> dict:
                 "network_required": False, "persists_user_data": True,
                 "persistence": "explicit opt-in record operations only; chosen directory outside source",
                 "storage_platform": "POSIX",
-                "limits_scope": "meal", "clinical_targets_generated": False}
+                "limits_scope": "meal", "clinical_targets_generated": False,
+                "operation_scopes": {"replace_meal": "meal", "revalidate_plan": "meal",
+                                     "restore_plan": "meal", "check_day_plan": "day_plan",
+                                     "check_constraints": "supplied_items"}}
     if operation == "calculate":
         return calculate(request["items"], catalog)
     if operation == "check_constraints":
@@ -131,6 +135,8 @@ def dispatch(request: dict) -> dict:
         return summarize_actuals(request["state"], catalog)
     if operation == "revalidate_plan":
         return revalidate_plan(request["state"], request["constraints"], catalog)
+    if operation == "check_day_plan":
+        return check_day_plan(request["state"], request["constraints"], request["coverage"], catalog)
     return restore_plan(request["state"], request["previous_meals"], request["constraints"], catalog)
 
 

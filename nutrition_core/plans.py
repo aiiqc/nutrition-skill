@@ -10,6 +10,7 @@ MAX_COLLECTION_SIZE = 1000
 MAX_REVISION = 9007199254740991
 ACTUAL_STATUSES = {"confirmed", "partial", "not_eaten", "unknown"}
 RECORDED_STATUSES = {"confirmed", "partial", "not_eaten"}
+DAY_PLAN_VERSION = "m5-2026-10-06.1"
 
 
 def _object(value: Any, required: set[str], allowed: set[str], label: str) -> dict:
@@ -194,13 +195,69 @@ def revalidate_plan(state: dict, constraints: dict, catalog: dict) -> dict:
     return _result(state, status, issues, checks=checks, scope="meal")
 
 
+def check_day_plan(state: dict, constraints: dict, coverage: dict, catalog: dict) -> dict:
+    """Check supplied daily limits against planned intake, never actual intake.
+
+    Coverage is complete only when the caller explicitly confirms that the
+    expected meal groups include the whole day, including drinks and snacks.
+    An incomplete list can prove an excess or allergen conflict, but cannot
+    prove that the entire day falls short of a minimum.
+    """
+    by_id = _state(state, catalog)
+    _object(coverage, {"expected_meal_ids", "confirmed"},
+            {"expected_meal_ids", "confirmed"}, "coverage")
+    expected = coverage["expected_meal_ids"]
+    if not isinstance(expected, list) or not 1 <= len(expected) <= MAX_COLLECTION_SIZE:
+        raise NutritionError("invalid_coverage", "expected_meal_ids must contain 1 through 1000 meal IDs")
+    for meal_id in expected:
+        _meal_id(meal_id)
+    if len(set(expected)) != len(expected):
+        raise NutritionError("duplicate_meal_id", "Expected meal IDs must be unique")
+    if not isinstance(coverage["confirmed"], bool):
+        raise NutritionError("invalid_coverage", "coverage.confirmed must be a boolean")
+
+    expected_set = set(expected)
+    missing = [meal_id for meal_id in expected if meal_id not in by_id]
+    unexpected = [meal_id for meal_id in by_id if meal_id not in expected_set]
+    empty = [meal_id for meal_id, meal in by_id.items() if not meal["items"]]
+    complete = coverage["confirmed"] and not missing and not unexpected and not empty
+    details = {"confirmed": coverage["confirmed"], "expected_meal_ids": expected,
+               "listed_meal_ids": list(by_id), "missing_meal_ids": missing,
+               "unexpected_meal_ids": unexpected, "empty_meal_ids": empty}
+
+    items = [item for meal in state["meals"] for item in meal["items"]]
+    check = check_constraints(items, constraints, catalog)
+    issues = check["issues"]
+    deferred = []
+    if not complete:
+        deferred = [{**issue, "reason": "incomplete_day_coverage"}
+                    for issue in issues if issue["code"] == "nutrient_below_min"]
+        issues = [issue for issue in issues if issue["code"] != "nutrient_below_min"]
+        issues.append({"code": "day_plan_coverage_incomplete", "scope": "day_plan",
+                       "message": "Confirm all planned intake, including drinks and snacks, and provide every expected meal group",
+                       **details})
+        conflict_codes = {"nutrient_above_max", "allergen_conflict", "constraint_bounds_conflict"}
+        check["status"] = "conflict" if any(issue["code"] in conflict_codes for issue in issues) else "needs_information"
+    check = {**check, "issues": issues, "scope": "day_plan"}
+    return _result(state, check["status"], issues, scope="day_plan", intake_basis="planned",
+                   coverage_scope="user_declared_day", plan_complete=complete, coverage=details,
+                   calculation_scope="listed_plan_meals", calculation=check["calculation"], constraints_check=check,
+                   supplied_constraints=constraints, deferred_minimum_checks=deferred,
+                   day_plan_version=DAY_PLAN_VERSION)
+
+
 def restore_plan(state: dict, previous_meals: list, constraints: dict, catalog: dict) -> dict:
-    """Restore a valid plan atomically, preserving recorded meals and actuals."""
+    """Restore atomically, preserving currently locked and recorded meals."""
     current = _state(state, catalog)
     previous = _meals(previous_meals, catalog)
     if current.keys() != previous.keys():
         raise NutritionError("meal_set_mismatch", "Restoration must retain the current meal IDs")
     status, checks, issues = _checks(previous_meals, constraints, catalog)
+    for meal_id, meal in current.items():
+        if meal["locked"] and previous[meal_id] != meal:
+            status = "conflict"
+            issues.append({"code": "locked_meal_changed", "meal_id": meal_id, "scope": "meal",
+                           "message": "Restoration cannot change a currently locked meal's plan entry"})
     for meal_id, actual in state["actuals"].items():
         if actual["status"] in RECORDED_STATUSES and previous[meal_id] != current[meal_id]:
             status = "conflict"

@@ -79,3 +79,39 @@ class CommandLineTests(unittest.TestCase):
         bad["constraints"]["limits"][0].pop("source")
         code, result, _ = invoke(json.dumps(bad).encode())
         self.assertEqual((code, result["status"]), (1, "error"))
+
+    def test_day_plan_process_exit_codes_and_scopes(self):
+        state = json.loads((ROOT / "examples" / "initial-state.json").read_text())
+        request = {"operation": "check_day_plan", "state": state, "constraints": {},
+                   "coverage": {"expected_meal_ids": [meal["id"] for meal in state["meals"]], "confirmed": True}}
+        code, result, stderr = invoke(json.dumps(request).encode())
+        self.assertEqual((code, result["status"], stderr), (0, "ok", b""))
+        self.assertEqual(result["scope"], "day_plan")
+        self.assertEqual(result["state"], state)
+        request["coverage"]["confirmed"] = False
+        code, result, stderr = invoke(json.dumps(request).encode())
+        self.assertEqual((code, result["status"], stderr), (2, "needs_information", b""))
+        request["constraints"] = {"limits": [{"nutrient": "energy_kcal", "max": "1", "source": "Synthetic limit"}]}
+        code, result, stderr = invoke(json.dumps(request).encode())
+        self.assertEqual((code, result["status"], stderr), (2, "conflict", b""))
+        description = dispatch({"operation": "describe"})
+        self.assertIn("check_day_plan", description["operations"])
+        self.assertEqual(description["limits_scope"], "meal")
+        self.assertEqual(description["operation_scopes"]["check_day_plan"], "day_plan")
+
+    def test_day_plan_missing_and_invalid_fields_rejected(self):
+        state = json.loads((ROOT / "examples" / "initial-state.json").read_text())
+        request = {"operation": "check_day_plan", "state": state, "constraints": {},
+                   "coverage": {"expected_meal_ids": ["breakfast", "lunch", "dinner"], "confirmed": True}}
+        bad_requests = []
+        for key in ("state", "constraints", "coverage"):
+            bad = copy.deepcopy(request)
+            del bad[key]
+            bad_requests.append(bad)
+        bad_requests.append({**request, "items": []})
+        bad_requests.append({**request, "coverage": {**request["coverage"], "confirm": True}})
+        bad_requests.append({**request, "coverage": {**request["coverage"], "confirmed": "true"}})
+        for bad in bad_requests:
+            with self.subTest(bad=bad):
+                code, result, stderr = invoke(json.dumps(bad).encode())
+                self.assertEqual((code, result["status"], stderr), (1, "error", b""))

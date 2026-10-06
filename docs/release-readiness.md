@@ -29,7 +29,7 @@
 
 CI采用GitHub官方checkout/setup-python及现有unittest，避免额外测试框架。官方配置入口：[checkout](https://github.com/actions/checkout)、[setup-python](https://github.com/actions/setup-python)。Actions只做检查，不创建Release、提交代码、发送通知或运行定时任务。
 
-## 首发验证与后续边界
+## 首发当时的验证与边界
 
 | 项目 | 当前结论 | 完成条件 |
 |---|---|---|
@@ -40,7 +40,13 @@ CI采用GitHub官方checkout/setup-python及现有unittest，避免额外测试�
 | 仓库创建与目标核对 | PASS：已在Chrome创建并核对aiiqc/nutrition-skill，Public | 首发源文件与CI另行核对，结果见下项及验收记录 |
 | 首次源代码提交与公开发布 | PASS：main初始提交已公开，59文件逐项一致 | 固定证据为[91ab29f](https://github.com/aiiqc/nutrition-skill/commit/91ab29f03a20208f406e4a05e55b22543956ab4a)及上述首次CI运行 |
 
-首次公开源码预览及对应提交验证已完成。后续提交的运行状态以[Actions页](https://github.com/aiiqc/nutrition-skill/actions)为准。模型自然选择及桌面UI完整旅程仍未验收，因此不标记M4全通过或正式稳定版。建议下一步开展有界开发者试用并补足真实宿主旅程，该阶段尚未启动。
+首次公开源码预览及对应提交验证已完成。上表保留首发时的验收范围，后续提交的运行状态以[Actions页](https://github.com/aiiqc/nutrition-skill/actions)为准。
+
+## 2026-10-06本地dev2候选
+
+新增按调用者给定约束核对全天计划，修复恢复旧计划可能改变当前锁定餐，并明确组合锁定操作的计划版本递增。两套本地Python各187项测试通过；Codex CLI 0.157.1 app-server的实际模型主旅程完成自然选用、建档、选餐、记录、周反馈及新会话读取恢复。最初启动受阻的历史与修复复验细节见[验收记录](verification.md)。
+
+本候选尚未提交、推送或运行对应远端CI。建议更新范围仅为现有aiiqc/nutrition-skill的main及由推送触发的现有CI，不包含新建tag或GitHub Release。发布前应核对候选源包、差异与准确授权；不把dev1 CI当作dev2证据。桌面GUI、其他宿主、专业审核、真实用户与健康效果仍未验证；长期容量等能力边界保持不变。
 
 ## Release 文案草稿
 

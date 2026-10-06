@@ -1,6 +1,6 @@
 # 安装与首次试用
 
-当前是开发者预览版，工作名Nutrition Skill，Skill ID为`nutrition-skill`。建议先在独立项目中试用，再决定是否个人全局安装。本页面向macOS/Linux；本次实测macOS，Linux等待CI实跑。需要Python 3.11+和能够执行Python、读取本地文件的宿主。Windows持久存储尚不支持。
+当前是开发者预览版，工作名Nutrition Skill，Skill ID为`nutrition-skill`。建议先在独立项目中试用，再决定是否个人全局安装。本页面向macOS/Linux；已公开的0.2.0.dev1在Ubuntu/macOS的Python 3.11/3.14四组CI通过，项目安装布局在macOS实测。当前0.2.0.dev2为本地候选，尚无对应远端CI；另已在Codex CLI 0.157.1的app-server项目副本完成实际模型旅程，桌面GUI与其他宿主未验证。需要Python 3.11+和能够执行Python、读取本地文件的宿主。Windows持久存储尚不支持。
 
 ## 两种使用方式
 
