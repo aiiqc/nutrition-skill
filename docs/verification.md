@@ -1,6 +1,6 @@
 # 本地验收与发布验证记录
 
-当前工作副本：0.2.0.dev2本地候选（2026-10-06）；其验证单列于下方“dev2全天计划核对”与“真实宿主复验及锁定修复”。下述首发历史记录日期为2026-10-05、软件版本为0.2.0.dev1，不能作为dev2远端CI的证据。数值规则：m2-2026-10-05.1；工作流规则：m3-2026-10-05.2；食品目录：usda-five-2026-10-05.1；档案文件格式：nutrition-record-v2。
+当前公开版本：0.2.0.dev2（2026-10-06）；其本地、宿主与远端证据分别见下方“dev2全天计划核对”“真实宿主复验及锁定修复”和“dev2公开更新”。下述首发历史记录日期为2026-10-05、软件版本为0.2.0.dev1，不能作为dev2远端CI的证据。数值规则：m2-2026-10-05.1；工作流规则：m3-2026-10-05.2；食品目录：usda-five-2026-10-05.1；档案文件格式：nutrition-record-v2。
 
 结论：当前启用的M0–M3本地功能通过相应验收，包括Skill源文件、确定性核心、结构化日常流程与显式本地存储。M4新增的项目范围发现与首次公开发布、四组远端CI证据单列。各表只证明所列版本和范围；实际模型自然选择已有后文dev2证据，不等于全部22条产品条件、个人全局安装、专业营养审阅或健康效果通过。
 
@@ -108,7 +108,7 @@ python3 -B -m nutrition_core --input examples/allergen-unknown.json
 
 ## dev2全天计划核对
 
-新增`check_day_plan`，版本标记`m5-2026-10-06.1`；数值公式、食品目录、存储格式与自动参数边界保持原有版本。以下结果只对应本地dev2工作副本，尚未commit、push或运行对应远端CI。
+新增`check_day_plan`，版本标记`m5-2026-10-06.1`；数值公式、食品目录、存储格式与自动参数边界保持原有版本。以下本地证据对应dev2功能代码；该版本随后已公开，远端结果单列于后文。
 
 | 检查 | 状态 | 实际证据与边界 |
 |---|---|---|
@@ -121,16 +121,16 @@ python3 -B -m nutrition_core --input examples/allergen-unknown.json
 | 安装后源码外CLI | PASS | -I隔离进程、只加载安装目录，阻断socket构造器；8项描述/完整计划/未确认覆盖/部分计划已超限/实吃分离/自动目标禁用/锁定恢复拒绝/明确解锁后恢复检查通过 |
 | 核心打包一致性 | PASS | 17个核心载荷文件在源码、wheel、安装目录间逐字节一致；没有新增运行时依赖 |
 | 文档与图形静态检查 | PASS | 规格正文SHA256与HTML标记一致；3个静态内嵌SVG、无脚本或外部载入资源，HTML与Markdown本地链接目标可达；不代表浏览器画面验收 |
-| dev2远端CI、再次公开发布 | NOT RUN | 当前为本地候选；dev1的四组远端PASS不能用于本候选 |
+| dev2远端CI、再次公开发布 | PASS | 功能提交4ff03c0已公开；[对应CI](https://github.com/aiiqc/nutrition-skill/actions/runs/37435684685)四组各187项测试及演示通过，详细证据见后文 |
 | 更新图形的浏览器画面验收 | BLOCKED | headless Chrome启动失败；受支持浏览器拒绝file协议访问，未绕过浏览器策略；不沿用dev1的四宽度画面验收结论 |
 
 示例`examples/check-day-plan.json`使用既有合成状态和明确标注的虚构目标，计算结果为1033.96 kcal、123.8324g蛋白质；这些数字只验证算术，不能作为完整饮食推荐。覆盖确认设false时为needs_information，已知部分超上限时仍为conflict。
 
-锁定修复后的最终wheel为85976字节，SHA256为`db937699c9edd2885941d82867ee975deb198132838720a7313270b61fda00eb`。wheel仅分发核心；Skill说明和合成例子仍使用完整源包。当前改动未增加食品数据、自动营养参数或个人档案持久字段。
+锁定修复后的最终wheel为85976字节，SHA256为`db937699c9edd2885941d82867ee975deb198132838720a7313270b61fda00eb`。该wheel保留验收当时的README元数据快照；后续发布状态只改文档，没有改核心载荷。wheel仅分发核心；最新Skill说明和合成例子使用完整发布源包。当前改动未增加食品数据、自动营养参数或个人档案持久字段。
 
 ## 真实宿主复验及锁定修复
 
-日期2026-10-06，软件0.2.0.dev2本地候选。当前环境允许进程启动后，使用Codex CLI 0.157.1的官方app-server stdio接口、默认配置返回的gpt-6-astra模型及真实工具执行；在独立项目的`.agents/skills/nutrition-skill`复制完整Skill。只用虚构档案与临时会话，未修改全局配置、复制凭据或安装服务。证据范围是该CLI接口及配置组合，不是桌面GUI操作或所有宿主。
+日期2026-10-06，软件0.2.0.dev2，测试当时为本地候选，现已公开。当前环境允许进程启动后，使用Codex CLI 0.157.1的官方app-server stdio接口、默认配置返回的gpt-6-astra模型及真实工具执行；在独立项目的`.agents/skills/nutrition-skill`复制完整Skill。只用虚构档案与临时会话，未修改全局配置、复制凭据或安装服务。证据范围是该CLI接口及配置组合，不是桌面GUI操作或所有宿主。
 
 | 检查 | 状态 | 观察到的行为 |
 |---|---|---|
@@ -153,6 +153,20 @@ python3 -B -m nutrition_core --input examples/allergen-unknown.json
 另有一轮在save_record已成功形成存储版本4后，验收客户端处理空命令输出出错，未捕获模型完成事件。先独立读取核对版本4与数据，再修正客户端并开始新会话；没有重发保存请求。该轮不计入11个完成轮次，不算端到端通过，也没有把客户端失败误报为产品存储失败。验收客户端仅保存派生计数及断言结果；合成运行记录与宿主文件均在公开源码之外。宿主自身的留存和数据传输不受本项目承诺控制。
 
 本地证据存于开发工作目录，源包只包含可复现代码、测试和脱敏结论，不包含运行时档案、原始prompt或工具日志。尚无真实用户试用或长期可靠性结论。
+
+## dev2公开更新
+
+2026-10-06，用户确认将已验收候选提交并推送至现有aiiqc/nutrition-skill的main，随后核对四组CI；本轮不创建tag或GitHub Release。功能提交为[4ff03c044af3bea44572672cd8088d2a913c93cf](https://github.com/aiiqc/nutrition-skill/commit/4ff03c044af3bea44572672cd8088d2a913c93cf)，远端61个文件的Git blob SHA与本地提交树逐项一致。
+
+| 检查 | 状态 | 实际证据 |
+|---|---|---|
+| 公开仓库与功能提交 | PASS | 所有者aiiqc、仓库nutrition-skill、Public、默认分支main；功能提交已推送，61文件逐项一致 |
+| Ubuntu Python 3.11 | PASS | 187项测试，合成demo步骤成功 |
+| Ubuntu Python 3.14 | PASS | 187项测试，合成demo步骤成功 |
+| macOS Python 3.11 | PASS | 187项测试，合成demo步骤成功 |
+| macOS Python 3.14 | PASS | 187项测试，合成demo步骤成功 |
+
+固定运行：[37435684685](https://github.com/aiiqc/nutrition-skill/actions/runs/37435684685)，head_sha与上述功能提交一致，状态completed/success。已读取四组日志核对Ran 187 tests，并核对unit/integration及demo步骤成功。随后仅同步README、安装、规格、验收及发布状态文档；最新main的CI以仓库徽章和[Actions页](https://github.com/aiiqc/nutrition-skill/actions)为准，不把旧提交结果写成其他提交的证据。
 
 ## 未运行与能力边界
 

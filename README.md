@@ -2,11 +2,11 @@
 
 [![CI](https://github.com/aiiqc/nutrition-skill/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/aiiqc/nutrition-skill/actions/workflows/ci.yml)
 
-可供智能助手使用、也可被未来 App 复用的饮食 Skill 与独立计算核心。当前工作副本为 `0.2.0.dev2` 本地候选，新增按调用者给定目标核对全天计划；GitHub已公开版本仍为 `0.2.0.dev1`。M0–M3已通过当前启用范围的验收；各版本证据和边界见验收记录。
+可供智能助手使用、也可被未来 App 复用的饮食 Skill 与独立计算核心。当前公开版本为 `0.2.0.dev2`，新增按调用者给定目标核对全天计划，并修复恢复旧计划时的锁定保护。M0–M3已通过当前启用范围的验收；各版本证据和边界见验收记录。
 
 完整产品方向见 [唯一产品规格](docs/product-spec.md)。主入口为[SKILL.md](SKILL.md)，按[Agent Skills格式](https://agentskills.io/specification)组织。精确食品库目前只有五条资料；中西餐建议是项目自编的餐食结构，明确标为qualitative_only，不表示已满足个人热量或临床目标。
 
-首次试用见[项目内安装说明](docs/installation.md)；参与开发见[贡献说明](CONTRIBUTING.md)。本项目已作为开发者预览版公开于[aiiqc/nutrition-skill](https://github.com/aiiqc/nutrition-skill)。[首发CI](https://github.com/aiiqc/nutrition-skill/actions/runs/37304774493)已通过Ubuntu/macOS × Python 3.11/3.14四组检查，每组166项测试及演示通过；[发布记录](docs/release-readiness.md)列出范围与验收边界。顶部徽章显示main的最新检查状态，首发结果以固定链接为准。
+首次试用见[项目内安装说明](docs/installation.md)；参与开发见[贡献说明](CONTRIBUTING.md)。本项目已作为开发者预览版公开于[aiiqc/nutrition-skill](https://github.com/aiiqc/nutrition-skill)。[dev2 CI](https://github.com/aiiqc/nutrition-skill/actions/runs/37435684685)已通过Ubuntu/macOS × Python 3.11/3.14四组检查，每组187项测试及演示通过；[发布记录](docs/release-readiness.md)列出范围与验收边界。顶部徽章显示main的最新检查状态，固定链接对应dev2功能提交。
 
 ## 立即运行
 
@@ -90,6 +90,6 @@ assert result["totals"]["energy_kcal"]["amount"] == "297"
 
 ## 当前进度与下一步
 
-公开的dev1源码与四组远端CI已完成验收。2026-10-06在允许进程启动的当前环境，已通过Codex CLI 0.157.1的app-server实际模型会话，完成自然选用、渐进建档、问餐、缺货替换、非定量实吃、周反馈、本地保存和新会话读取恢复。测试使用虚构资料与项目范围安装副本；桌面GUI、其他宿主、真实用户和营养效果仍需分别验证。详情见[验收记录](docs/verification.md)。
+公开的dev2源码与四组远端CI已完成验收。2026-10-06在允许进程启动的当前环境，已通过Codex CLI 0.157.1的app-server实际模型会话，完成自然选用、渐进建档、问餐、缺货替换、非定量实吃、周反馈、本地保存和新会话读取恢复。测试使用虚构资料与项目范围安装副本；桌面GUI、其他宿主、真实用户和营养效果仍需分别验证。详情见[验收记录](docs/verification.md)。
 
-dev2本地候选新增全天计划核对，并修复恢复旧计划可能改变当前锁定餐的问题；锁定组合操作明确区分计划版本与存储版本。下一步是确认本候选的GitHub更新范围，再提交、推送并核对对应远端CI。自动营养目标、食品扩充、断食及长期留存仍按[产品规格中的待定项](docs/product-spec.md#待定项与影响范围)逐项推进；当前版本没有完成全部产品范围。
+dev2已发布全天计划核对及锁定恢复修复；锁定组合操作明确区分计划版本与存储版本。下一步进入有限开发者试用，验证不同使用者的实际流程；参与范围和反馈方式尚待约定，真实用户试用尚未启动。自动营养目标、食品扩充、断食及长期留存仍按[产品规格中的待定项](docs/product-spec.md#待定项与影响范围)逐项推进；当前版本没有完成全部产品范围。

@@ -1,6 +1,6 @@
 # GitHub 开发者预览发布记录
 
-日期：2026-10-05。软件版本0.2.0.dev1；项目名Nutrition Skill，已确认的公开目标为[aiiqc/nutrition-skill](https://github.com/aiiqc/nutrition-skill)。本文件记录首次公开检查及可选Release文案，不替代[唯一产品规格](product-spec.md)中的需求和当前状态。
+当前公开版本：0.2.0.dev2（2026-10-06）；下文保留2026-10-05的dev1首发历史。项目名Nutrition Skill，已确认的公开目标为[aiiqc/nutrition-skill](https://github.com/aiiqc/nutrition-skill)。本文件记录首次公开检查及可选Release文案，不替代[唯一产品规格](product-spec.md)中的需求和当前状态。
 
 首发已完成：0.2.0.dev1的59个项目文件已公开到main，初始提交为[91ab29f03a20208f406e4a05e55b22543956ab4a](https://github.com/aiiqc/nutrition-skill/commit/91ab29f03a20208f406e4a05e55b22543956ab4a)。远端59个文件的Git blob SHA与本地发布树逐项一致；[首次CI运行](https://github.com/aiiqc/nutrition-skill/actions/runs/37304774493)为completed/success，Ubuntu/macOS × Python 3.11/3.14四组各166项测试与演示步骤全部成功。tag与GitHub Release尚未创建。
 
@@ -42,13 +42,13 @@ CI采用GitHub官方checkout/setup-python及现有unittest，避免额外测试�
 
 首次公开源码预览及对应提交验证已完成。上表保留首发时的验收范围，后续提交的运行状态以[Actions页](https://github.com/aiiqc/nutrition-skill/actions)为准。
 
-## 2026-10-06本地dev2候选
+## 2026-10-06 dev2公开更新
 
 新增按调用者给定约束核对全天计划，修复恢复旧计划可能改变当前锁定餐，并明确组合锁定操作的计划版本递增。两套本地Python各187项测试通过；Codex CLI 0.157.1 app-server的实际模型主旅程完成自然选用、建档、选餐、记录、周反馈及新会话读取恢复。最初启动受阻的历史与修复复验细节见[验收记录](verification.md)。
 
-本候选尚未提交、推送或运行对应远端CI。建议更新范围仅为现有aiiqc/nutrition-skill的main及由推送触发的现有CI，不包含新建tag或GitHub Release。发布前应核对候选源包、差异与准确授权；不把dev1 CI当作dev2证据。桌面GUI、其他宿主、专业审核、真实用户与健康效果仍未验证；长期容量等能力边界保持不变。
+用户确认后，功能提交[4ff03c0](https://github.com/aiiqc/nutrition-skill/commit/4ff03c044af3bea44572672cd8088d2a913c93cf)已公开到现有main，61个源文件与远端逐项一致；[对应CI](https://github.com/aiiqc/nutrition-skill/actions/runs/37435684685)四组各187项测试与演示通过。随后同步发布状态文档；后续main运行以仓库Actions为准。没有创建tag或GitHub Release。桌面GUI、其他宿主、专业审核、真实用户与健康效果仍未验证；长期容量等能力边界保持不变。
 
-## Release 文案草稿
+## dev1首发时的Release文案草稿（历史）
 
 标题建议：`Nutrition Skill 0.2.0.dev1 — Developer Preview`。这只是草稿，未创建tag或Release。
 
