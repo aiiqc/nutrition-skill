@@ -26,9 +26,10 @@ class CatalogTests(unittest.TestCase):
         with self.assertRaises(NutritionError):
             validate_catalog(catalog)
 
-    def test_exactly_five_real_foods_with_unknown_allergen_assessment(self):
-        self.assertEqual(set(self.catalog["foods"]),
-                         {"usda:171077", "usda:171477", "usda:2512381", "usda:169757", "usda:330137"})
+    def test_thirty_real_foods_preserve_original_records_with_unknown_allergen_assessment(self):
+        self.assertEqual(len(self.catalog["foods"]), 30)
+        self.assertTrue({"usda:171077", "usda:171477", "usda:2512381", "usda:169757", "usda:330137"}
+                        <= set(self.catalog["foods"]))
         for food in self.catalog["foods"].values():
             self.assertEqual(food["allergens"]["assessment"], "unknown")
             self.assertEqual(food["source"]["license"], "CC0-1.0")

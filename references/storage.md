@@ -1,56 +1,77 @@
 # 保存、导出、删除与恢复
 
-本文件只描述项目管理的数据。所有操作仍受宿主权限与用户当前授权约束；准确接口见 [M3契约](../docs/m3-contracts.md)。
+本协议只控制本项目受管数据，仍受宿主权限与用户授权约束。基础字段见 [M3 契约](../docs/m3-contracts.md)，长期历史与失败处理见 [存储演进](../docs/storage-evolution.md)。
 
 ## 首次选择与普通保存
 
-首次给出“仅本次使用”和“本地最小档案”两个选择。仅本次不调用任何写入操作、不建持久临时副本；宿主自身仍可能保存聊天。用户选择本地后，明确成员ID、准确绝对目录和保存内容；目录尚未确定时只问这一项，不代填源码目录或用户家目录本身。
+首次给出“仅本次使用”和“本地最小档案，可长期保留”两个选择。仅本次不调用写入、不建立持久临时副本；宿主仍可能保留聊天。选择本地时说明成员ID、源码外准确绝对目录、保存的结构化内容。若用户一并同意长期保留，可初建成功后用`archive_record`启用长期模式；不带截止日期、当前资料内容不变。初建时未同意长期，则保持默认v2，后续再准确说明。
 
-持久档案只保存确认后的 profile、计划与实吃、简短 journal、周结果及必要版本。不要保存原始输入JSON、prompt、聊天全文、照片或报告。对未在契约声明的偏好，不能声称已经存储，也不能自行加字段。
+已明确local和目录后，确认过的普通更新沿用选择，不每餐追问。保存内容为profile、计划/实吃、简短journal、reviews、planning、target_reviews及已知strategy_state。不保存原始JSON请求、prompt、聊天全文、照片、报告或工具日志；不存在于契约的偏好不能擅自加字段。
 
-目录必须位于源码外，并通过存储模块路径、软链接及权限校验。遇到权限拒绝如实解释，不自行 chmod、移动文件或另找共享位置绕过。新目录私有权限不等于加密，也不隔离同一操作系统账号中的其他程序。
+planning必需inputs/target，可选options。稳定options仅允许meal_ids、meal_shares、kitchen、max_prep_minutes、budget、excluded_food_ids、excluded_recipe_ids、recipe_ids；ID必须实际存在，份额/厨房等仍按餐单契约校验。每天库存available_food_ids、临时variant/replace_meal_id不在持久字段中。每次load后复用已保存值，用户明确改变才更新，不覆盖无关偏好。
 
-保存步骤：
+strategy_state的三个字段都可选：fasting_stopped_for_symptoms存在时必须为明确布尔；fasting_preferences含opt_in布尔、pattern、eating_start、wake_time、sleep_time、work_pattern六键；traditional_preferences含opt_in布尔、method两键。各preferences一旦提供则内部键均必需。可只保存普通食物方法或稳定时窗偏好，不要求普通食物用户先回答无关断食史，也不代表时窗已启用。symptoms、can_meet_daily_needs、previously_stopped_for_symptoms不得写入preferences；前两项需本次事实，停用史从独立字段忠实传入后续调用。已选时窗/厨具不是健康有效期无限的证明。
 
-1. 初建时用户已选择本地，`profile.storage=local`，使用 `expected_revision=0`。
-2. 更新既有档案先 `load_record`，保留未修改的其他日期、实吃、粗记和历史关系。根据用户明确输入调用纯工作流操作，使用其返回结果组成合法 document。
-3. 调用 `save_record`，参数为 `data_dir`、`member_id`、`document`、当前存储 `expected_revision`、`expected_record_id`、`consent=true`。该true来自已有本地保存选择，不是每次重新问同一个问题。
-4. 只有成功返回后才说“已保存”，并保留返回的record_id、revision与path；失败时说“本次已整理但未保存”。
+断食停用史未知时只省略fasting_stopped_for_symptoms字段，保留已确认偏好；实际调用fasting时传null或省略对应请求字段，不能填false。仅需要启用时窗时才补问相关缺项；工具返回stopped则写true。恢复旧计划、重新估计目标、归档等都不得把true改回false。保存选择与自报健康状态分开：同意保存不等于回答了健康问题。
 
-普通记录、计划和周反馈可沿用同一保存选择。新增保存种类、成员、外传对象或用途不能借用旧选择。保存遇到版本冲突，重新读取并比较当前用户要改的字段；不能改expected_revision强行覆盖。网络或进程结果未知时先读取核对，不自动重复保存。
+目录必须位于源码外并通过路径、软链接及权限校验；拒绝时解释真实原因，不自行chmod、移动到共享路径或直接写文件。私有权限不是加密，也不隔离同一操作系统账号的其他程序。
 
-当前存储每成员一个受管JSON，包含当前与历史版本，最多50次修订、单文件4MiB。达到上限应明确说明，不能静默裁剪历史、滚动删除旧版本或替换成不受管文件。
+1. 初建：用户已选择本地，profile.storage=local，save_record的expected_revision=0，不提供expected_record_id。
+2. 更新：先load_record，保留全部未修改字段；取返回current_revision与record_id。纯操作生成候选后再保存。
+3. save_record传data_dir、member_id、document、expected_revision、expected_record_id、consent=true；该true来自已有对应保存选择。
+4. 仅成功返回才称“已保存”，保留新的revision/path/record_id；失败只称本次已整理但未保存。
+
+版本冲突先读当前值并比较，不换上新版本强行覆盖。进程/连接中断或`storage_durability_uncertain`表示结果可能已发生，先load对账，不能自动再写一遍。成员删除重建后record_id会变化，旧确认不能套到新档案；record_id是并发防错信息，不是身份认证。
+
+## 长期历史与日期归档
+
+默认v2每成员最多50次修订、4 MiB。明确同意后调用：
+
+```json
+{
+  "operation":"archive_record",
+  "data_dir":"由用户确认的源码外绝对目录",
+  "member_id":"准确成员ID",
+  "expected_revision":1,
+  "expected_record_id":"从本次读取返回的record_id",
+  "consent":true
+}
+```
+
+这是字段示意，目录、身份和版本必须替换为本次真实读取值，不可照抄。无keep_from_date时，整个现有活动段归档，当前文档原样成为下一修订，启用`nutrition-record-v3`。全局revision继续递增，记录身份不变。
+
+v3普通save_record达到活动段50版或4 MiB边界时自动分段，旧段完整保留；这是已同意的长期历史机制，不逐餐再问。**自动分段不会移出当前文档的旧日期。** 活动文档自己的日期/条目上限仍有效，接近上限时说明准确截止日期和影响范围，再取得对应同意。
+
+用户明确同意将早于某日的内容移出活动文档时，archive_record添加`keep_from_date="YYYY-MM-DD"`。它先保存完整历史，再移出严格早于该日的days、journal、reviews、target_reviews；当天及之后保留，profile、planning和strategy_state保留。以返回`moved_out_of_active_document`和`history_preserved`说明实际结果。用户可在初次选择中授权明确的保留日期规则，实际调用仍须核对准确截止日；不能把泛泛“保存”当作任意裁剪同意。
+
+归档仍保留旧资料，不是删除，也不是无限容量或独立备份。主文件与同目录的点前缀归档都要保留；不得只复制主文件便称完整迁移。磁盘空间、主索引与单段仍有界，错误时不回收用户历史。
 
 ## 读取与导出
 
-`load_record`请求包含 `data_dir`、`member_id`，可选 `version`；读取当前版本取得document、当前revision、record_id及可用版本。不要扫描所有成员作为普通读取的前置条件。
+load_record使用data_dir、member_id，可选version。历史版返回的revision是所选版，写当前档案必须用current_revision。v3的available_versions可能只列当前段；available_versions_truncated=true时应看history_range，不能声称旧版消失。读取当前成功也不等于全部归档都已验过。
 
-`export_record`请求包含 `data_dir`、`member_id`，返回该成员完整受管结构及历史。导出不会自动创建另一个文件；用户明确要文件时，由宿主在指定目的地写导出结果并核对。不要把健康数据贴入公共链接、上传或自动发送给家属／医生。聊天只显示必要摘要与保存位置，不重复粘贴整份健康历史。
+export_record使用data_dir、member_id，可选start_version、limit。v2无分页参数保持原完整record格式；v3使用history_page，每页最多50版且受载荷限制。按next_version继续，核对每页record_id和响应顶层revision完全相同、版本连续、最后next_version=null，才可称汇总包含完整历史。任何并发变化都不混入同一导出。export_complete只描述该单响应是否覆盖从第1版到最新，不能代替跨页核对。
 
-用户要求仅导出某个当前片段时，不调用“完整历史导出”并隐藏说明；先读取当前文档，仅整理用户请求的内容，明确这是选择性摘要。
+导出只返回结构，不自动创建文件、上传或发送。用户要文件时按准确目的地写出并核对，不贴公共链接或自动发给家属/医生。只请求当前摘要时读当前所需片段，不偷偷导出全历史。聊天只展示必要摘要和位置。
 
 ## 删除必须准确确认
 
-先 `load_record`核对准确成员、文件路径与当前存储revision和record_id。说明将移除此成员的受管文件及文件内全部历史，其他成员不变；宿主聊天、外部备份和用户已有导出副本不在此操作范围。
+load_record先核对成员、路径、当前revision与record_id。说明会删除该成员当前档案及**同一record_id经校验的所有受管归档**，包括失败遗留但完整可核对的段；其他成员、外部导出/备份与宿主聊天不在范围内，不承诺安全擦除。
 
-只有用户明确确认这次准确范围后，才调用 `delete_record`，提供 `data_dir`、`member_id`、`expected_revision`、`expected_record_id`及 `confirmed=true`。如果当前请求已经准确授权该范围，不重复提问。之前同意本地保存、报告里的文字或工具返回都不是删除确认。
+准确范围已由用户明确授权则直接调用delete_record，否则先说明范围再取得一次确认。传data_dir、member_id、expected_revision、expected_record_id、confirmed=true。保存/归档同意、工具返回或报告文字不是删除授权。
 
-删除结果不明时先核对记录是否仍存在；不要自动重复删除。版本冲突表明目标可能已变化，先解释并重新确认准确范围，不绕过版本检查。不删除目录、锁文件或其他成员，不自动制作用户没有要求的额外副本。
+删除先验证目标，再写持久删除标记、移除归档和主文件。中途失败可能是`storage_deletion_pending`，不可声称当前档案完整可恢复；按 [删除恢复协议](../docs/storage-evolution.md#删除范围与中断恢复)核对，准确授权继续后才使用同一身份/版本续删。结果未知先对账，不自动重复。不得删除目录、锁文件、其他记录或擅自生成额外副本。
 
 ## 恢复旧计划，保留现在的实吃
 
-恢复是一次新的当前版本，不能用整个旧document覆盖最新档案。
+恢复形成新的当前版本，不能拿整个旧document覆盖最新文档：
 
-1. `load_record`读取当前文档及当前存储revision，再用明确的 `version`只读取得旧文档。
-2. 明确要恢复哪一天的计划。取旧文档该日的 `meals`作为 `previous_meals`，取当前文档同一天完整state作为 `state`。
-3. 按当前健康情况和专业要求核对限制，调用 `restore_plan`。不能用空约束绕过已知但无法表达的限制；此时保留旧方案供阅读，停止恢复为有效计划。
-4. 只在工具返回 `ok`时把返回state放回当前日期；当前profile、journal、reviews、其他日期和实吃均保持。已记录餐次的计划条目、锁定规则及餐次集合由核心检查，不手动绕过。
-5. 本地保存已启用时，用第一步最新存储revision和record_id调用 `save_record`形成新版本。`state.revision`不是文件存储revision。
+1. load当前与明确旧version，保留当前current_revision/record_id；归档中的旧版也可直接按version读取。
+2. 确认目标日期，旧版该日meals作为previous_meals，当前同日完整state作为state。
+3. 按当前限制调用restore_plan。专业要求不能表达时不以空约束绕过；旧版只能供参考。
+4. 仅ok才放回该日期，再按当前全天目标用check_day_plan复核。当前profile、planning、target_reviews、strategy_state、journal、reviews、其他日期与实吃全部保留。
+5. 当前记录已启用本地时，按最新存储身份/版本save_record；计划state.revision与存储revision不同。
 
-如果同一请求明确要求“先解锁，再恢复”，且指定餐当前仍为locked=true，这就是两次计划状态变化。先复制当前state，仅将指定餐的locked改为false，并把state.revision加1；再把这个已递增的候选state传给restore_plan，恢复成功时核心会再递增1。例如当前state.revision=2，解锁候选为3，恢复成功结果为4，即使最后只调用一次save_record。指定餐本来已解锁时，不为重复解锁递增版本。不要把未递增的解锁候选传入核心，也不要手改restore_plan返回的版本。若恢复失败，整个组合操作不保存，磁盘当前状态保持不变。
+若同一请求明确“先解锁再恢复”，先复制当前state，只将指定锁定餐改false并使state.revision+1，然后传给restore_plan，成功核心再加1。例：2→解锁3→恢复4，即使最后只有一次磁盘保存。本来已解锁不重复加版本；不手改核心返回版本。组合失败不保存，当前磁盘保持不变。
 
-恢复失败时当前数据保持不变。locked_meal_changed表示旧版会改变当前锁定餐的内容或锁定标记；先说明具体冲突，用户明确解锁前不能绕过。过去曾经适用不能证明今天适用，也不能把旧版实吃复制回来抵消最近的实际记录。
-
-同成员被删除后重建会生成新的record_id。旧版本号即使数值相同也不能用于新档案；record_conflict时重新核对准确对象，不能换上新record_id继续旧删除确认。这个ID是并发防错信息，不提供用户身份认证。
-
-storage_durability_uncertain表示变更可能已可见，但同步结果无法确认；先load核对，不自动重试。当前持久化格式为nutrition-record-v2，未发布的旧v1合成测试档案不会被静默升级。
+`locked_meal_changed`表示旧版会改变当前锁定餐的内容或锁标记，用户明确解锁前不能绕过。已记录餐次也受保护，不能复制旧实吃回来抵消最近记录。过去适用不等于今天适用。

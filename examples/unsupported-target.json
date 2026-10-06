@@ -1,3 +1,6 @@
 {
-  "operation": "automatic_targets"
+  "operation": "automatic_targets",
+  "profile": {"id": "example_adult"},
+  "inputs": {},
+  "as_of": "2026-10-06"
 }

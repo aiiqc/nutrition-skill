@@ -35,7 +35,7 @@ class CommandLineTests(unittest.TestCase):
 
     def test_request_size_and_disabled_capability(self):
         self.assertEqual(invoke(b' ' * 1_048_577)[1]["code"], "input_too_large")
-        code, result, stderr = invoke(b'{"operation":"automatic_targets"}')
+        code, result, stderr = invoke(b'{"operation":"save_profile"}')
         self.assertEqual((code, result["status"], stderr), (3, "unsupported", b""))
 
     def test_unpaired_surrogate_cannot_break_error_serialization(self):

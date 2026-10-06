@@ -1,5 +1,5 @@
 {
-  "catalog_version": "usda-five-2026-10-05.1",
+  "catalog_version": "usda-thirty-2026-10-06.1",
   "foods": {
     "usda:171077": {
       "id": "usda:171077",
@@ -1572,6 +1572,4556 @@
           "grams": "170",
           "label": "1 RACC",
           "source": "https://fdc.nal.usda.gov/food-details/330137/nutrients ; foodPortion.id=312634; amount=1; gramWeight=170"
+        }
+      },
+      "allergens": {
+        "contains": [],
+        "may_contain": [],
+        "assessment": "unknown",
+        "source": "USDA nutrient record does not establish complete ingredients or cross-contact assessment."
+      }
+    },
+    "usda:173904": {
+      "id": "usda:173904",
+      "name": "Cereals, oats, regular and quick, not fortified, dry",
+      "state": "raw",
+      "source": {
+        "publisher": "USDA FoodData Central",
+        "record_id": "173904",
+        "url": "https://fdc.nal.usda.gov/food-details/173904/nutrients",
+        "published_date": "2019-04-01",
+        "retrieved_date": "2026-10-06",
+        "license": "CC0-1.0",
+        "response_sha256": "895a32c1c48916ac3a07ddd1b7860e7f9a4e7d8b25560c1698e75182a3fb2f15",
+        "data_type": "SR Legacy"
+      },
+      "nutrients": {
+        "energy_kcal": {
+          "amount": "379",
+          "unit": "kcal",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1008",
+            "source_nutrient_name": "Energy",
+            "source_amount": "379",
+            "source_unit": "kcal",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1008"
+        },
+        "protein_g": {
+          "amount": "13.15",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1003",
+            "source_nutrient_name": "Protein",
+            "source_amount": "13.15",
+            "source_unit": "g",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "13",
+            "max": "13.24",
+            "data_points": 4
+          }
+        },
+        "carbohydrate_g": {
+          "amount": "67.7",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1005",
+            "source_nutrient_name": "Carbohydrate, by difference",
+            "source_amount": "67.7",
+            "source_unit": "g",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          }
+        },
+        "fat_g": {
+          "amount": "6.52",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1004",
+            "source_nutrient_name": "Total lipid (fat)",
+            "source_amount": "6.52",
+            "source_unit": "g",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "6.2",
+            "max": "6.92",
+            "data_points": 4
+          }
+        },
+        "fiber_g": {
+          "amount": "10.1",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1079",
+            "source_nutrient_name": "Fiber, total dietary",
+            "source_amount": "10.1",
+            "source_unit": "g",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "8.8",
+            "max": "11",
+            "data_points": 4
+          }
+        },
+        "sodium_mg": {
+          "amount": "6",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1093",
+            "source_nutrient_name": "Sodium, Na",
+            "source_amount": "6",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "5",
+            "max": "7",
+            "data_points": 4
+          }
+        },
+        "potassium_mg": {
+          "amount": "362",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1092",
+            "source_nutrient_name": "Potassium, K",
+            "source_amount": "362",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "351",
+            "max": "369",
+            "data_points": 4
+          }
+        },
+        "phosphorus_mg": {
+          "amount": "410",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1091",
+            "source_nutrient_name": "Phosphorus, P",
+            "source_amount": "410",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "384",
+            "max": "434",
+            "data_points": 4
+          }
+        }
+      },
+      "energy_alternatives": [
+        {
+          "amount": "1586",
+          "unit": "kJ",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1062",
+            "source_nutrient_name": "Energy",
+            "source_amount": "1586",
+            "source_unit": "kJ",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1062_kj"
+        }
+      ],
+      "portions": {
+        "usda:93454": {
+          "grams": "81",
+          "label": "1 cup",
+          "source": "https://fdc.nal.usda.gov/food-details/173904/nutrients ; foodPortion.id=93454; amount=1; gramWeight=81"
+        },
+        "usda:93455": {
+          "grams": "27",
+          "label": "0.33 cup",
+          "source": "https://fdc.nal.usda.gov/food-details/173904/nutrients ; foodPortion.id=93455; amount=0.33; gramWeight=27"
+        }
+      },
+      "allergens": {
+        "contains": [],
+        "may_contain": [],
+        "assessment": "unknown",
+        "source": "USDA nutrient record does not establish complete ingredients or cross-contact assessment."
+      }
+    },
+    "usda:173424": {
+      "id": "usda:173424",
+      "name": "Egg, whole, cooked, hard-boiled",
+      "state": "cooked",
+      "source": {
+        "publisher": "USDA FoodData Central",
+        "record_id": "173424",
+        "url": "https://fdc.nal.usda.gov/food-details/173424/nutrients",
+        "published_date": "2019-04-01",
+        "retrieved_date": "2026-10-06",
+        "license": "CC0-1.0",
+        "response_sha256": "8be047fdca236bf4495a2e465fc292428ce0d766a35f3ad961974fa1475c0629",
+        "data_type": "SR Legacy"
+      },
+      "nutrients": {
+        "energy_kcal": {
+          "amount": "155",
+          "unit": "kcal",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1008",
+            "source_nutrient_name": "Energy",
+            "source_amount": "155",
+            "source_unit": "kcal",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1008"
+        },
+        "protein_g": {
+          "amount": "12.58",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1003",
+            "source_nutrient_name": "Protein",
+            "source_amount": "12.58",
+            "source_unit": "g",
+            "data_points": 14
+          }
+        },
+        "carbohydrate_g": {
+          "amount": "1.12",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1005",
+            "source_nutrient_name": "Carbohydrate, by difference",
+            "source_amount": "1.12",
+            "source_unit": "g",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          }
+        },
+        "fat_g": {
+          "amount": "10.61",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1004",
+            "source_nutrient_name": "Total lipid (fat)",
+            "source_amount": "10.61",
+            "source_unit": "g",
+            "data_points": 7
+          }
+        },
+        "fiber_g": {
+          "amount": "0",
+          "unit": "g",
+          "status": "assumed_zero",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1079",
+            "source_nutrient_name": "Fiber, total dietary",
+            "source_amount": "0",
+            "source_unit": "g",
+            "derivation_code": "Z",
+            "derivation_description": "Assumed zero (Insignificant amount or not naturally occurring in a food, such as fiber in meat)",
+            "data_points": 0
+          }
+        },
+        "sodium_mg": {
+          "amount": "124",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1093",
+            "source_nutrient_name": "Sodium, Na",
+            "source_amount": "124",
+            "source_unit": "mg",
+            "data_points": 14
+          }
+        },
+        "potassium_mg": {
+          "amount": "126",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1092",
+            "source_nutrient_name": "Potassium, K",
+            "source_amount": "126",
+            "source_unit": "mg",
+            "data_points": 14
+          }
+        },
+        "phosphorus_mg": {
+          "amount": "172",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1091",
+            "source_nutrient_name": "Phosphorus, P",
+            "source_amount": "172",
+            "source_unit": "mg",
+            "data_points": 14
+          }
+        }
+      },
+      "energy_alternatives": [
+        {
+          "amount": "649",
+          "unit": "kJ",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1062",
+            "source_nutrient_name": "Energy",
+            "source_amount": "649",
+            "source_unit": "kJ",
+            "data_points": 0
+          },
+          "method": "usda_1062_kj"
+        }
+      ],
+      "portions": {
+        "usda:92499": {
+          "grams": "8.5",
+          "label": "1 tbsp",
+          "source": "https://fdc.nal.usda.gov/food-details/173424/nutrients ; foodPortion.id=92499; amount=1; gramWeight=8.5"
+        },
+        "usda:92498": {
+          "grams": "136",
+          "label": "1 cup, chopped",
+          "source": "https://fdc.nal.usda.gov/food-details/173424/nutrients ; foodPortion.id=92498; amount=1; gramWeight=136"
+        },
+        "usda:92500": {
+          "grams": "50",
+          "label": "1 large",
+          "source": "https://fdc.nal.usda.gov/food-details/173424/nutrients ; foodPortion.id=92500; amount=1; gramWeight=50"
+        }
+      },
+      "allergens": {
+        "contains": [],
+        "may_contain": [],
+        "assessment": "unknown",
+        "source": "USDA nutrient record does not establish complete ingredients or cross-contact assessment."
+      }
+    },
+    "usda:172448": {
+      "id": "usda:172448",
+      "name": "Tofu, firm, prepared with calcium sulfate and magnesium chloride (nigari)",
+      "state": "processed",
+      "source": {
+        "publisher": "USDA FoodData Central",
+        "record_id": "172448",
+        "url": "https://fdc.nal.usda.gov/food-details/172448/nutrients",
+        "published_date": "2019-04-01",
+        "retrieved_date": "2026-10-06",
+        "license": "CC0-1.0",
+        "response_sha256": "63383d08fa996926e8381bd0e00e860f410f516c013ee92fb8567e13a0ad621d",
+        "data_type": "SR Legacy"
+      },
+      "nutrients": {
+        "energy_kcal": {
+          "amount": "78",
+          "unit": "kcal",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1008",
+            "source_nutrient_name": "Energy",
+            "source_amount": "78",
+            "source_unit": "kcal",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1008"
+        },
+        "protein_g": {
+          "amount": "9.04",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1003",
+            "source_nutrient_name": "Protein",
+            "source_amount": "9.04",
+            "source_unit": "g",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "8.56",
+            "max": "9.5",
+            "data_points": 4
+          }
+        },
+        "carbohydrate_g": {
+          "amount": "2.85",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1005",
+            "source_nutrient_name": "Carbohydrate, by difference",
+            "source_amount": "2.85",
+            "source_unit": "g",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          }
+        },
+        "fat_g": {
+          "amount": "4.17",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1004",
+            "source_nutrient_name": "Total lipid (fat)",
+            "source_amount": "4.17",
+            "source_unit": "g",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "3.42",
+            "max": "4.46",
+            "data_points": 7
+          }
+        },
+        "fiber_g": {
+          "amount": "0.9",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1079",
+            "source_nutrient_name": "Fiber, total dietary",
+            "source_amount": "0.9",
+            "source_unit": "g",
+            "derivation_code": "JA",
+            "derivation_description": "Aggregated data involving combinations of data with only source codes 1 and 12 and/or 13",
+            "min": "0.4",
+            "max": "2.3",
+            "data_points": 5
+          }
+        },
+        "sodium_mg": {
+          "amount": "12",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1093",
+            "source_nutrient_name": "Sodium, Na",
+            "source_amount": "12",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "3",
+            "max": "30",
+            "data_points": 7
+          }
+        },
+        "potassium_mg": {
+          "amount": "148",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1092",
+            "source_nutrient_name": "Potassium, K",
+            "source_amount": "148",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "99",
+            "max": "176",
+            "data_points": 7
+          }
+        },
+        "phosphorus_mg": {
+          "amount": "121",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1091",
+            "source_nutrient_name": "Phosphorus, P",
+            "source_amount": "121",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "92",
+            "max": "147",
+            "data_points": 6
+          }
+        }
+      },
+      "energy_alternatives": [
+        {
+          "amount": "326",
+          "unit": "kJ",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1062",
+            "source_nutrient_name": "Energy",
+            "source_amount": "326",
+            "source_unit": "kJ",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1062_kj"
+        }
+      ],
+      "portions": {
+        "usda:90639": {
+          "grams": "81",
+          "label": "0.25 block",
+          "source": "https://fdc.nal.usda.gov/food-details/172448/nutrients ; foodPortion.id=90639; amount=0.25; gramWeight=81"
+        },
+        "usda:90638": {
+          "grams": "126",
+          "label": "0.5 cup",
+          "source": "https://fdc.nal.usda.gov/food-details/172448/nutrients ; foodPortion.id=90638; amount=0.5; gramWeight=126"
+        },
+        "usda:90640": {
+          "grams": "91",
+          "label": "0.2 block",
+          "source": "https://fdc.nal.usda.gov/food-details/172448/nutrients ; foodPortion.id=90640; amount=0.2; gramWeight=91"
+        }
+      },
+      "allergens": {
+        "contains": [],
+        "may_contain": [],
+        "assessment": "unknown",
+        "source": "USDA nutrient record does not establish complete ingredients or cross-contact assessment."
+      }
+    },
+    "usda:172421": {
+      "id": "usda:172421",
+      "name": "Lentils, mature seeds, cooked, boiled, without salt",
+      "state": "cooked",
+      "source": {
+        "publisher": "USDA FoodData Central",
+        "record_id": "172421",
+        "url": "https://fdc.nal.usda.gov/food-details/172421/nutrients",
+        "published_date": "2019-04-01",
+        "retrieved_date": "2026-10-06",
+        "license": "CC0-1.0",
+        "response_sha256": "2c20c19a32cf921f7d5a29b34467bcc5723e4a7a95d685cbc11edfee35bd4307",
+        "data_type": "SR Legacy"
+      },
+      "nutrients": {
+        "energy_kcal": {
+          "amount": "116",
+          "unit": "kcal",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1008",
+            "source_nutrient_name": "Energy",
+            "source_amount": "116",
+            "source_unit": "kcal",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1008"
+        },
+        "protein_g": {
+          "amount": "9.02",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1003",
+            "source_nutrient_name": "Protein",
+            "source_amount": "9.02",
+            "source_unit": "g",
+            "data_points": 23
+          }
+        },
+        "carbohydrate_g": {
+          "amount": "20.13",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1005",
+            "source_nutrient_name": "Carbohydrate, by difference",
+            "source_amount": "20.13",
+            "source_unit": "g",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          }
+        },
+        "fat_g": {
+          "amount": "0.38",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1004",
+            "source_nutrient_name": "Total lipid (fat)",
+            "source_amount": "0.38",
+            "source_unit": "g",
+            "data_points": 22
+          }
+        },
+        "fiber_g": {
+          "amount": "7.9",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1079",
+            "source_nutrient_name": "Fiber, total dietary",
+            "source_amount": "7.9",
+            "source_unit": "g",
+            "data_points": 0
+          }
+        },
+        "sodium_mg": {
+          "amount": "2",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1093",
+            "source_nutrient_name": "Sodium, Na",
+            "source_amount": "2",
+            "source_unit": "mg",
+            "data_points": 16
+          }
+        },
+        "potassium_mg": {
+          "amount": "369",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1092",
+            "source_nutrient_name": "Potassium, K",
+            "source_amount": "369",
+            "source_unit": "mg",
+            "data_points": 20
+          }
+        },
+        "phosphorus_mg": {
+          "amount": "180",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1091",
+            "source_nutrient_name": "Phosphorus, P",
+            "source_amount": "180",
+            "source_unit": "mg",
+            "data_points": 20
+          }
+        }
+      },
+      "energy_alternatives": [
+        {
+          "amount": "487",
+          "unit": "kJ",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1062",
+            "source_nutrient_name": "Energy",
+            "source_amount": "487",
+            "source_unit": "kJ",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1062_kj"
+        }
+      ],
+      "portions": {
+        "usda:90596": {
+          "grams": "198",
+          "label": "1 cup",
+          "source": "https://fdc.nal.usda.gov/food-details/172421/nutrients ; foodPortion.id=90596; amount=1; gramWeight=198"
+        },
+        "usda:90597": {
+          "grams": "12.3",
+          "label": "1 tbsp",
+          "source": "https://fdc.nal.usda.gov/food-details/172421/nutrients ; foodPortion.id=90597; amount=1; gramWeight=12.3"
+        }
+      },
+      "allergens": {
+        "contains": [],
+        "may_contain": [],
+        "assessment": "unknown",
+        "source": "USDA nutrient record does not establish complete ingredients or cross-contact assessment."
+      }
+    },
+    "usda:173735": {
+      "id": "usda:173735",
+      "name": "Beans, black, mature seeds, cooked, boiled, without salt",
+      "state": "cooked",
+      "source": {
+        "publisher": "USDA FoodData Central",
+        "record_id": "173735",
+        "url": "https://fdc.nal.usda.gov/food-details/173735/nutrients",
+        "published_date": "2019-04-01",
+        "retrieved_date": "2026-10-06",
+        "license": "CC0-1.0",
+        "response_sha256": "dada61a807b2071b86e44dacbef540b9841afd75252f178f2c57527867df5dae",
+        "data_type": "SR Legacy"
+      },
+      "nutrients": {
+        "energy_kcal": {
+          "amount": "132",
+          "unit": "kcal",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1008",
+            "source_nutrient_name": "Energy",
+            "source_amount": "132",
+            "source_unit": "kcal",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1008"
+        },
+        "protein_g": {
+          "amount": "8.86",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1003",
+            "source_nutrient_name": "Protein",
+            "source_amount": "8.86",
+            "source_unit": "g",
+            "data_points": 8
+          }
+        },
+        "carbohydrate_g": {
+          "amount": "23.71",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1005",
+            "source_nutrient_name": "Carbohydrate, by difference",
+            "source_amount": "23.71",
+            "source_unit": "g",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          }
+        },
+        "fat_g": {
+          "amount": "0.54",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1004",
+            "source_nutrient_name": "Total lipid (fat)",
+            "source_amount": "0.54",
+            "source_unit": "g",
+            "data_points": 8
+          }
+        },
+        "fiber_g": {
+          "amount": "8.7",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1079",
+            "source_nutrient_name": "Fiber, total dietary",
+            "source_amount": "8.7",
+            "source_unit": "g",
+            "data_points": 0
+          }
+        },
+        "sodium_mg": {
+          "amount": "1",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1093",
+            "source_nutrient_name": "Sodium, Na",
+            "source_amount": "1",
+            "source_unit": "mg",
+            "data_points": 4
+          }
+        },
+        "potassium_mg": {
+          "amount": "355",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1092",
+            "source_nutrient_name": "Potassium, K",
+            "source_amount": "355",
+            "source_unit": "mg",
+            "data_points": 14
+          }
+        },
+        "phosphorus_mg": {
+          "amount": "140",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1091",
+            "source_nutrient_name": "Phosphorus, P",
+            "source_amount": "140",
+            "source_unit": "mg",
+            "data_points": 8
+          }
+        }
+      },
+      "energy_alternatives": [
+        {
+          "amount": "552",
+          "unit": "kJ",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1062",
+            "source_nutrient_name": "Energy",
+            "source_amount": "552",
+            "source_unit": "kJ",
+            "data_points": 0
+          },
+          "method": "usda_1062_kj"
+        }
+      ],
+      "portions": {
+        "usda:93200": {
+          "grams": "172",
+          "label": "1 cup",
+          "source": "https://fdc.nal.usda.gov/food-details/173735/nutrients ; foodPortion.id=93200; amount=1; gramWeight=172"
+        }
+      },
+      "allergens": {
+        "contains": [],
+        "may_contain": [],
+        "assessment": "unknown",
+        "source": "USDA nutrient record does not establish complete ingredients or cross-contact assessment."
+      }
+    },
+    "usda:171267": {
+      "id": "usda:171267",
+      "name": "Milk, reduced fat, fluid, 2% milkfat, with added vitamin A and vitamin D",
+      "state": "processed",
+      "source": {
+        "publisher": "USDA FoodData Central",
+        "record_id": "171267",
+        "url": "https://fdc.nal.usda.gov/food-details/171267/nutrients",
+        "published_date": "2019-04-01",
+        "retrieved_date": "2026-10-06",
+        "license": "CC0-1.0",
+        "response_sha256": "54587021b5469189a2d35d4900748b5e9d7664c415477ab8620cf645a679644a",
+        "data_type": "SR Legacy"
+      },
+      "nutrients": {
+        "energy_kcal": {
+          "amount": "50",
+          "unit": "kcal",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1008",
+            "source_nutrient_name": "Energy",
+            "source_amount": "50",
+            "source_unit": "kcal",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1008"
+        },
+        "protein_g": {
+          "amount": "3.3",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1003",
+            "source_nutrient_name": "Protein",
+            "source_amount": "3.3",
+            "source_unit": "g",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "3.18",
+            "max": "3.61",
+            "data_points": 13
+          }
+        },
+        "carbohydrate_g": {
+          "amount": "4.8",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1005",
+            "source_nutrient_name": "Carbohydrate, by difference",
+            "source_amount": "4.8",
+            "source_unit": "g",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          }
+        },
+        "fat_g": {
+          "amount": "1.98",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1004",
+            "source_nutrient_name": "Total lipid (fat)",
+            "source_amount": "1.98",
+            "source_unit": "g",
+            "derivation_code": "JO",
+            "derivation_description": "Aggregated data involving combinations of data with different source codes when at least one code is not 1, 6, 12, or 13",
+            "min": "1.9",
+            "max": "2.06",
+            "data_points": 14
+          }
+        },
+        "fiber_g": {
+          "amount": "0",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1079",
+            "source_nutrient_name": "Fiber, total dietary",
+            "source_amount": "0",
+            "source_unit": "g",
+            "data_points": 0
+          }
+        },
+        "sodium_mg": {
+          "amount": "47",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1093",
+            "source_nutrient_name": "Sodium, Na",
+            "source_amount": "47",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "36",
+            "max": "69",
+            "data_points": 31
+          }
+        },
+        "potassium_mg": {
+          "amount": "140",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1092",
+            "source_nutrient_name": "Potassium, K",
+            "source_amount": "140",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "103",
+            "max": "172",
+            "data_points": 31
+          }
+        },
+        "phosphorus_mg": {
+          "amount": "92",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1091",
+            "source_nutrient_name": "Phosphorus, P",
+            "source_amount": "92",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "82",
+            "max": "98",
+            "data_points": 28
+          }
+        }
+      },
+      "energy_alternatives": [
+        {
+          "amount": "210",
+          "unit": "kJ",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1062",
+            "source_nutrient_name": "Energy",
+            "source_amount": "210",
+            "source_unit": "kJ",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1062_kj"
+        }
+      ],
+      "portions": {
+        "usda:88322": {
+          "grams": "976",
+          "label": "1 quart",
+          "source": "https://fdc.nal.usda.gov/food-details/171267/nutrients ; foodPortion.id=88322; amount=1; gramWeight=976"
+        },
+        "usda:88320": {
+          "grams": "244",
+          "label": "1 cup",
+          "source": "https://fdc.nal.usda.gov/food-details/171267/nutrients ; foodPortion.id=88320; amount=1; gramWeight=244"
+        },
+        "usda:88321": {
+          "grams": "30.5",
+          "label": "1 fl oz",
+          "source": "https://fdc.nal.usda.gov/food-details/171267/nutrients ; foodPortion.id=88321; amount=1; gramWeight=30.5"
+        }
+      },
+      "allergens": {
+        "contains": [],
+        "may_contain": [],
+        "assessment": "unknown",
+        "source": "USDA nutrient record does not establish complete ingredients or cross-contact assessment."
+      }
+    },
+    "usda:172688": {
+      "id": "usda:172688",
+      "name": "Bread, whole-wheat, commercially prepared",
+      "state": "processed",
+      "source": {
+        "publisher": "USDA FoodData Central",
+        "record_id": "172688",
+        "url": "https://fdc.nal.usda.gov/food-details/172688/nutrients",
+        "published_date": "2019-04-01",
+        "retrieved_date": "2026-10-06",
+        "license": "CC0-1.0",
+        "response_sha256": "8dd0ea91560ea4115b52cc1cda1c08e56d1cedea1ab91d218f2a7625a28894f2",
+        "data_type": "SR Legacy"
+      },
+      "nutrients": {
+        "energy_kcal": {
+          "amount": "252",
+          "unit": "kcal",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1008",
+            "source_nutrient_name": "Energy",
+            "source_amount": "252",
+            "source_unit": "kcal",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1008"
+        },
+        "protein_g": {
+          "amount": "12.45",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1003",
+            "source_nutrient_name": "Protein",
+            "source_amount": "12.45",
+            "source_unit": "g",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "11.31",
+            "max": "13.56",
+            "data_points": 10
+          }
+        },
+        "carbohydrate_g": {
+          "amount": "42.71",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1005",
+            "source_nutrient_name": "Carbohydrate, by difference",
+            "source_amount": "42.71",
+            "source_unit": "g",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          }
+        },
+        "fat_g": {
+          "amount": "3.5",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1004",
+            "source_nutrient_name": "Total lipid (fat)",
+            "source_amount": "3.5",
+            "source_unit": "g",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "3.15",
+            "max": "4",
+            "data_points": 10
+          }
+        },
+        "fiber_g": {
+          "amount": "6",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1079",
+            "source_nutrient_name": "Fiber, total dietary",
+            "source_amount": "6",
+            "source_unit": "g",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "5.2",
+            "max": "8.3",
+            "data_points": 7
+          }
+        },
+        "sodium_mg": {
+          "amount": "455",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1093",
+            "source_nutrient_name": "Sodium, Na",
+            "source_amount": "455",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "255",
+            "max": "545",
+            "data_points": 10
+          }
+        },
+        "potassium_mg": {
+          "amount": "254",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1092",
+            "source_nutrient_name": "Potassium, K",
+            "source_amount": "254",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "207",
+            "max": "308",
+            "data_points": 10
+          }
+        },
+        "phosphorus_mg": {
+          "amount": "212",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1091",
+            "source_nutrient_name": "Phosphorus, P",
+            "source_amount": "212",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "190",
+            "max": "248",
+            "data_points": 10
+          }
+        }
+      },
+      "energy_alternatives": [
+        {
+          "amount": "1055",
+          "unit": "kJ",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1062",
+            "source_nutrient_name": "Energy",
+            "source_amount": "1055",
+            "source_unit": "kJ",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1062_kj"
+        }
+      ],
+      "portions": {
+        "usda:91109": {
+          "grams": "28.35",
+          "label": "1 oz",
+          "source": "https://fdc.nal.usda.gov/food-details/172688/nutrients ; foodPortion.id=91109; amount=1; gramWeight=28.35"
+        },
+        "usda:91108": {
+          "grams": "32",
+          "label": "1 slice",
+          "source": "https://fdc.nal.usda.gov/food-details/172688/nutrients ; foodPortion.id=91108; amount=1; gramWeight=32"
+        }
+      },
+      "allergens": {
+        "contains": [],
+        "may_contain": [],
+        "assessment": "unknown",
+        "source": "USDA nutrient record does not establish complete ingredients or cross-contact assessment."
+      }
+    },
+    "usda:168928": {
+      "id": "usda:168928",
+      "name": "Pasta, cooked, unenriched, without added salt",
+      "state": "cooked",
+      "source": {
+        "publisher": "USDA FoodData Central",
+        "record_id": "168928",
+        "url": "https://fdc.nal.usda.gov/food-details/168928/nutrients",
+        "published_date": "2019-04-01",
+        "retrieved_date": "2026-10-06",
+        "license": "CC0-1.0",
+        "response_sha256": "fe272c1fb9bd670cad64b8495bebdc63c793a6da67ab1a3abe1a458a3b58679c",
+        "data_type": "SR Legacy"
+      },
+      "nutrients": {
+        "energy_kcal": {
+          "amount": "158",
+          "unit": "kcal",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1008",
+            "source_nutrient_name": "Energy",
+            "source_amount": "158",
+            "source_unit": "kcal",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1008"
+        },
+        "protein_g": {
+          "amount": "5.8",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1003",
+            "source_nutrient_name": "Protein",
+            "source_amount": "5.8",
+            "source_unit": "g",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "4.39",
+            "max": "7.2",
+            "data_points": 19
+          }
+        },
+        "carbohydrate_g": {
+          "amount": "30.86",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1005",
+            "source_nutrient_name": "Carbohydrate, by difference",
+            "source_amount": "30.86",
+            "source_unit": "g",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          }
+        },
+        "fat_g": {
+          "amount": "0.93",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1004",
+            "source_nutrient_name": "Total lipid (fat)",
+            "source_amount": "0.93",
+            "source_unit": "g",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "0.64",
+            "max": "1.11",
+            "data_points": 19
+          }
+        },
+        "fiber_g": {
+          "amount": "1.8",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1079",
+            "source_nutrient_name": "Fiber, total dietary",
+            "source_amount": "1.8",
+            "source_unit": "g",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "1.3",
+            "max": "2.3",
+            "data_points": 18
+          }
+        },
+        "sodium_mg": {
+          "amount": "1",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1093",
+            "source_nutrient_name": "Sodium, Na",
+            "source_amount": "1",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "0",
+            "max": "2",
+            "data_points": 39
+          }
+        },
+        "potassium_mg": {
+          "amount": "44",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1092",
+            "source_nutrient_name": "Potassium, K",
+            "source_amount": "44",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "24",
+            "max": "83",
+            "data_points": 52
+          }
+        },
+        "phosphorus_mg": {
+          "amount": "58",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1091",
+            "source_nutrient_name": "Phosphorus, P",
+            "source_amount": "58",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "37",
+            "max": "87",
+            "data_points": 56
+          }
+        }
+      },
+      "energy_alternatives": [
+        {
+          "amount": "660",
+          "unit": "kJ",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1062",
+            "source_nutrient_name": "Energy",
+            "source_amount": "660",
+            "source_unit": "kJ",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1062_kj"
+        }
+      ],
+      "portions": {
+        "usda:84012": {
+          "grams": "107",
+          "label": "1 cup penne",
+          "source": "https://fdc.nal.usda.gov/food-details/168928/nutrients ; foodPortion.id=84012; amount=1; gramWeight=107"
+        },
+        "usda:84014": {
+          "grams": "107",
+          "label": "1 cup farfalle",
+          "source": "https://fdc.nal.usda.gov/food-details/168928/nutrients ; foodPortion.id=84014; amount=1; gramWeight=107"
+        },
+        "usda:84011": {
+          "grams": "132",
+          "label": "1 cup elbows packed",
+          "source": "https://fdc.nal.usda.gov/food-details/168928/nutrients ; foodPortion.id=84011; amount=1; gramWeight=132"
+        },
+        "usda:84009": {
+          "grams": "151",
+          "label": "1 cup spaghetti packed",
+          "source": "https://fdc.nal.usda.gov/food-details/168928/nutrients ; foodPortion.id=84009; amount=1; gramWeight=151"
+        },
+        "usda:84015": {
+          "grams": "105",
+          "label": "1 cup shells",
+          "source": "https://fdc.nal.usda.gov/food-details/168928/nutrients ; foodPortion.id=84015; amount=1; gramWeight=105"
+        },
+        "usda:84013": {
+          "grams": "107",
+          "label": "1 cup rotini",
+          "source": "https://fdc.nal.usda.gov/food-details/168928/nutrients ; foodPortion.id=84013; amount=1; gramWeight=107"
+        },
+        "usda:84010": {
+          "grams": "120",
+          "label": "1 cup elbows not packed",
+          "source": "https://fdc.nal.usda.gov/food-details/168928/nutrients ; foodPortion.id=84010; amount=1; gramWeight=120"
+        },
+        "usda:84016": {
+          "grams": "116",
+          "label": "1 cup lasagne",
+          "source": "https://fdc.nal.usda.gov/food-details/168928/nutrients ; foodPortion.id=84016; amount=1; gramWeight=116"
+        },
+        "usda:84008": {
+          "grams": "124",
+          "label": "1 cup spaghetti not packed",
+          "source": "https://fdc.nal.usda.gov/food-details/168928/nutrients ; foodPortion.id=84008; amount=1; gramWeight=124"
+        }
+      },
+      "allergens": {
+        "contains": [],
+        "may_contain": [],
+        "assessment": "unknown",
+        "source": "USDA nutrient record does not establish complete ingredients or cross-contact assessment."
+      }
+    },
+    "usda:170440": {
+      "id": "usda:170440",
+      "name": "Potatoes, boiled, cooked without skin, flesh, without salt",
+      "state": "cooked",
+      "source": {
+        "publisher": "USDA FoodData Central",
+        "record_id": "170440",
+        "url": "https://fdc.nal.usda.gov/food-details/170440/nutrients",
+        "published_date": "2019-04-01",
+        "retrieved_date": "2026-10-06",
+        "license": "CC0-1.0",
+        "response_sha256": "a705a87252a95f4390756ea7a60807b4de005d9453f84db67079a44345547e17",
+        "data_type": "SR Legacy"
+      },
+      "nutrients": {
+        "energy_kcal": {
+          "amount": "86",
+          "unit": "kcal",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1008",
+            "source_nutrient_name": "Energy",
+            "source_amount": "86",
+            "source_unit": "kcal",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1008"
+        },
+        "protein_g": {
+          "amount": "1.71",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1003",
+            "source_nutrient_name": "Protein",
+            "source_amount": "1.71",
+            "source_unit": "g",
+            "data_points": 6
+          }
+        },
+        "carbohydrate_g": {
+          "amount": "20.01",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1005",
+            "source_nutrient_name": "Carbohydrate, by difference",
+            "source_amount": "20.01",
+            "source_unit": "g",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          }
+        },
+        "fat_g": {
+          "amount": "0.1",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1004",
+            "source_nutrient_name": "Total lipid (fat)",
+            "source_amount": "0.1",
+            "source_unit": "g",
+            "data_points": 0
+          }
+        },
+        "fiber_g": {
+          "amount": "1.8",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1079",
+            "source_nutrient_name": "Fiber, total dietary",
+            "source_amount": "1.8",
+            "source_unit": "g",
+            "data_points": 0
+          }
+        },
+        "sodium_mg": {
+          "amount": "5",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1093",
+            "source_nutrient_name": "Sodium, Na",
+            "source_amount": "5",
+            "source_unit": "mg",
+            "data_points": 6
+          }
+        },
+        "potassium_mg": {
+          "amount": "328",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1092",
+            "source_nutrient_name": "Potassium, K",
+            "source_amount": "328",
+            "source_unit": "mg",
+            "data_points": 0
+          }
+        },
+        "phosphorus_mg": {
+          "amount": "40",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1091",
+            "source_nutrient_name": "Phosphorus, P",
+            "source_amount": "40",
+            "source_unit": "mg",
+            "data_points": 6
+          }
+        }
+      },
+      "energy_alternatives": [
+        {
+          "amount": "360",
+          "unit": "kJ",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1062",
+            "source_nutrient_name": "Energy",
+            "source_amount": "360",
+            "source_unit": "kJ",
+            "data_points": 0
+          },
+          "method": "usda_1062_kj"
+        }
+      ],
+      "portions": {
+        "usda:86654": {
+          "grams": "125",
+          "label": "1 small (1-3/4\" to 2-1/2\" dia.)",
+          "source": "https://fdc.nal.usda.gov/food-details/170440/nutrients ; foodPortion.id=86654; amount=1; gramWeight=125"
+        },
+        "usda:86652": {
+          "grams": "300",
+          "label": "1 large (3\" to 4-1/4\" dia.)",
+          "source": "https://fdc.nal.usda.gov/food-details/170440/nutrients ; foodPortion.id=86652; amount=1; gramWeight=300"
+        },
+        "usda:86653": {
+          "grams": "167",
+          "label": "1 medium (2-1/4\" to 3-1/4\" dia.)",
+          "source": "https://fdc.nal.usda.gov/food-details/170440/nutrients ; foodPortion.id=86653; amount=1; gramWeight=167"
+        },
+        "usda:86651": {
+          "grams": "78",
+          "label": "0.5 cup",
+          "source": "https://fdc.nal.usda.gov/food-details/170440/nutrients ; foodPortion.id=86651; amount=0.5; gramWeight=78"
+        }
+      },
+      "allergens": {
+        "contains": [],
+        "may_contain": [],
+        "assessment": "unknown",
+        "source": "USDA nutrient record does not establish complete ingredients or cross-contact assessment."
+      }
+    },
+    "usda:175168": {
+      "id": "usda:175168",
+      "name": "Fish, salmon, Atlantic, farmed, cooked, dry heat",
+      "state": "cooked",
+      "source": {
+        "publisher": "USDA FoodData Central",
+        "record_id": "175168",
+        "url": "https://fdc.nal.usda.gov/food-details/175168/nutrients",
+        "published_date": "2019-04-01",
+        "retrieved_date": "2026-10-06",
+        "license": "CC0-1.0",
+        "response_sha256": "63026b81ec735e188e5187c186994d167dfe49b290550309820cc24c517f3678",
+        "data_type": "SR Legacy"
+      },
+      "nutrients": {
+        "energy_kcal": {
+          "amount": "206",
+          "unit": "kcal",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1008",
+            "source_nutrient_name": "Energy",
+            "source_amount": "206",
+            "source_unit": "kcal",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1008"
+        },
+        "protein_g": {
+          "amount": "22.1",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1003",
+            "source_nutrient_name": "Protein",
+            "source_amount": "22.1",
+            "source_unit": "g",
+            "data_points": 2
+          }
+        },
+        "carbohydrate_g": {
+          "amount": "0",
+          "unit": "g",
+          "status": "assumed_zero",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1005",
+            "source_nutrient_name": "Carbohydrate, by difference",
+            "source_amount": "0",
+            "source_unit": "g",
+            "derivation_code": "Z",
+            "derivation_description": "Assumed zero (Insignificant amount or not naturally occurring in a food, such as fiber in meat)",
+            "data_points": 0
+          }
+        },
+        "fat_g": {
+          "amount": "12.35",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1004",
+            "source_nutrient_name": "Total lipid (fat)",
+            "source_amount": "12.35",
+            "source_unit": "g",
+            "data_points": 2
+          }
+        },
+        "fiber_g": {
+          "amount": "0",
+          "unit": "g",
+          "status": "assumed_zero",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1079",
+            "source_nutrient_name": "Fiber, total dietary",
+            "source_amount": "0",
+            "source_unit": "g",
+            "derivation_code": "Z",
+            "derivation_description": "Assumed zero (Insignificant amount or not naturally occurring in a food, such as fiber in meat)",
+            "data_points": 0
+          }
+        },
+        "sodium_mg": {
+          "amount": "61",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1093",
+            "source_nutrient_name": "Sodium, Na",
+            "source_amount": "61",
+            "source_unit": "mg",
+            "data_points": 2
+          }
+        },
+        "potassium_mg": {
+          "amount": "384",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1092",
+            "source_nutrient_name": "Potassium, K",
+            "source_amount": "384",
+            "source_unit": "mg",
+            "data_points": 2
+          }
+        },
+        "phosphorus_mg": {
+          "amount": "252",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1091",
+            "source_nutrient_name": "Phosphorus, P",
+            "source_amount": "252",
+            "source_unit": "mg",
+            "data_points": 2
+          }
+        }
+      },
+      "energy_alternatives": [
+        {
+          "amount": "861",
+          "unit": "kJ",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1062",
+            "source_nutrient_name": "Energy",
+            "source_amount": "861",
+            "source_unit": "kJ",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1062_kj"
+        }
+      ],
+      "portions": {
+        "usda:95789": {
+          "grams": "178",
+          "label": "0.5 fillet",
+          "source": "https://fdc.nal.usda.gov/food-details/175168/nutrients ; foodPortion.id=95789; amount=0.5; gramWeight=178"
+        },
+        "usda:95788": {
+          "grams": "85",
+          "label": "3 oz",
+          "source": "https://fdc.nal.usda.gov/food-details/175168/nutrients ; foodPortion.id=95788; amount=3; gramWeight=85"
+        }
+      },
+      "allergens": {
+        "contains": [],
+        "may_contain": [],
+        "assessment": "unknown",
+        "source": "USDA nutrient record does not establish complete ingredients or cross-contact assessment."
+      }
+    },
+    "usda:171413": {
+      "id": "usda:171413",
+      "name": "Oil, olive, salad or cooking",
+      "state": "processed",
+      "source": {
+        "publisher": "USDA FoodData Central",
+        "record_id": "171413",
+        "url": "https://fdc.nal.usda.gov/food-details/171413/nutrients",
+        "published_date": "2019-04-01",
+        "retrieved_date": "2026-10-06",
+        "license": "CC0-1.0",
+        "response_sha256": "d8069208067752bfdd0aa01d1bc3689c6017bea827ca2bbd9a0c2d1ac594cb1f",
+        "data_type": "SR Legacy"
+      },
+      "nutrients": {
+        "energy_kcal": {
+          "amount": "884",
+          "unit": "kcal",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1008",
+            "source_nutrient_name": "Energy",
+            "source_amount": "884",
+            "source_unit": "kcal",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1008"
+        },
+        "protein_g": {
+          "amount": "0",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1003",
+            "source_nutrient_name": "Protein",
+            "source_amount": "0",
+            "source_unit": "g",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "0",
+            "max": "0",
+            "data_points": 4
+          }
+        },
+        "carbohydrate_g": {
+          "amount": "0",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1005",
+            "source_nutrient_name": "Carbohydrate, by difference",
+            "source_amount": "0",
+            "source_unit": "g",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          }
+        },
+        "fat_g": {
+          "amount": "100",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1004",
+            "source_nutrient_name": "Total lipid (fat)",
+            "source_amount": "100",
+            "source_unit": "g",
+            "derivation_code": "O",
+            "derivation_description": "Other procedure used from imputing",
+            "data_points": 0
+          }
+        },
+        "fiber_g": {
+          "amount": "0",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1079",
+            "source_nutrient_name": "Fiber, total dietary",
+            "source_amount": "0",
+            "source_unit": "g",
+            "data_points": 0
+          }
+        },
+        "sodium_mg": {
+          "amount": "2",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1093",
+            "source_nutrient_name": "Sodium, Na",
+            "source_amount": "2",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "2",
+            "max": "3",
+            "data_points": 4
+          }
+        },
+        "potassium_mg": {
+          "amount": "1",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1092",
+            "source_nutrient_name": "Potassium, K",
+            "source_amount": "1",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "0",
+            "max": "1",
+            "data_points": 4
+          }
+        },
+        "phosphorus_mg": {
+          "amount": "0",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1091",
+            "source_nutrient_name": "Phosphorus, P",
+            "source_amount": "0",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "0",
+            "max": "0",
+            "data_points": 4
+          }
+        }
+      },
+      "energy_alternatives": [
+        {
+          "amount": "3700",
+          "unit": "kJ",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1062",
+            "source_nutrient_name": "Energy",
+            "source_amount": "3700",
+            "source_unit": "kJ",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1062_kj"
+        }
+      ],
+      "portions": {
+        "usda:88667": {
+          "grams": "13.5",
+          "label": "1 tablespoon",
+          "source": "https://fdc.nal.usda.gov/food-details/171413/nutrients ; foodPortion.id=88667; amount=1; gramWeight=13.5"
+        },
+        "usda:88669": {
+          "grams": "4.5",
+          "label": "1 tsp",
+          "source": "https://fdc.nal.usda.gov/food-details/171413/nutrients ; foodPortion.id=88669; amount=1; gramWeight=4.5"
+        },
+        "usda:88668": {
+          "grams": "216",
+          "label": "1 cup",
+          "source": "https://fdc.nal.usda.gov/food-details/171413/nutrients ; foodPortion.id=88668; amount=1; gramWeight=216"
+        }
+      },
+      "allergens": {
+        "contains": [],
+        "may_contain": [],
+        "assessment": "unknown",
+        "source": "USDA nutrient record does not establish complete ingredients or cross-contact assessment."
+      }
+    },
+    "usda:170158": {
+      "id": "usda:170158",
+      "name": "Nuts, almonds, dry roasted, without salt added",
+      "state": "processed",
+      "source": {
+        "publisher": "USDA FoodData Central",
+        "record_id": "170158",
+        "url": "https://fdc.nal.usda.gov/food-details/170158/nutrients",
+        "published_date": "2019-04-01",
+        "retrieved_date": "2026-10-06",
+        "license": "CC0-1.0",
+        "response_sha256": "ce62c625f1758793a93a2d269cd86eaf6d2b9e24e8add3649de1f4f9f198f05f",
+        "data_type": "SR Legacy"
+      },
+      "nutrients": {
+        "energy_kcal": {
+          "amount": "598",
+          "unit": "kcal",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1008",
+            "source_nutrient_name": "Energy",
+            "source_amount": "598",
+            "source_unit": "kcal",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1008"
+        },
+        "protein_g": {
+          "amount": "20.96",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1003",
+            "source_nutrient_name": "Protein",
+            "source_amount": "20.96",
+            "source_unit": "g",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "17.8",
+            "max": "23.7",
+            "data_points": 24
+          }
+        },
+        "carbohydrate_g": {
+          "amount": "21.01",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1005",
+            "source_nutrient_name": "Carbohydrate, by difference",
+            "source_amount": "21.01",
+            "source_unit": "g",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          }
+        },
+        "fat_g": {
+          "amount": "52.54",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1004",
+            "source_nutrient_name": "Total lipid (fat)",
+            "source_amount": "52.54",
+            "source_unit": "g",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "47.29",
+            "max": "56.29",
+            "data_points": 23
+          }
+        },
+        "fiber_g": {
+          "amount": "10.9",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1079",
+            "source_nutrient_name": "Fiber, total dietary",
+            "source_amount": "10.9",
+            "source_unit": "g",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "7.8",
+            "max": "13.1",
+            "data_points": 20
+          }
+        },
+        "sodium_mg": {
+          "amount": "3",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1093",
+            "source_nutrient_name": "Sodium, Na",
+            "source_amount": "3",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "0",
+            "max": "17",
+            "data_points": 20
+          }
+        },
+        "potassium_mg": {
+          "amount": "713",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1092",
+            "source_nutrient_name": "Potassium, K",
+            "source_amount": "713",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "558",
+            "max": "854",
+            "data_points": 21
+          }
+        },
+        "phosphorus_mg": {
+          "amount": "471",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1091",
+            "source_nutrient_name": "Phosphorus, P",
+            "source_amount": "471",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "371",
+            "max": "564",
+            "data_points": 21
+          }
+        }
+      },
+      "energy_alternatives": [
+        {
+          "amount": "2502",
+          "unit": "kJ",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1062",
+            "source_nutrient_name": "Energy",
+            "source_amount": "2502",
+            "source_unit": "kJ",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1062_kj"
+        }
+      ],
+      "portions": {
+        "usda:86148": {
+          "grams": "138",
+          "label": "1 cup whole kernels",
+          "source": "https://fdc.nal.usda.gov/food-details/170158/nutrients ; foodPortion.id=86148; amount=1; gramWeight=138"
+        },
+        "usda:86149": {
+          "grams": "28.35",
+          "label": "1 oz (22 whole kernels)",
+          "source": "https://fdc.nal.usda.gov/food-details/170158/nutrients ; foodPortion.id=86149; amount=1; gramWeight=28.35"
+        }
+      },
+      "allergens": {
+        "contains": [],
+        "may_contain": [],
+        "assessment": "unknown",
+        "source": "USDA nutrient record does not establish complete ingredients or cross-contact assessment."
+      }
+    },
+    "usda:173944": {
+      "id": "usda:173944",
+      "name": "Bananas, raw",
+      "state": "raw",
+      "source": {
+        "publisher": "USDA FoodData Central",
+        "record_id": "173944",
+        "url": "https://fdc.nal.usda.gov/food-details/173944/nutrients",
+        "published_date": "2019-04-01",
+        "retrieved_date": "2026-10-06",
+        "license": "CC0-1.0",
+        "response_sha256": "0560cf4300cf614fddaad217644bb93c8d7824c9379f4b4959afa356111cbf97",
+        "data_type": "SR Legacy"
+      },
+      "nutrients": {
+        "energy_kcal": {
+          "amount": "89",
+          "unit": "kcal",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1008",
+            "source_nutrient_name": "Energy",
+            "source_amount": "89",
+            "source_unit": "kcal",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1008"
+        },
+        "protein_g": {
+          "amount": "1.09",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1003",
+            "source_nutrient_name": "Protein",
+            "source_amount": "1.09",
+            "source_unit": "g",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "0.75",
+            "max": "1.31",
+            "data_points": 12
+          }
+        },
+        "carbohydrate_g": {
+          "amount": "22.8",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1005",
+            "source_nutrient_name": "Carbohydrate, by difference",
+            "source_amount": "22.8",
+            "source_unit": "g",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          }
+        },
+        "fat_g": {
+          "amount": "0.33",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1004",
+            "source_nutrient_name": "Total lipid (fat)",
+            "source_amount": "0.33",
+            "source_unit": "g",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "0.07",
+            "max": "0.7",
+            "data_points": 19
+          }
+        },
+        "fiber_g": {
+          "amount": "2.6",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1079",
+            "source_nutrient_name": "Fiber, total dietary",
+            "source_amount": "2.6",
+            "source_unit": "g",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "1.7",
+            "max": "3.7",
+            "data_points": 13
+          }
+        },
+        "sodium_mg": {
+          "amount": "1",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1093",
+            "source_nutrient_name": "Sodium, Na",
+            "source_amount": "1",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "0",
+            "max": "5",
+            "data_points": 45
+          }
+        },
+        "potassium_mg": {
+          "amount": "358",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1092",
+            "source_nutrient_name": "Potassium, K",
+            "source_amount": "358",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "308",
+            "max": "426",
+            "data_points": 45
+          }
+        },
+        "phosphorus_mg": {
+          "amount": "22",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1091",
+            "source_nutrient_name": "Phosphorus, P",
+            "source_amount": "22",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "15",
+            "max": "29",
+            "data_points": 45
+          }
+        }
+      },
+      "energy_alternatives": [
+        {
+          "amount": "371",
+          "unit": "kJ",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1062",
+            "source_nutrient_name": "Energy",
+            "source_amount": "371",
+            "source_unit": "kJ",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1062_kj"
+        }
+      ],
+      "portions": {
+        "usda:93518": {
+          "grams": "126",
+          "label": "1 NLEA serving",
+          "source": "https://fdc.nal.usda.gov/food-details/173944/nutrients ; foodPortion.id=93518; amount=1; gramWeight=126"
+        },
+        "usda:93517": {
+          "grams": "152",
+          "label": "1 extra large (9\" or longer)",
+          "source": "https://fdc.nal.usda.gov/food-details/173944/nutrients ; foodPortion.id=93517; amount=1; gramWeight=152"
+        },
+        "usda:93516": {
+          "grams": "136",
+          "label": "1 large (8\" to 8-7/8\" long)",
+          "source": "https://fdc.nal.usda.gov/food-details/173944/nutrients ; foodPortion.id=93516; amount=1; gramWeight=136"
+        },
+        "usda:93512": {
+          "grams": "150",
+          "label": "1 cup, sliced",
+          "source": "https://fdc.nal.usda.gov/food-details/173944/nutrients ; foodPortion.id=93512; amount=1; gramWeight=150"
+        },
+        "usda:93514": {
+          "grams": "101",
+          "label": "1 small (6\" to 6-7/8\" long)",
+          "source": "https://fdc.nal.usda.gov/food-details/173944/nutrients ; foodPortion.id=93514; amount=1; gramWeight=101"
+        },
+        "usda:93513": {
+          "grams": "81",
+          "label": "1 extra small (less than 6\" long)",
+          "source": "https://fdc.nal.usda.gov/food-details/173944/nutrients ; foodPortion.id=93513; amount=1; gramWeight=81"
+        },
+        "usda:93515": {
+          "grams": "118",
+          "label": "1 medium (7\" to 7-7/8\" long)",
+          "source": "https://fdc.nal.usda.gov/food-details/173944/nutrients ; foodPortion.id=93515; amount=1; gramWeight=118"
+        },
+        "usda:93511": {
+          "grams": "225",
+          "label": "1 cup, mashed",
+          "source": "https://fdc.nal.usda.gov/food-details/173944/nutrients ; foodPortion.id=93511; amount=1; gramWeight=225"
+        }
+      },
+      "allergens": {
+        "contains": [],
+        "may_contain": [],
+        "assessment": "unknown",
+        "source": "USDA nutrient record does not establish complete ingredients or cross-contact assessment."
+      }
+    },
+    "usda:171688": {
+      "id": "usda:171688",
+      "name": "Apples, raw, with skin (Includes foods for USDA's Food Distribution Program)",
+      "state": "raw",
+      "source": {
+        "publisher": "USDA FoodData Central",
+        "record_id": "171688",
+        "url": "https://fdc.nal.usda.gov/food-details/171688/nutrients",
+        "published_date": "2019-04-01",
+        "retrieved_date": "2026-10-06",
+        "license": "CC0-1.0",
+        "response_sha256": "a3bad2e84eb59f63f542844cb9447f58ede21ea6bd60cde26d20287f329f220c",
+        "data_type": "SR Legacy"
+      },
+      "nutrients": {
+        "energy_kcal": {
+          "amount": "52",
+          "unit": "kcal",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1008",
+            "source_nutrient_name": "Energy",
+            "source_amount": "52",
+            "source_unit": "kcal",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1008"
+        },
+        "protein_g": {
+          "amount": "0.26",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1003",
+            "source_nutrient_name": "Protein",
+            "source_amount": "0.26",
+            "source_unit": "g",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "0.17",
+            "max": "0.57",
+            "data_points": 29
+          }
+        },
+        "carbohydrate_g": {
+          "amount": "13.8",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1005",
+            "source_nutrient_name": "Carbohydrate, by difference",
+            "source_amount": "13.8",
+            "source_unit": "g",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          }
+        },
+        "fat_g": {
+          "amount": "0.17",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1004",
+            "source_nutrient_name": "Total lipid (fat)",
+            "source_amount": "0.17",
+            "source_unit": "g",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "0.05",
+            "max": "0.31",
+            "data_points": 35
+          }
+        },
+        "fiber_g": {
+          "amount": "2.4",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1079",
+            "source_nutrient_name": "Fiber, total dietary",
+            "source_amount": "2.4",
+            "source_unit": "g",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "1.4",
+            "max": "3.5",
+            "data_points": 29
+          }
+        },
+        "sodium_mg": {
+          "amount": "1",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1093",
+            "source_nutrient_name": "Sodium, Na",
+            "source_amount": "1",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "1",
+            "max": "2",
+            "data_points": 6
+          }
+        },
+        "potassium_mg": {
+          "amount": "107",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1092",
+            "source_nutrient_name": "Potassium, K",
+            "source_amount": "107",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "88",
+            "max": "136",
+            "data_points": 26
+          }
+        },
+        "phosphorus_mg": {
+          "amount": "11",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1091",
+            "source_nutrient_name": "Phosphorus, P",
+            "source_amount": "11",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "10",
+            "max": "13",
+            "data_points": 23
+          }
+        }
+      },
+      "energy_alternatives": [
+        {
+          "amount": "218",
+          "unit": "kJ",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1062",
+            "source_nutrient_name": "Energy",
+            "source_amount": "218",
+            "source_unit": "kJ",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1062_kj"
+        }
+      ],
+      "portions": {
+        "usda:89191": {
+          "grams": "109",
+          "label": "1 cup slices",
+          "source": "https://fdc.nal.usda.gov/food-details/171688/nutrients ; foodPortion.id=89191; amount=1; gramWeight=109"
+        },
+        "usda:89193": {
+          "grams": "182",
+          "label": "1 medium (3\" dia)",
+          "source": "https://fdc.nal.usda.gov/food-details/171688/nutrients ; foodPortion.id=89193; amount=1; gramWeight=182"
+        },
+        "usda:89194": {
+          "grams": "149",
+          "label": "1 small (2-3/4\" dia)",
+          "source": "https://fdc.nal.usda.gov/food-details/171688/nutrients ; foodPortion.id=89194; amount=1; gramWeight=149"
+        },
+        "usda:89196": {
+          "grams": "242",
+          "label": "1 NLEA serving",
+          "source": "https://fdc.nal.usda.gov/food-details/171688/nutrients ; foodPortion.id=89196; amount=1; gramWeight=242"
+        },
+        "usda:89190": {
+          "grams": "125",
+          "label": "1 cup, quartered or chopped",
+          "source": "https://fdc.nal.usda.gov/food-details/171688/nutrients ; foodPortion.id=89190; amount=1; gramWeight=125"
+        },
+        "usda:89195": {
+          "grams": "101",
+          "label": "1 extra small (2-1/2\" dia)",
+          "source": "https://fdc.nal.usda.gov/food-details/171688/nutrients ; foodPortion.id=89195; amount=1; gramWeight=101"
+        },
+        "usda:89192": {
+          "grams": "223",
+          "label": "1 large (3-1/4\" dia)",
+          "source": "https://fdc.nal.usda.gov/food-details/171688/nutrients ; foodPortion.id=89192; amount=1; gramWeight=223"
+        }
+      },
+      "allergens": {
+        "contains": [],
+        "may_contain": [],
+        "assessment": "unknown",
+        "source": "USDA nutrient record does not establish complete ingredients or cross-contact assessment."
+      }
+    },
+    "usda:169967": {
+      "id": "usda:169967",
+      "name": "Broccoli, cooked, boiled, drained, without salt",
+      "state": "cooked",
+      "source": {
+        "publisher": "USDA FoodData Central",
+        "record_id": "169967",
+        "url": "https://fdc.nal.usda.gov/food-details/169967/nutrients",
+        "published_date": "2019-04-01",
+        "retrieved_date": "2026-10-06",
+        "license": "CC0-1.0",
+        "response_sha256": "b61e9b04194e2bdea01473528aa51361935f113aef6be4a5ac1ccaaed9ca36d8",
+        "data_type": "SR Legacy"
+      },
+      "nutrients": {
+        "energy_kcal": {
+          "amount": "35",
+          "unit": "kcal",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1008",
+            "source_nutrient_name": "Energy",
+            "source_amount": "35",
+            "source_unit": "kcal",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1008"
+        },
+        "protein_g": {
+          "amount": "2.38",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1003",
+            "source_nutrient_name": "Protein",
+            "source_amount": "2.38",
+            "source_unit": "g",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "data_points": 4
+          }
+        },
+        "carbohydrate_g": {
+          "amount": "7.18",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1005",
+            "source_nutrient_name": "Carbohydrate, by difference",
+            "source_amount": "7.18",
+            "source_unit": "g",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          }
+        },
+        "fat_g": {
+          "amount": "0.41",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1004",
+            "source_nutrient_name": "Total lipid (fat)",
+            "source_amount": "0.41",
+            "source_unit": "g",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "data_points": 4
+          }
+        },
+        "fiber_g": {
+          "amount": "3.3",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1079",
+            "source_nutrient_name": "Fiber, total dietary",
+            "source_amount": "3.3",
+            "source_unit": "g",
+            "derivation_code": "JA",
+            "derivation_description": "Aggregated data involving combinations of data with only source codes 1 and 12 and/or 13",
+            "data_points": 4
+          }
+        },
+        "sodium_mg": {
+          "amount": "41",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1093",
+            "source_nutrient_name": "Sodium, Na",
+            "source_amount": "41",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "data_points": 4
+          }
+        },
+        "potassium_mg": {
+          "amount": "293",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1092",
+            "source_nutrient_name": "Potassium, K",
+            "source_amount": "293",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "data_points": 4
+          }
+        },
+        "phosphorus_mg": {
+          "amount": "67",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1091",
+            "source_nutrient_name": "Phosphorus, P",
+            "source_amount": "67",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "data_points": 4
+          }
+        }
+      },
+      "energy_alternatives": [
+        {
+          "amount": "146",
+          "unit": "kJ",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1062",
+            "source_nutrient_name": "Energy",
+            "source_amount": "146",
+            "source_unit": "kJ",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1062_kj"
+        }
+      ],
+      "portions": {
+        "usda:85773": {
+          "grams": "280",
+          "label": "1 stalk, large (11\"-12\" long)",
+          "source": "https://fdc.nal.usda.gov/food-details/169967/nutrients ; foodPortion.id=85773; amount=1; gramWeight=280"
+        },
+        "usda:85776": {
+          "grams": "37",
+          "label": "1 spear (about 5\" long)",
+          "source": "https://fdc.nal.usda.gov/food-details/169967/nutrients ; foodPortion.id=85776; amount=1; gramWeight=37"
+        },
+        "usda:85772": {
+          "grams": "78",
+          "label": "0.5 cup, chopped",
+          "source": "https://fdc.nal.usda.gov/food-details/169967/nutrients ; foodPortion.id=85772; amount=0.5; gramWeight=78"
+        },
+        "usda:85774": {
+          "grams": "180",
+          "label": "1 stalk, medium (7-1/2\" - 8\" long)",
+          "source": "https://fdc.nal.usda.gov/food-details/169967/nutrients ; foodPortion.id=85774; amount=1; gramWeight=180"
+        },
+        "usda:85775": {
+          "grams": "140",
+          "label": "1 stalk, small (5\" long)",
+          "source": "https://fdc.nal.usda.gov/food-details/169967/nutrients ; foodPortion.id=85775; amount=1; gramWeight=140"
+        }
+      },
+      "allergens": {
+        "contains": [],
+        "may_contain": [],
+        "assessment": "unknown",
+        "source": "USDA nutrient record does not establish complete ingredients or cross-contact assessment."
+      }
+    },
+    "usda:170394": {
+      "id": "usda:170394",
+      "name": "Carrots, cooked, boiled, drained, without salt",
+      "state": "cooked",
+      "source": {
+        "publisher": "USDA FoodData Central",
+        "record_id": "170394",
+        "url": "https://fdc.nal.usda.gov/food-details/170394/nutrients",
+        "published_date": "2019-04-01",
+        "retrieved_date": "2026-10-06",
+        "license": "CC0-1.0",
+        "response_sha256": "1a30a4174244480a1999d160475059a751ab767b46f7bf87813b29b8121c3408",
+        "data_type": "SR Legacy"
+      },
+      "nutrients": {
+        "energy_kcal": {
+          "amount": "35",
+          "unit": "kcal",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1008",
+            "source_nutrient_name": "Energy",
+            "source_amount": "35",
+            "source_unit": "kcal",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1008"
+        },
+        "protein_g": {
+          "amount": "0.76",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1003",
+            "source_nutrient_name": "Protein",
+            "source_amount": "0.76",
+            "source_unit": "g",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "0.62",
+            "max": "0.83",
+            "data_points": 4
+          }
+        },
+        "carbohydrate_g": {
+          "amount": "8.22",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1005",
+            "source_nutrient_name": "Carbohydrate, by difference",
+            "source_amount": "8.22",
+            "source_unit": "g",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          }
+        },
+        "fat_g": {
+          "amount": "0.18",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1004",
+            "source_nutrient_name": "Total lipid (fat)",
+            "source_amount": "0.18",
+            "source_unit": "g",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "0.02",
+            "max": "0.34",
+            "data_points": 4
+          }
+        },
+        "fiber_g": {
+          "amount": "3",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1079",
+            "source_nutrient_name": "Fiber, total dietary",
+            "source_amount": "3",
+            "source_unit": "g",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "2.9",
+            "max": "3.1",
+            "data_points": 4
+          }
+        },
+        "sodium_mg": {
+          "amount": "58",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1093",
+            "source_nutrient_name": "Sodium, Na",
+            "source_amount": "58",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "46",
+            "max": "71",
+            "data_points": 4
+          }
+        },
+        "potassium_mg": {
+          "amount": "235",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1092",
+            "source_nutrient_name": "Potassium, K",
+            "source_amount": "235",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "201",
+            "max": "283",
+            "data_points": 4
+          }
+        },
+        "phosphorus_mg": {
+          "amount": "30",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1091",
+            "source_nutrient_name": "Phosphorus, P",
+            "source_amount": "30",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "27",
+            "max": "35",
+            "data_points": 4
+          }
+        }
+      },
+      "energy_alternatives": [
+        {
+          "amount": "147",
+          "unit": "kJ",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1062",
+            "source_nutrient_name": "Energy",
+            "source_amount": "147",
+            "source_unit": "kJ",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1062_kj"
+        }
+      ],
+      "portions": {
+        "usda:86566": {
+          "grams": "46",
+          "label": "1 carrot",
+          "source": "https://fdc.nal.usda.gov/food-details/170394/nutrients ; foodPortion.id=86566; amount=1; gramWeight=46"
+        },
+        "usda:86564": {
+          "grams": "9.7",
+          "label": "1 tbsp",
+          "source": "https://fdc.nal.usda.gov/food-details/170394/nutrients ; foodPortion.id=86564; amount=1; gramWeight=9.7"
+        },
+        "usda:86565": {
+          "grams": "78",
+          "label": "0.5 cup slices",
+          "source": "https://fdc.nal.usda.gov/food-details/170394/nutrients ; foodPortion.id=86565; amount=0.5; gramWeight=78"
+        }
+      },
+      "allergens": {
+        "contains": [],
+        "may_contain": [],
+        "assessment": "unknown",
+        "source": "USDA nutrient record does not establish complete ingredients or cross-contact assessment."
+      }
+    },
+    "usda:168463": {
+      "id": "usda:168463",
+      "name": "Spinach, cooked, boiled, drained, without salt",
+      "state": "cooked",
+      "source": {
+        "publisher": "USDA FoodData Central",
+        "record_id": "168463",
+        "url": "https://fdc.nal.usda.gov/food-details/168463/nutrients",
+        "published_date": "2019-04-01",
+        "retrieved_date": "2026-10-06",
+        "license": "CC0-1.0",
+        "response_sha256": "0137c9e569f1fa61fb01461e5df8925dc52333a53867eb0bb50d943c8ba5526a",
+        "data_type": "SR Legacy"
+      },
+      "nutrients": {
+        "energy_kcal": {
+          "amount": "23",
+          "unit": "kcal",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1008",
+            "source_nutrient_name": "Energy",
+            "source_amount": "23",
+            "source_unit": "kcal",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1008"
+        },
+        "protein_g": {
+          "amount": "2.97",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1003",
+            "source_nutrient_name": "Protein",
+            "source_amount": "2.97",
+            "source_unit": "g",
+            "data_points": 16
+          }
+        },
+        "carbohydrate_g": {
+          "amount": "3.75",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1005",
+            "source_nutrient_name": "Carbohydrate, by difference",
+            "source_amount": "3.75",
+            "source_unit": "g",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          }
+        },
+        "fat_g": {
+          "amount": "0.26",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1004",
+            "source_nutrient_name": "Total lipid (fat)",
+            "source_amount": "0.26",
+            "source_unit": "g",
+            "data_points": 16
+          }
+        },
+        "fiber_g": {
+          "amount": "2.4",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1079",
+            "source_nutrient_name": "Fiber, total dietary",
+            "source_amount": "2.4",
+            "source_unit": "g",
+            "data_points": 0
+          }
+        },
+        "sodium_mg": {
+          "amount": "70",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1093",
+            "source_nutrient_name": "Sodium, Na",
+            "source_amount": "70",
+            "source_unit": "mg",
+            "data_points": 8
+          }
+        },
+        "potassium_mg": {
+          "amount": "466",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1092",
+            "source_nutrient_name": "Potassium, K",
+            "source_amount": "466",
+            "source_unit": "mg",
+            "data_points": 12
+          }
+        },
+        "phosphorus_mg": {
+          "amount": "56",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1091",
+            "source_nutrient_name": "Phosphorus, P",
+            "source_amount": "56",
+            "source_unit": "mg",
+            "data_points": 12
+          }
+        }
+      },
+      "energy_alternatives": [
+        {
+          "amount": "96",
+          "unit": "kJ",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1062",
+            "source_nutrient_name": "Energy",
+            "source_amount": "96",
+            "source_unit": "kJ",
+            "data_points": 0
+          },
+          "method": "usda_1062_kj"
+        }
+      ],
+      "portions": {
+        "usda:83136": {
+          "grams": "180",
+          "label": "1 cup",
+          "source": "https://fdc.nal.usda.gov/food-details/168463/nutrients ; foodPortion.id=83136; amount=1; gramWeight=180"
+        }
+      },
+      "allergens": {
+        "contains": [],
+        "may_contain": [],
+        "assessment": "unknown",
+        "source": "USDA nutrient record does not establish complete ingredients or cross-contact assessment."
+      }
+    },
+    "usda:170420": {
+      "id": "usda:170420",
+      "name": "Peas, green, cooked, boiled, drained, without salt",
+      "state": "cooked",
+      "source": {
+        "publisher": "USDA FoodData Central",
+        "record_id": "170420",
+        "url": "https://fdc.nal.usda.gov/food-details/170420/nutrients",
+        "published_date": "2019-04-01",
+        "retrieved_date": "2026-10-06",
+        "license": "CC0-1.0",
+        "response_sha256": "b5eccc42218e3a2b0a91e357fba319f9ded37048f0bc30969cb382bf4792ced4",
+        "data_type": "SR Legacy"
+      },
+      "nutrients": {
+        "energy_kcal": {
+          "amount": "84",
+          "unit": "kcal",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1008",
+            "source_nutrient_name": "Energy",
+            "source_amount": "84",
+            "source_unit": "kcal",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1008"
+        },
+        "protein_g": {
+          "amount": "5.36",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1003",
+            "source_nutrient_name": "Protein",
+            "source_amount": "5.36",
+            "source_unit": "g",
+            "data_points": 14
+          }
+        },
+        "carbohydrate_g": {
+          "amount": "15.6",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1005",
+            "source_nutrient_name": "Carbohydrate, by difference",
+            "source_amount": "15.6",
+            "source_unit": "g",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          }
+        },
+        "fat_g": {
+          "amount": "0.22",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1004",
+            "source_nutrient_name": "Total lipid (fat)",
+            "source_amount": "0.22",
+            "source_unit": "g",
+            "data_points": 14
+          }
+        },
+        "fiber_g": {
+          "amount": "5.5",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1079",
+            "source_nutrient_name": "Fiber, total dietary",
+            "source_amount": "5.5",
+            "source_unit": "g",
+            "data_points": 0
+          }
+        },
+        "sodium_mg": {
+          "amount": "3",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1093",
+            "source_nutrient_name": "Sodium, Na",
+            "source_amount": "3",
+            "source_unit": "mg",
+            "data_points": 8
+          }
+        },
+        "potassium_mg": {
+          "amount": "271",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1092",
+            "source_nutrient_name": "Potassium, K",
+            "source_amount": "271",
+            "source_unit": "mg",
+            "data_points": 12
+          }
+        },
+        "phosphorus_mg": {
+          "amount": "117",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1091",
+            "source_nutrient_name": "Phosphorus, P",
+            "source_amount": "117",
+            "source_unit": "mg",
+            "data_points": 12
+          }
+        }
+      },
+      "energy_alternatives": [
+        {
+          "amount": "352",
+          "unit": "kJ",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1062",
+            "source_nutrient_name": "Energy",
+            "source_amount": "352",
+            "source_unit": "kJ",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1062_kj"
+        }
+      ],
+      "portions": {
+        "usda:86614": {
+          "grams": "160",
+          "label": "1 cup",
+          "source": "https://fdc.nal.usda.gov/food-details/170420/nutrients ; foodPortion.id=86614; amount=1; gramWeight=160"
+        }
+      },
+      "allergens": {
+        "contains": [],
+        "may_contain": [],
+        "assessment": "unknown",
+        "source": "USDA nutrient record does not establish complete ingredients or cross-contact assessment."
+      }
+    },
+    "usda:170457": {
+      "id": "usda:170457",
+      "name": "Tomatoes, red, ripe, raw, year round average",
+      "state": "raw",
+      "source": {
+        "publisher": "USDA FoodData Central",
+        "record_id": "170457",
+        "url": "https://fdc.nal.usda.gov/food-details/170457/nutrients",
+        "published_date": "2019-04-01",
+        "retrieved_date": "2026-10-06",
+        "license": "CC0-1.0",
+        "response_sha256": "99ec481dfb1b1ca565564287be378b33c4ec980cfd5cc9f9e4a5211e971c5e93",
+        "data_type": "SR Legacy"
+      },
+      "nutrients": {
+        "energy_kcal": {
+          "amount": "18",
+          "unit": "kcal",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1008",
+            "source_nutrient_name": "Energy",
+            "source_amount": "18",
+            "source_unit": "kcal",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1008"
+        },
+        "protein_g": {
+          "amount": "0.88",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1003",
+            "source_nutrient_name": "Protein",
+            "source_amount": "0.88",
+            "source_unit": "g",
+            "derivation_code": "JO",
+            "derivation_description": "Aggregated data involving combinations of data with different source codes when at least one code is not 1, 6, 12, or 13",
+            "min": "0.59",
+            "max": "1.06",
+            "data_points": 19
+          }
+        },
+        "carbohydrate_g": {
+          "amount": "3.89",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1005",
+            "source_nutrient_name": "Carbohydrate, by difference",
+            "source_amount": "3.89",
+            "source_unit": "g",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          }
+        },
+        "fat_g": {
+          "amount": "0.2",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1004",
+            "source_nutrient_name": "Total lipid (fat)",
+            "source_amount": "0.2",
+            "source_unit": "g",
+            "derivation_code": "JO",
+            "derivation_description": "Aggregated data involving combinations of data with different source codes when at least one code is not 1, 6, 12, or 13",
+            "min": "0.07",
+            "max": "0.8",
+            "data_points": 26
+          }
+        },
+        "fiber_g": {
+          "amount": "1.2",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1079",
+            "source_nutrient_name": "Fiber, total dietary",
+            "source_amount": "1.2",
+            "source_unit": "g",
+            "derivation_code": "JA",
+            "derivation_description": "Aggregated data involving combinations of data with only source codes 1 and 12 and/or 13",
+            "min": "0.7",
+            "max": "2",
+            "data_points": 5
+          }
+        },
+        "sodium_mg": {
+          "amount": "5",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1093",
+            "source_nutrient_name": "Sodium, Na",
+            "source_amount": "5",
+            "source_unit": "mg",
+            "derivation_code": "JA",
+            "derivation_description": "Aggregated data involving combinations of data with only source codes 1 and 12 and/or 13",
+            "min": "1",
+            "max": "24",
+            "data_points": 66
+          }
+        },
+        "potassium_mg": {
+          "amount": "237",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1092",
+            "source_nutrient_name": "Potassium, K",
+            "source_amount": "237",
+            "source_unit": "mg",
+            "derivation_code": "JA",
+            "derivation_description": "Aggregated data involving combinations of data with only source codes 1 and 12 and/or 13",
+            "min": "144",
+            "max": "385",
+            "data_points": 67
+          }
+        },
+        "phosphorus_mg": {
+          "amount": "24",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1091",
+            "source_nutrient_name": "Phosphorus, P",
+            "source_amount": "24",
+            "source_unit": "mg",
+            "derivation_code": "JA",
+            "derivation_description": "Aggregated data involving combinations of data with only source codes 1 and 12 and/or 13",
+            "min": "15",
+            "max": "37",
+            "data_points": 69
+          }
+        }
+      },
+      "energy_alternatives": [
+        {
+          "amount": "74",
+          "unit": "kJ",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1062",
+            "source_nutrient_name": "Energy",
+            "source_amount": "74",
+            "source_unit": "kJ",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1062_kj"
+        }
+      ],
+      "portions": {
+        "usda:86686": {
+          "grams": "123",
+          "label": "1 medium whole (2-3/5\" dia)",
+          "source": "https://fdc.nal.usda.gov/food-details/170457/nutrients ; foodPortion.id=86686; amount=1; gramWeight=123"
+        },
+        "usda:86687": {
+          "grams": "20",
+          "label": "1 slice, medium (1/4\" thick)",
+          "source": "https://fdc.nal.usda.gov/food-details/170457/nutrients ; foodPortion.id=86687; amount=1; gramWeight=20"
+        },
+        "usda:86685": {
+          "grams": "182",
+          "label": "1 large whole (3\" dia)",
+          "source": "https://fdc.nal.usda.gov/food-details/170457/nutrients ; foodPortion.id=86685; amount=1; gramWeight=182"
+        },
+        "usda:86684": {
+          "grams": "17",
+          "label": "1 cherry",
+          "source": "https://fdc.nal.usda.gov/food-details/170457/nutrients ; foodPortion.id=86684; amount=1; gramWeight=17"
+        },
+        "usda:86683": {
+          "grams": "62",
+          "label": "1 Italian tomato",
+          "source": "https://fdc.nal.usda.gov/food-details/170457/nutrients ; foodPortion.id=86683; amount=1; gramWeight=62"
+        },
+        "usda:86692": {
+          "grams": "15",
+          "label": "1 slice, thin/small",
+          "source": "https://fdc.nal.usda.gov/food-details/170457/nutrients ; foodPortion.id=86692; amount=1; gramWeight=15"
+        },
+        "usda:86682": {
+          "grams": "180",
+          "label": "1 cup, chopped or sliced",
+          "source": "https://fdc.nal.usda.gov/food-details/170457/nutrients ; foodPortion.id=86682; amount=1; gramWeight=180"
+        },
+        "usda:86689": {
+          "grams": "91",
+          "label": "1 small whole (2-2/5\" dia)",
+          "source": "https://fdc.nal.usda.gov/food-details/170457/nutrients ; foodPortion.id=86689; amount=1; gramWeight=91"
+        },
+        "usda:86690": {
+          "grams": "27",
+          "label": "1 slice, thick/large (1/2\" thick)",
+          "source": "https://fdc.nal.usda.gov/food-details/170457/nutrients ; foodPortion.id=86690; amount=1; gramWeight=27"
+        },
+        "usda:86681": {
+          "grams": "149",
+          "label": "1 cup cherry tomatoes",
+          "source": "https://fdc.nal.usda.gov/food-details/170457/nutrients ; foodPortion.id=86681; amount=1; gramWeight=149"
+        },
+        "usda:86691": {
+          "grams": "31",
+          "label": "1 wedge (1/4 of medium tomato)",
+          "source": "https://fdc.nal.usda.gov/food-details/170457/nutrients ; foodPortion.id=86691; amount=1; gramWeight=31"
+        },
+        "usda:86693": {
+          "grams": "148",
+          "label": "1 NLEA serving",
+          "source": "https://fdc.nal.usda.gov/food-details/170457/nutrients ; foodPortion.id=86693; amount=1; gramWeight=148"
+        },
+        "usda:86688": {
+          "grams": "62",
+          "label": "1 plum tomato",
+          "source": "https://fdc.nal.usda.gov/food-details/170457/nutrients ; foodPortion.id=86688; amount=1; gramWeight=62"
+        }
+      },
+      "allergens": {
+        "contains": [],
+        "may_contain": [],
+        "assessment": "unknown",
+        "source": "USDA nutrient record does not establish complete ingredients or cross-contact assessment."
+      }
+    },
+    "usda:168409": {
+      "id": "usda:168409",
+      "name": "Cucumber, with peel, raw",
+      "state": "raw",
+      "source": {
+        "publisher": "USDA FoodData Central",
+        "record_id": "168409",
+        "url": "https://fdc.nal.usda.gov/food-details/168409/nutrients",
+        "published_date": "2019-04-01",
+        "retrieved_date": "2026-10-06",
+        "license": "CC0-1.0",
+        "response_sha256": "4ae41920a37b5604c3a97ce604076eed47464a878900067208a2fefc31de7d59",
+        "data_type": "SR Legacy"
+      },
+      "nutrients": {
+        "energy_kcal": {
+          "amount": "15",
+          "unit": "kcal",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1008",
+            "source_nutrient_name": "Energy",
+            "source_amount": "15",
+            "source_unit": "kcal",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1008"
+        },
+        "protein_g": {
+          "amount": "0.65",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1003",
+            "source_nutrient_name": "Protein",
+            "source_amount": "0.65",
+            "source_unit": "g",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "0.65",
+            "max": "0.65",
+            "data_points": 4
+          }
+        },
+        "carbohydrate_g": {
+          "amount": "3.63",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1005",
+            "source_nutrient_name": "Carbohydrate, by difference",
+            "source_amount": "3.63",
+            "source_unit": "g",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          }
+        },
+        "fat_g": {
+          "amount": "0.11",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1004",
+            "source_nutrient_name": "Total lipid (fat)",
+            "source_amount": "0.11",
+            "source_unit": "g",
+            "derivation_code": "JO",
+            "derivation_description": "Aggregated data involving combinations of data with different source codes when at least one code is not 1, 6, 12, or 13",
+            "min": "0.1",
+            "max": "0.11",
+            "data_points": 9
+          }
+        },
+        "fiber_g": {
+          "amount": "0.5",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1079",
+            "source_nutrient_name": "Fiber, total dietary",
+            "source_amount": "0.5",
+            "source_unit": "g",
+            "min": "0.5",
+            "max": "0.5",
+            "data_points": 1
+          }
+        },
+        "sodium_mg": {
+          "amount": "2",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1093",
+            "source_nutrient_name": "Sodium, Na",
+            "source_amount": "2",
+            "source_unit": "mg",
+            "data_points": 54
+          }
+        },
+        "potassium_mg": {
+          "amount": "147",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1092",
+            "source_nutrient_name": "Potassium, K",
+            "source_amount": "147",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "147",
+            "max": "147",
+            "data_points": 4
+          }
+        },
+        "phosphorus_mg": {
+          "amount": "24",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1091",
+            "source_nutrient_name": "Phosphorus, P",
+            "source_amount": "24",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "24",
+            "max": "24",
+            "data_points": 4
+          }
+        }
+      },
+      "energy_alternatives": [
+        {
+          "amount": "65",
+          "unit": "kJ",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1062",
+            "source_nutrient_name": "Energy",
+            "source_amount": "65",
+            "source_unit": "kJ",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1062_kj"
+        }
+      ],
+      "portions": {
+        "usda:83050": {
+          "grams": "301",
+          "label": "1 cucumber (8-1/4\")",
+          "source": "https://fdc.nal.usda.gov/food-details/168409/nutrients ; foodPortion.id=83050; amount=1; gramWeight=301"
+        },
+        "usda:83049": {
+          "grams": "52",
+          "label": "0.5 cup slices",
+          "source": "https://fdc.nal.usda.gov/food-details/168409/nutrients ; foodPortion.id=83049; amount=0.5; gramWeight=52"
+        }
+      },
+      "allergens": {
+        "contains": [],
+        "may_contain": [],
+        "assessment": "unknown",
+        "source": "USDA nutrient record does not establish complete ingredients or cross-contact assessment."
+      }
+    },
+    "usda:169252": {
+      "id": "usda:169252",
+      "name": "Mushrooms, white, cooked, boiled, drained, without salt",
+      "state": "cooked",
+      "source": {
+        "publisher": "USDA FoodData Central",
+        "record_id": "169252",
+        "url": "https://fdc.nal.usda.gov/food-details/169252/nutrients",
+        "published_date": "2019-04-01",
+        "retrieved_date": "2026-10-06",
+        "license": "CC0-1.0",
+        "response_sha256": "b4e0376df2902b943951b2cb4ff50114bc9d7e44899c158195fac33a123cb660",
+        "data_type": "SR Legacy"
+      },
+      "nutrients": {
+        "energy_kcal": {
+          "amount": "28",
+          "unit": "kcal",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1008",
+            "source_nutrient_name": "Energy",
+            "source_amount": "28",
+            "source_unit": "kcal",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1008"
+        },
+        "protein_g": {
+          "amount": "2.17",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1003",
+            "source_nutrient_name": "Protein",
+            "source_amount": "2.17",
+            "source_unit": "g",
+            "data_points": 0
+          }
+        },
+        "carbohydrate_g": {
+          "amount": "5.29",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1005",
+            "source_nutrient_name": "Carbohydrate, by difference",
+            "source_amount": "5.29",
+            "source_unit": "g",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          }
+        },
+        "fat_g": {
+          "amount": "0.47",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1004",
+            "source_nutrient_name": "Total lipid (fat)",
+            "source_amount": "0.47",
+            "source_unit": "g",
+            "data_points": 0
+          }
+        },
+        "fiber_g": {
+          "amount": "2.2",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1079",
+            "source_nutrient_name": "Fiber, total dietary",
+            "source_amount": "2.2",
+            "source_unit": "g",
+            "data_points": 0
+          }
+        },
+        "sodium_mg": {
+          "amount": "2",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1093",
+            "source_nutrient_name": "Sodium, Na",
+            "source_amount": "2",
+            "source_unit": "mg",
+            "data_points": 0
+          }
+        },
+        "potassium_mg": {
+          "amount": "356",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1092",
+            "source_nutrient_name": "Potassium, K",
+            "source_amount": "356",
+            "source_unit": "mg",
+            "data_points": 0
+          }
+        },
+        "phosphorus_mg": {
+          "amount": "87",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1091",
+            "source_nutrient_name": "Phosphorus, P",
+            "source_amount": "87",
+            "source_unit": "mg",
+            "data_points": 0
+          }
+        }
+      },
+      "energy_alternatives": [
+        {
+          "amount": "117",
+          "unit": "kJ",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1062",
+            "source_nutrient_name": "Energy",
+            "source_amount": "117",
+            "source_unit": "kJ",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1062_kj"
+        }
+      ],
+      "portions": {
+        "usda:84533": {
+          "grams": "156",
+          "label": "1 cup pieces",
+          "source": "https://fdc.nal.usda.gov/food-details/169252/nutrients ; foodPortion.id=84533; amount=1; gramWeight=156"
+        },
+        "usda:84535": {
+          "grams": "12",
+          "label": "1 mushroom",
+          "source": "https://fdc.nal.usda.gov/food-details/169252/nutrients ; foodPortion.id=84535; amount=1; gramWeight=12"
+        },
+        "usda:84534": {
+          "grams": "9.8",
+          "label": "1 tbsp",
+          "source": "https://fdc.nal.usda.gov/food-details/169252/nutrients ; foodPortion.id=84534; amount=1; gramWeight=9.8"
+        }
+      },
+      "allergens": {
+        "contains": [],
+        "may_contain": [],
+        "assessment": "unknown",
+        "source": "USDA nutrient record does not establish complete ingredients or cross-contact assessment."
+      }
+    },
+    "usda:168484": {
+      "id": "usda:168484",
+      "name": "Sweet potato, cooked, boiled, without skin",
+      "state": "cooked",
+      "source": {
+        "publisher": "USDA FoodData Central",
+        "record_id": "168484",
+        "url": "https://fdc.nal.usda.gov/food-details/168484/nutrients",
+        "published_date": "2019-04-01",
+        "retrieved_date": "2026-10-06",
+        "license": "CC0-1.0",
+        "response_sha256": "2eaa91fe4731ee1ff94bfe635012c999157d063adfb384a5351ec0664b3cd4b9",
+        "data_type": "SR Legacy"
+      },
+      "nutrients": {
+        "energy_kcal": {
+          "amount": "76",
+          "unit": "kcal",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1008",
+            "source_nutrient_name": "Energy",
+            "source_amount": "76",
+            "source_unit": "kcal",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1008"
+        },
+        "protein_g": {
+          "amount": "1.37",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1003",
+            "source_nutrient_name": "Protein",
+            "source_amount": "1.37",
+            "source_unit": "g",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "1.1",
+            "max": "1.54",
+            "data_points": 4
+          }
+        },
+        "carbohydrate_g": {
+          "amount": "17.7",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1005",
+            "source_nutrient_name": "Carbohydrate, by difference",
+            "source_amount": "17.7",
+            "source_unit": "g",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          }
+        },
+        "fat_g": {
+          "amount": "0.14",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1004",
+            "source_nutrient_name": "Total lipid (fat)",
+            "source_amount": "0.14",
+            "source_unit": "g",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "0.02",
+            "max": "0.27",
+            "data_points": 4
+          }
+        },
+        "fiber_g": {
+          "amount": "2.5",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1079",
+            "source_nutrient_name": "Fiber, total dietary",
+            "source_amount": "2.5",
+            "source_unit": "g",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "2.4",
+            "max": "2.8",
+            "data_points": 4
+          }
+        },
+        "sodium_mg": {
+          "amount": "27",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1093",
+            "source_nutrient_name": "Sodium, Na",
+            "source_amount": "27",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "21",
+            "max": "43",
+            "data_points": 4
+          }
+        },
+        "potassium_mg": {
+          "amount": "230",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1092",
+            "source_nutrient_name": "Potassium, K",
+            "source_amount": "230",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "186",
+            "max": "288",
+            "data_points": 4
+          }
+        },
+        "phosphorus_mg": {
+          "amount": "32",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1091",
+            "source_nutrient_name": "Phosphorus, P",
+            "source_amount": "32",
+            "source_unit": "mg",
+            "derivation_code": "A",
+            "derivation_description": "Analytical",
+            "min": "22",
+            "max": "47",
+            "data_points": 4
+          }
+        }
+      },
+      "energy_alternatives": [
+        {
+          "amount": "320",
+          "unit": "kJ",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1062",
+            "source_nutrient_name": "Energy",
+            "source_amount": "320",
+            "source_unit": "kJ",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1062_kj"
+        }
+      ],
+      "portions": {
+        "usda:83173": {
+          "grams": "151",
+          "label": "1 medium",
+          "source": "https://fdc.nal.usda.gov/food-details/168484/nutrients ; foodPortion.id=83173; amount=1; gramWeight=151"
+        },
+        "usda:83172": {
+          "grams": "328",
+          "label": "1 cup, mashed",
+          "source": "https://fdc.nal.usda.gov/food-details/168484/nutrients ; foodPortion.id=83172; amount=1; gramWeight=328"
+        }
+      },
+      "allergens": {
+        "contains": [],
+        "may_contain": [],
+        "assessment": "unknown",
+        "source": "USDA nutrient record does not establish complete ingredients or cross-contact assessment."
+      }
+    },
+    "usda:169283": {
+      "id": "usda:169283",
+      "name": "Soybeans, green, cooked, boiled, drained, without salt",
+      "state": "cooked",
+      "source": {
+        "publisher": "USDA FoodData Central",
+        "record_id": "169283",
+        "url": "https://fdc.nal.usda.gov/food-details/169283/nutrients",
+        "published_date": "2019-04-01",
+        "retrieved_date": "2026-10-06",
+        "license": "CC0-1.0",
+        "response_sha256": "b90d55119e9843b58e9806e40cb06f65f723dceea7f5e16d44a00943f0259f5c",
+        "data_type": "SR Legacy"
+      },
+      "nutrients": {
+        "energy_kcal": {
+          "amount": "141",
+          "unit": "kcal",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1008",
+            "source_nutrient_name": "Energy",
+            "source_amount": "141",
+            "source_unit": "kcal",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1008"
+        },
+        "protein_g": {
+          "amount": "12.4",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1003",
+            "source_nutrient_name": "Protein",
+            "source_amount": "12.4",
+            "source_unit": "g",
+            "data_points": 2
+          }
+        },
+        "carbohydrate_g": {
+          "amount": "11",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1005",
+            "source_nutrient_name": "Carbohydrate, by difference",
+            "source_amount": "11",
+            "source_unit": "g",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          }
+        },
+        "fat_g": {
+          "amount": "6.4",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1004",
+            "source_nutrient_name": "Total lipid (fat)",
+            "source_amount": "6.4",
+            "source_unit": "g",
+            "data_points": 1
+          }
+        },
+        "fiber_g": {
+          "amount": "4.2",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1079",
+            "source_nutrient_name": "Fiber, total dietary",
+            "source_amount": "4.2",
+            "source_unit": "g",
+            "data_points": 0
+          }
+        },
+        "sodium_mg": {
+          "amount": "14",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1093",
+            "source_nutrient_name": "Sodium, Na",
+            "source_amount": "14",
+            "source_unit": "mg",
+            "data_points": 1
+          }
+        },
+        "potassium_mg": {
+          "amount": "539",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1092",
+            "source_nutrient_name": "Potassium, K",
+            "source_amount": "539",
+            "source_unit": "mg",
+            "data_points": 1
+          }
+        },
+        "phosphorus_mg": {
+          "amount": "158",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1091",
+            "source_nutrient_name": "Phosphorus, P",
+            "source_amount": "158",
+            "source_unit": "mg",
+            "data_points": 2
+          }
+        }
+      },
+      "energy_alternatives": [
+        {
+          "amount": "590",
+          "unit": "kJ",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1062",
+            "source_nutrient_name": "Energy",
+            "source_amount": "590",
+            "source_unit": "kJ",
+            "data_points": 0
+          },
+          "method": "usda_1062_kj"
+        }
+      ],
+      "portions": {
+        "usda:84595": {
+          "grams": "180",
+          "label": "1 cup",
+          "source": "https://fdc.nal.usda.gov/food-details/169283/nutrients ; foodPortion.id=84595; amount=1; gramWeight=180"
+        }
+      },
+      "allergens": {
+        "contains": [],
+        "may_contain": [],
+        "assessment": "unknown",
+        "source": "USDA nutrient record does not establish complete ingredients or cross-contact assessment."
+      }
+    },
+    "usda:171284": {
+      "id": "usda:171284",
+      "name": "Yogurt, plain, whole milk",
+      "state": "processed",
+      "source": {
+        "publisher": "USDA FoodData Central",
+        "record_id": "171284",
+        "url": "https://fdc.nal.usda.gov/food-details/171284/nutrients",
+        "published_date": "2019-04-01",
+        "retrieved_date": "2026-10-06",
+        "license": "CC0-1.0",
+        "response_sha256": "c5af75b5416d5d03ff85bf811cae846df2a43ed8badb1c97719a3cc7f4b8fd62",
+        "data_type": "SR Legacy"
+      },
+      "nutrients": {
+        "energy_kcal": {
+          "amount": "61",
+          "unit": "kcal",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1008",
+            "source_nutrient_name": "Energy",
+            "source_amount": "61",
+            "source_unit": "kcal",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1008"
+        },
+        "protein_g": {
+          "amount": "3.47",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1003",
+            "source_nutrient_name": "Protein",
+            "source_amount": "3.47",
+            "source_unit": "g",
+            "data_points": 0
+          }
+        },
+        "carbohydrate_g": {
+          "amount": "4.66",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1005",
+            "source_nutrient_name": "Carbohydrate, by difference",
+            "source_amount": "4.66",
+            "source_unit": "g",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          }
+        },
+        "fat_g": {
+          "amount": "3.25",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1004",
+            "source_nutrient_name": "Total lipid (fat)",
+            "source_amount": "3.25",
+            "source_unit": "g",
+            "data_points": 0
+          }
+        },
+        "fiber_g": {
+          "amount": "0",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1079",
+            "source_nutrient_name": "Fiber, total dietary",
+            "source_amount": "0",
+            "source_unit": "g",
+            "data_points": 0
+          }
+        },
+        "sodium_mg": {
+          "amount": "46",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1093",
+            "source_nutrient_name": "Sodium, Na",
+            "source_amount": "46",
+            "source_unit": "mg",
+            "data_points": 0
+          }
+        },
+        "potassium_mg": {
+          "amount": "155",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1092",
+            "source_nutrient_name": "Potassium, K",
+            "source_amount": "155",
+            "source_unit": "mg",
+            "data_points": 0
+          }
+        },
+        "phosphorus_mg": {
+          "amount": "95",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1091",
+            "source_nutrient_name": "Phosphorus, P",
+            "source_amount": "95",
+            "source_unit": "mg",
+            "data_points": 0
+          }
+        }
+      },
+      "energy_alternatives": [
+        {
+          "amount": "257",
+          "unit": "kJ",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1062",
+            "source_nutrient_name": "Energy",
+            "source_amount": "257",
+            "source_unit": "kJ",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1062_kj"
+        }
+      ],
+      "portions": {
+        "usda:88363": {
+          "grams": "227",
+          "label": "1 container (8 oz)",
+          "source": "https://fdc.nal.usda.gov/food-details/171284/nutrients ; foodPortion.id=88363; amount=1; gramWeight=227"
+        },
+        "usda:88362": {
+          "grams": "170",
+          "label": "1 container (6 oz)",
+          "source": "https://fdc.nal.usda.gov/food-details/171284/nutrients ; foodPortion.id=88362; amount=1; gramWeight=170"
+        },
+        "usda:88364": {
+          "grams": "113",
+          "label": "0.5 container (4 oz)",
+          "source": "https://fdc.nal.usda.gov/food-details/171284/nutrients ; foodPortion.id=88364; amount=0.5; gramWeight=113"
+        },
+        "usda:88365": {
+          "grams": "245",
+          "label": "1 cup (8 fl oz)",
+          "source": "https://fdc.nal.usda.gov/food-details/171284/nutrients ; foodPortion.id=88365; amount=1; gramWeight=245"
+        }
+      },
+      "allergens": {
+        "contains": [],
+        "may_contain": [],
+        "assessment": "unknown",
+        "source": "USDA nutrient record does not establish complete ingredients or cross-contact assessment."
+      }
+    },
+    "usda:169097": {
+      "id": "usda:169097",
+      "name": "Oranges, raw, all commercial varieties",
+      "state": "raw",
+      "source": {
+        "publisher": "USDA FoodData Central",
+        "record_id": "169097",
+        "url": "https://fdc.nal.usda.gov/food-details/169097/nutrients",
+        "published_date": "2019-04-01",
+        "retrieved_date": "2026-10-06",
+        "license": "CC0-1.0",
+        "response_sha256": "d95d4741cab4ab29b6f91062b4f4769e73e81260b476fcf8e21bfe3c80b3da38",
+        "data_type": "SR Legacy"
+      },
+      "nutrients": {
+        "energy_kcal": {
+          "amount": "47",
+          "unit": "kcal",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1008",
+            "source_nutrient_name": "Energy",
+            "source_amount": "47",
+            "source_unit": "kcal",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          },
+          "method": "usda_1008"
+        },
+        "protein_g": {
+          "amount": "0.94",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1003",
+            "source_nutrient_name": "Protein",
+            "source_amount": "0.94",
+            "source_unit": "g",
+            "data_points": 69
+          }
+        },
+        "carbohydrate_g": {
+          "amount": "11.8",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1005",
+            "source_nutrient_name": "Carbohydrate, by difference",
+            "source_amount": "11.8",
+            "source_unit": "g",
+            "derivation_code": "NC",
+            "derivation_description": "Calculated",
+            "data_points": 0
+          }
+        },
+        "fat_g": {
+          "amount": "0.12",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1004",
+            "source_nutrient_name": "Total lipid (fat)",
+            "source_amount": "0.12",
+            "source_unit": "g",
+            "data_points": 4
+          }
+        },
+        "fiber_g": {
+          "amount": "2.4",
+          "unit": "g",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1079",
+            "source_nutrient_name": "Fiber, total dietary",
+            "source_amount": "2.4",
+            "source_unit": "g",
+            "data_points": 0
+          }
+        },
+        "sodium_mg": {
+          "amount": "0",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1093",
+            "source_nutrient_name": "Sodium, Na",
+            "source_amount": "0",
+            "source_unit": "mg",
+            "data_points": 72
+          }
+        },
+        "potassium_mg": {
+          "amount": "181",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1092",
+            "source_nutrient_name": "Potassium, K",
+            "source_amount": "181",
+            "source_unit": "mg",
+            "data_points": 180
+          }
+        },
+        "phosphorus_mg": {
+          "amount": "14",
+          "unit": "mg",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1091",
+            "source_nutrient_name": "Phosphorus, P",
+            "source_amount": "14",
+            "source_unit": "mg",
+            "data_points": 68
+          }
+        }
+      },
+      "energy_alternatives": [
+        {
+          "amount": "197",
+          "unit": "kJ",
+          "status": "reported",
+          "evidence": {
+            "scope": "aggregate",
+            "source_nutrient_id": "1062",
+            "source_nutrient_name": "Energy",
+            "source_amount": "197",
+            "source_unit": "kJ",
+            "data_points": 0
+          },
+          "method": "usda_1062_kj"
+        }
+      ],
+      "portions": {
+        "usda:84229": {
+          "grams": "96",
+          "label": "1 small (2-3/8\" dia)",
+          "source": "https://fdc.nal.usda.gov/food-details/169097/nutrients ; foodPortion.id=84229; amount=1; gramWeight=96"
+        },
+        "usda:84228": {
+          "grams": "184",
+          "label": "1 large (3-1/16\" dia)",
+          "source": "https://fdc.nal.usda.gov/food-details/169097/nutrients ; foodPortion.id=84228; amount=1; gramWeight=184"
+        },
+        "usda:84227": {
+          "grams": "180",
+          "label": "1 cup, sections",
+          "source": "https://fdc.nal.usda.gov/food-details/169097/nutrients ; foodPortion.id=84227; amount=1; gramWeight=180"
+        },
+        "usda:84230": {
+          "grams": "131",
+          "label": "1 fruit (2-5/8\" dia)",
+          "source": "https://fdc.nal.usda.gov/food-details/169097/nutrients ; foodPortion.id=84230; amount=1; gramWeight=131"
         }
       },
       "allergens": {

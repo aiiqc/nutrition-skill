@@ -53,3 +53,13 @@ weekly_review.feedback另有五个可选观测字段：adherent_days（0..7）�
 
 工作流版本m3-2026-10-05.2起，明确没有训练使用not_training，不产生训练缺项或隐含数值调整。原normal/changed/unknown反馈继续兼容；旧unknown不会自动改写为没有训练。执行天数与执行难度分别保留。
 旧0.2.0.dev0不识别新的not_training值；包含该值的记录至少需要dev1读取，不保证新记录可由旧版本打开。
+
+## 0.3.0文档可选扩展
+
+`schema_version="m3-1"`保留旧文档，新增可选字段：
+
+- `planning:{inputs,target,options?}`：inputs必须与target内的规范化inputs完全一致；target由[nutrition-rules](nutrition-rules.md)的验证器核对成员和数值。新餐单仍重新核对当前profile，保存成功不等于目标适用。可选options保留稳定的餐次/分配、厨具、时间、预算、食物或菜式排除、固定菜式；与generate_day_plan同字段校验，但不保存当天库存available_food_ids、variant或replace_meal_id作为默认。
+- `target_reviews:[review,...]`：最多52个完整`nutrition-target-review-v1`结果，包含previous_target、target和结构化feedback，按成员及变化校验。
+- `strategy_state:{fasting_stopped_for_symptoms?:bool,fasting_preferences?,traditional_preferences?}`：三个字段均可选，停用史仅在明确知道时保存。缺省为未知，不填false；发生不适退出后保留true，下一次策略调用不能绕过历史。fasting_preferences完整保存opt_in、pattern、eating_start、wake_time、sleep_time、work_pattern；traditional_preferences保存opt_in与method。当前symptoms、can_meet_daily_needs不属于稳定偏好，不能永久假定。
+
+活动`days`/`journal`/`reviews`/`target_reviews`原有容量有界。需要持续使用时，明确启用[长期归档](storage-evolution.md)，而不是删除旧记录或伪装成新成员。v2旧默认导出格式保持；v3分页导出字段不同，接入者必须按scope处理。

@@ -267,7 +267,7 @@ def validate_document(document: Any) -> dict:
     """Validate one member's managed records, excluding unstructured chat/media."""
     _json_only(document)
     require_keys(document, {"schema_version", "profile"},
-                 {"schema_version", "profile", "days", "journal", "reviews"}, "document")
+                 {"schema_version", "profile", "days", "journal", "reviews", "planning", "target_reviews", "strategy_state"}, "document")
     if document["schema_version"] != "m3-1":
         raise NutritionError("unsupported_schema", "Unsupported document schema")
     profile = validate_profile(document["profile"])
@@ -296,6 +296,56 @@ def validate_document(document: Any) -> dict:
         raise NutritionError("input_capacity_exceeded", "reviews must contain at most 52 entries")
     for review in reviews:
         _validate_review(review, profile["id"])
+    if "planning" in document:
+        from .targets import validate_target
+        planning = require_keys(document["planning"], {"inputs", "target"}, {"inputs", "target", "options"}, "planning")
+        target = validate_target(planning["target"], profile["id"])
+        if planning["inputs"] != target["inputs"]:
+            raise NutritionError("inconsistent_planning", "Saved inputs must match the target inputs")
+    if "strategy_state" in document:
+        state = require_keys(document["strategy_state"], set(),
+                             {"fasting_stopped_for_symptoms", "fasting_preferences", "traditional_preferences"}, "strategy_state")
+        if "fasting_stopped_for_symptoms" in state and type(state["fasting_stopped_for_symptoms"]) is not bool:
+            raise NutritionError("invalid_strategy_state", "Fasting stop history must be explicit boolean")
+        if "fasting_preferences" in state:
+            from .strategies import _clock, PATTERNS
+            preferences = require_keys(state["fasting_preferences"],
+                                       {"opt_in", "pattern", "eating_start", "wake_time", "sleep_time", "work_pattern"},
+                                       {"opt_in", "pattern", "eating_start", "wake_time", "sleep_time", "work_pattern"},
+                                       "fasting_preferences")
+            if type(preferences["opt_in"]) is not bool:
+                raise NutritionError("invalid_strategy_state", "Stored opt-in must be boolean")
+            _enum(preferences["pattern"], set(PATTERNS), "fasting pattern")
+            _enum(preferences["work_pattern"], {"day", "night", "rotating"}, "work pattern")
+            for key in ("eating_start", "wake_time", "sleep_time"):
+                _clock(preferences[key], key)
+        if "traditional_preferences" in state:
+            preferences = require_keys(state["traditional_preferences"], {"opt_in", "method"},
+                                       {"opt_in", "method"}, "traditional_preferences")
+            if type(preferences["opt_in"]) is not bool:
+                raise NutritionError("invalid_strategy_state", "Stored opt-in must be boolean")
+            _enum(preferences["method"], {"porridge", "boil", "steam"}, "traditional method")
+    if "planning" in document and "options" in document["planning"]:
+        from .meal_planning import _options
+        options = document["planning"]["options"]
+        require_keys(options, set(), {"meal_ids", "meal_shares", "kitchen", "max_prep_minutes", "budget",
+                                     "excluded_food_ids", "excluded_recipe_ids", "recipe_ids"}, "planning.options")
+        _options(options)
+        catalog = load_catalog()
+        if any(food_id not in catalog["foods"] for food_id in options.get("excluded_food_ids", [])):
+            raise NutritionError("unknown_food", "Saved exclusions must refer to catalog foods")
+        recipe_ids = {recipe["id"] for recipe in json.loads(
+            (Path(__file__).with_name("data") / "portion-recipes.json").read_text(encoding="utf-8"))["recipes"]}
+        if any(rid not in recipe_ids for rid in options.get("excluded_recipe_ids", [])) or any(
+                rid not in recipe_ids for rid in options.get("recipe_ids", {}).values()):
+            raise NutritionError("unknown_recipe", "Saved recipe choices must refer to known recipes")
+    target_reviews = document.get("target_reviews", [])
+    if not isinstance(target_reviews, list) or len(target_reviews) > 52:
+        raise NutritionError("input_capacity_exceeded", "target_reviews must contain at most 52 entries; archive older entries explicitly")
+    if target_reviews:
+        from .targets import validate_review
+        for review in target_reviews:
+            validate_review(review, profile["id"])
     return deepcopy(document)
 
 

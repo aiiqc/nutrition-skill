@@ -2,6 +2,8 @@
 
 先阅读 [产品规格](docs/product-spec.md)、[核心契约](docs/contracts.md) 与 [M3 工作流和存储契约](docs/m3-contracts.md)。提出改动时说明具体问题、预期行为和验收方式；涉及新功能、营养规则或数据来源时先确定范围。复用现有模块和标准库，避免顺带改名、格式化或添加无关依赖。
 
+不改代码也可按[开发者自助试用指南](docs/developer-pilot.md)用虚构资料检查安装与对话，并自行选择是否提交[脱敏反馈](.github/ISSUE_TEMPLATE/developer-pilot.md)。指南存在不代表外部试用已经开始；不收集成员档案或原始聊天。
+
 ## 本地检查
 
 需要 Python 3.11 或以上；现有运行时与测试使用标准库。从项目根目录执行：
@@ -9,11 +11,12 @@
 ```sh
 python3 -m unittest discover -s tests -v
 python3 scripts/demo.py
+python3 scripts/product_demo.py
 ```
 
 修复尽量提供修改前失败、修改后通过的行为证据；新增测试放入现有 `unittest` 结构，覆盖实际分支、错误输入和恢复行为。先运行与改动相关的测试，提交评审前运行上述现有检查。无需为了贡献引入新的测试框架。
 
-[CI 配置](.github/workflows/ci.yml)计划在 Ubuntu 和 macOS 的 Python 3.11、3.14 上执行相同检查。官方 Actions 固定到完整提交 SHA；更新时核对上游精确 tag、提交与变更说明，并同步版本注释，不只替换为浮动主版本。
+[CI 配置](.github/workflows/ci.yml)在 Ubuntu 和 macOS 的 Python 3.11、3.14 上执行相同检查。各版结果见[验收记录](docs/verification.md)。官方 Actions 固定到完整提交 SHA；更新时核对上游精确 tag、提交与变更说明，并同步版本注释，不只替换为浮动主版本。
 
 ## 示例、隐私与数据
 
@@ -27,4 +30,4 @@ python3 scripts/demo.py
 
 说明最终改动为何必要、实际运行的命令、环境及结果，并列出会影响结论的未验证项。使用 `PASS`、`FAIL`、`NOT RUN` 等真实状态；本地测试、配置解析、GitHub CI 实跑、宿主自动发现、真实用户流程和临床效果分别报告。未运行的检查不得宣称通过，测试数量或截图不能代替所声称的行为证据。
 
-当前 CI 文件属于本地发布准备。只有远端工作流实际执行成功，才可记录 GitHub CI 为 `PASS`；文件存在或本地解析成功不能证明这一点。
+CI结论必须对应准确提交。只有该提交的远端工作流实际执行成功，才可记录其 GitHub CI 为 `PASS`；文件存在、本地解析成功或旧版CI通过不能证明新提交通过。

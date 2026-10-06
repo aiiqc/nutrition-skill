@@ -43,6 +43,16 @@ def dispatch(request: dict) -> dict:
     from .plans import (check_day_plan, record_actual, replace_meal, restore_plan,
                         revalidate_plan, summarize_actuals)
 
+    product_schemas = {
+        "calculate_label": ({"label", "amount_g", "confirmed"}, {"label", "amount_g", "confirmed"}),
+        "automatic_targets": ({"profile", "inputs", "as_of"}, {"profile", "inputs", "as_of"}),
+        "weekly_adjustment": ({"profile", "target", "feedback", "as_of"}, {"profile", "target", "feedback", "as_of"}),
+        "generate_day_plan": ({"profile", "target", "as_of"}, {"profile", "target", "as_of", "options", "state", "constraints"}),
+        "find_foods": ({"query"}, {"query"}),
+        "list_recipes": (set(), set()),
+        "fasting": ({"profile", "as_of", "request"}, {"profile", "as_of", "request"}),
+        "tcm": ({"profile", "as_of", "request"}, {"profile", "as_of", "request"}),
+    }
     m3_schemas = {
         "assess_profile": ({"profile", "as_of"}, {"profile", "as_of"}),
         "next_meal": ({"profile", "as_of"}, {"profile", "as_of", "meal_id", "excluded_ids"}),
@@ -52,12 +62,14 @@ def dispatch(request: dict) -> dict:
         "save_record": ({"data_dir", "member_id", "document", "expected_revision", "consent"},
                         {"data_dir", "member_id", "document", "expected_revision", "consent", "expected_record_id"}),
         "load_record": ({"data_dir", "member_id"}, {"data_dir", "member_id", "version"}),
-        "export_record": ({"data_dir", "member_id"}, {"data_dir", "member_id"}),
+        "export_record": ({"data_dir", "member_id"}, {"data_dir", "member_id", "start_version", "limit"}),
+        "archive_record": ({"data_dir", "member_id", "expected_revision", "consent", "expected_record_id"},
+                           {"data_dir", "member_id", "expected_revision", "consent", "expected_record_id", "keep_from_date"}),
         "delete_record": ({"data_dir", "member_id", "expected_revision", "confirmed", "expected_record_id"},
                           {"data_dir", "member_id", "expected_revision", "confirmed", "expected_record_id"}),
     }
     allowed = {"operation", "items", "constraints", "state", "meal_id", "actual", "previous_meals", "coverage"}
-    for _, fields in m3_schemas.values():
+    for _, fields in list(m3_schemas.values()) + list(product_schemas.values()):
         allowed.update(fields)
     require_keys(request, {"operation"}, allowed, "request")
     operation = request["operation"]
@@ -74,6 +86,28 @@ def dispatch(request: dict) -> dict:
         "check_day_plan": ({"state", "constraints", "coverage"}, {"state", "constraints", "coverage"}),
         "restore_plan": ({"state", "previous_meals", "constraints"}, {"state", "previous_meals", "constraints"}),
     }
+    if operation in product_schemas:
+        required, allowed = product_schemas[operation]
+        require_keys(request, required | {"operation"}, allowed | {"operation"}, "request")
+        if operation == "calculate_label":
+            from .labels import calculate_label
+            return calculate_label(request["label"], request["amount_g"], request["confirmed"])
+        if operation in {"automatic_targets", "weekly_adjustment"}:
+            from .targets import derive_targets, review_targets
+            if operation == "automatic_targets":
+                return derive_targets(request["profile"], request["inputs"], request["as_of"])
+            return review_targets(request["profile"], request["target"], request["feedback"], request["as_of"])
+        if operation in {"fasting", "tcm"}:
+            from .strategies import fasting_plan, traditional_foods
+            function = fasting_plan if operation == "fasting" else traditional_foods
+            return function(request["profile"], request["as_of"], request["request"])
+        from .meal_planning import find_foods, generate_day_plan, DATA
+        if operation == "find_foods":
+            return find_foods(request["query"])
+        if operation == "list_recipes":
+            return {"status": "ok", **json.loads((DATA / "portion-recipes.json").read_text(encoding="utf-8"))}
+        return generate_day_plan(request["profile"], request["target"], request["as_of"], request.get("options"),
+                                 request.get("state"), request.get("constraints"))
     if operation in m3_schemas:
         required, allowed = m3_schemas[operation]
         require_keys(request, required | {"operation"}, allowed | {"operation"}, "request")
@@ -91,17 +125,20 @@ def dispatch(request: dict) -> dict:
         if operation == "aggregate_shopping":
             from .shopping import aggregate_shopping
             return aggregate_shopping(request["member_meals"], load_catalog())
-        from .storage import save_record, load_record, export_record, delete_record
+        from .storage import save_record, load_record, export_record, delete_record, archive_record
         if operation == "save_record":
             return save_record(request["data_dir"], request["member_id"], request["document"],
                                request["expected_revision"], request["consent"], request.get("expected_record_id"))
         if operation == "load_record":
             return load_record(request["data_dir"], request["member_id"], request.get("version"))
         if operation == "export_record":
-            return export_record(request["data_dir"], request["member_id"])
+            return export_record(request["data_dir"], request["member_id"], request.get("start_version"), request.get("limit"))
+        if operation == "archive_record":
+            return archive_record(request["data_dir"], request["member_id"], request["expected_revision"],
+                                  request["consent"], request["expected_record_id"], request.get("keep_from_date"))
         return delete_record(request["data_dir"], request["member_id"],
                              request["expected_revision"], request["confirmed"], request["expected_record_id"])
-    unsupported = {"automatic_targets", "weekly_adjustment", "fasting", "tcm", "save_profile"}
+    unsupported = {"save_profile"}
     if operation in unsupported:
         require_keys(request, {"operation"}, {"operation"}, "request")
         return {"status": "unsupported", "operation": operation,
@@ -115,11 +152,11 @@ def dispatch(request: dict) -> dict:
     if operation == "describe":
         return {"status": "ok", "version": __version__, "rule_version": RULE_VERSION,
                 "catalog_version": catalog["catalog_version"], "food_count": len(catalog["foods"]),
-                "operations": list(schemas) + list(m3_schemas), "disabled": sorted(unsupported),
+                "operations": list(schemas) + list(m3_schemas) + list(product_schemas), "disabled": sorted(unsupported),
                 "network_required": False, "persists_user_data": True,
                 "persistence": "explicit opt-in record operations only; chosen directory outside source",
                 "storage_platform": "POSIX",
-                "limits_scope": "meal", "clinical_targets_generated": False,
+                "limits_scope": "meal", "clinical_targets_generated": False, "general_adult_estimates": True,
                 "operation_scopes": {"replace_meal": "meal", "revalidate_plan": "meal",
                                      "restore_plan": "meal", "check_day_plan": "day_plan",
                                      "check_constraints": "supplied_items"}}
@@ -158,7 +195,7 @@ def main(argv: list[str] | None = None) -> int:
         result = NutritionError("io_error", "Could not read the requested input or catalog").as_dict()
     # Raw input is never logged. Structured output is deliberately sent only to stdout.
     print(json.dumps(result, ensure_ascii=True, allow_nan=False, sort_keys=True, indent=2))
-    return {"ok": 0, "error": 1, "needs_information": 2, "conflict": 2, "unsupported": 3}.get(result["status"], 1)
+    return {"ok": 0, "error": 1, "needs_information": 2, "conflict": 2, "unsupported": 3, "not_eligible": 2, "not_enabled": 2, "stopped": 2}.get(result["status"], 1)
 
 
 if __name__ == "__main__":

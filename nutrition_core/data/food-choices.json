@@ -1,0 +1,755 @@
+{
+  "schema_version": "food-choices-v1",
+  "foods": {
+    "usda:171077": {
+      "name_zh": "生去皮去骨鸡胸",
+      "aliases": [
+        "生鸡胸",
+        "生雞胸",
+        "raw chicken breast",
+        "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw"
+      ],
+      "category": "protein",
+      "meal_roles": [
+        "lunch",
+        "dinner"
+      ],
+      "preparation": [
+        "cook"
+      ],
+      "budget": "ordinary",
+      "portion_ids": [
+        "usda:87919",
+        "usda:87921",
+        "usda:87920"
+      ],
+      "notes": "按生重/干重称量可食部分；需要烹调，不把这些克数当成等量熟重。"
+    },
+    "usda:171477": {
+      "name_zh": "烤熟去皮去骨鸡胸",
+      "aliases": [
+        "熟鸡胸",
+        "熟雞胸",
+        "烤鸡胸",
+        "烤雞胸",
+        "roasted chicken breast",
+        "Chicken, broilers or fryers, breast, meat only, cooked, roasted"
+      ],
+      "category": "protein",
+      "meal_roles": [
+        "lunch",
+        "dinner"
+      ],
+      "preparation": [
+        "reheat"
+      ],
+      "budget": "ordinary",
+      "portion_ids": [
+        "usda:88817",
+        "usda:88818",
+        "usda:88819"
+      ],
+      "notes": "按记录所示状态称量可食部分；来源份量不是推荐摄入量。"
+    },
+    "usda:2512381": {
+      "name_zh": "生长粒白米",
+      "aliases": [
+        "生米",
+        "长粒白米",
+        "長粒白米",
+        "raw long-grain rice",
+        "Rice, white, long grain, unenriched, raw"
+      ],
+      "category": "grain",
+      "meal_roles": [
+        "lunch",
+        "dinner"
+      ],
+      "preparation": [
+        "cook"
+      ],
+      "budget": "ordinary",
+      "portion_ids": [
+        "usda:312591"
+      ],
+      "notes": "按生重/干重称量可食部分；需要烹调，不把这些克数当成等量熟重。"
+    },
+    "usda:169757": {
+      "name_zh": "无盐熟长粒白米饭",
+      "aliases": [
+        "米饭",
+        "白米饭",
+        "米飯",
+        "白飯",
+        "cooked white rice",
+        "Rice, white, long-grain, regular, unenriched, cooked without salt"
+      ],
+      "category": "grain",
+      "meal_roles": [
+        "lunch",
+        "dinner"
+      ],
+      "preparation": [
+        "reheat"
+      ],
+      "budget": "ordinary",
+      "portion_ids": [
+        "usda:85462"
+      ],
+      "notes": "按记录所示状态称量可食部分；来源份量不是推荐摄入量。"
+    },
+    "usda:330137": {
+      "name_zh": "原味脱脂希腊酸奶",
+      "aliases": [
+        "脱脂希腊酸奶",
+        "脫脂希臘優格",
+        "nonfat Greek yogurt",
+        "Yogurt, Greek, plain, nonfat"
+      ],
+      "category": "dairy",
+      "meal_roles": [
+        "breakfast",
+        "snack"
+      ],
+      "preparation": [
+        "ready_to_eat"
+      ],
+      "budget": "ordinary",
+      "portion_ids": [
+        "usda:119735",
+        "usda:312634"
+      ],
+      "notes": "按记录所示状态称量可食部分；来源份量不是推荐摄入量。"
+    },
+    "usda:173904": {
+      "name_zh": "普通/快熟未强化干燕麦",
+      "aliases": [
+        "燕麦",
+        "燕麥",
+        "oats",
+        "Cereals, oats, regular and quick, not fortified, dry"
+      ],
+      "category": "grain",
+      "meal_roles": [
+        "breakfast"
+      ],
+      "preparation": [
+        "cook"
+      ],
+      "budget": "ordinary",
+      "portion_ids": [
+        "usda:93454",
+        "usda:93455"
+      ],
+      "notes": "按生重/干重称量可食部分；需要烹调，不把这些克数当成等量熟重。"
+    },
+    "usda:173424": {
+      "name_zh": "水煮熟全蛋",
+      "aliases": [
+        "水煮蛋",
+        "鸡蛋",
+        "雞蛋",
+        "hard-boiled egg",
+        "Egg, whole, cooked, hard-boiled"
+      ],
+      "category": "protein",
+      "meal_roles": [
+        "breakfast",
+        "lunch",
+        "dinner",
+        "snack"
+      ],
+      "preparation": [
+        "ready_to_eat",
+        "reheat"
+      ],
+      "budget": "ordinary",
+      "portion_ids": [
+        "usda:92499",
+        "usda:92498",
+        "usda:92500"
+      ],
+      "notes": "按记录所示状态称量可食部分；来源份量不是推荐摄入量。"
+    },
+    "usda:172448": {
+      "name_zh": "硫酸钙与卤水凝固硬豆腐",
+      "aliases": [
+        "硬豆腐",
+        "豆腐",
+        "firm tofu",
+        "Tofu, firm, prepared with calcium sulfate and magnesium chloride (nigari)"
+      ],
+      "category": "legume",
+      "meal_roles": [
+        "lunch",
+        "dinner"
+      ],
+      "preparation": [
+        "cook"
+      ],
+      "budget": "ordinary",
+      "portion_ids": [
+        "usda:90639",
+        "usda:90638",
+        "usda:90640"
+      ],
+      "notes": "这条记录是硫酸钙与卤水凝固硬豆腐，按购买状态称重；不能代表油豆腐、嫩豆腐或加热失水后的等量熟重。"
+    },
+    "usda:172421": {
+      "name_zh": "无盐煮熟小扁豆",
+      "aliases": [
+        "小扁豆",
+        "lentils",
+        "Lentils, mature seeds, cooked, boiled, without salt"
+      ],
+      "category": "legume",
+      "meal_roles": [
+        "lunch",
+        "dinner"
+      ],
+      "preparation": [
+        "reheat"
+      ],
+      "budget": "ordinary",
+      "portion_ids": [
+        "usda:90596",
+        "usda:90597"
+      ],
+      "notes": "按记录所示状态称量可食部分；来源份量不是推荐摄入量。"
+    },
+    "usda:173735": {
+      "name_zh": "无盐煮熟黑芸豆",
+      "aliases": [
+        "黑芸豆",
+        "黑腰豆",
+        "black beans",
+        "Beans, black, mature seeds, cooked, boiled, without salt"
+      ],
+      "category": "legume",
+      "meal_roles": [
+        "lunch",
+        "dinner"
+      ],
+      "preparation": [
+        "reheat"
+      ],
+      "budget": "ordinary",
+      "portion_ids": [
+        "usda:93200"
+      ],
+      "notes": "本条为黑芸豆（Phaseolus vulgaris），不是黑大豆；按无盐煮熟后的可食重量，来源份量不是推荐摄入量。"
+    },
+    "usda:171267": {
+      "name_zh": "2%脂肪牛奶（添加维生素A和D）",
+      "aliases": [
+        "牛奶",
+        "2%牛奶",
+        "milk",
+        "Milk, reduced fat, fluid, 2% milkfat, with added vitamin A and vitamin D"
+      ],
+      "category": "dairy",
+      "meal_roles": [
+        "breakfast",
+        "snack"
+      ],
+      "preparation": [
+        "ready_to_eat"
+      ],
+      "budget": "ordinary",
+      "portion_ids": [
+        "usda:88322",
+        "usda:88320",
+        "usda:88321"
+      ],
+      "notes": "对应2%脂肪、添加维生素A/D的牛奶；不适用于全脂、脱脂或任意植物饮品。未验证密度，毫升不能直接当成克。"
+    },
+    "usda:172688": {
+      "name_zh": "商业制作全麦面包",
+      "aliases": [
+        "全麦面包",
+        "全麥麵包",
+        "whole-wheat bread",
+        "Bread, whole-wheat, commercially prepared"
+      ],
+      "category": "grain",
+      "meal_roles": [
+        "breakfast",
+        "lunch",
+        "dinner",
+        "snack"
+      ],
+      "preparation": [
+        "ready_to_eat"
+      ],
+      "budget": "ordinary",
+      "portion_ids": [
+        "usda:91109",
+        "usda:91108"
+      ],
+      "notes": "商业全麦面包参考记录；实际品牌、配方和片重可能不同，优先用包装资料。"
+    },
+    "usda:168928": {
+      "name_zh": "无盐未强化熟意大利面",
+      "aliases": [
+        "意面",
+        "意大利面",
+        "義大利麵",
+        "pasta",
+        "Pasta, cooked, unenriched, without added salt"
+      ],
+      "category": "grain",
+      "meal_roles": [
+        "lunch",
+        "dinner"
+      ],
+      "preparation": [
+        "reheat"
+      ],
+      "budget": "ordinary",
+      "portion_ids": [
+        "usda:84012",
+        "usda:84014",
+        "usda:84011",
+        "usda:84009",
+        "usda:84015",
+        "usda:84013",
+        "usda:84010",
+        "usda:84016",
+        "usda:84008"
+      ],
+      "notes": "按记录所示状态称量可食部分；来源份量不是推荐摄入量。"
+    },
+    "usda:170440": {
+      "name_zh": "去皮无盐水煮土豆",
+      "aliases": [
+        "土豆",
+        "马铃薯",
+        "馬鈴薯",
+        "potato",
+        "Potatoes, boiled, cooked without skin, flesh, without salt"
+      ],
+      "category": "grain",
+      "meal_roles": [
+        "breakfast",
+        "lunch",
+        "dinner"
+      ],
+      "preparation": [
+        "reheat"
+      ],
+      "budget": "ordinary",
+      "portion_ids": [
+        "usda:86654",
+        "usda:86652",
+        "usda:86653",
+        "usda:86651"
+      ],
+      "notes": "按记录所示状态称量可食部分；来源份量不是推荐摄入量。"
+    },
+    "usda:175168": {
+      "name_zh": "干热熟制养殖大西洋鲑",
+      "aliases": [
+        "三文鱼",
+        "鮭魚",
+        "salmon",
+        "Fish, salmon, Atlantic, farmed, cooked, dry heat"
+      ],
+      "category": "protein",
+      "meal_roles": [
+        "lunch",
+        "dinner"
+      ],
+      "preparation": [
+        "reheat"
+      ],
+      "budget": "ordinary",
+      "portion_ids": [
+        "usda:95789",
+        "usda:95788"
+      ],
+      "notes": "按记录所示状态称量可食部分；来源份量不是推荐摄入量。"
+    },
+    "usda:171413": {
+      "name_zh": "橄榄油",
+      "aliases": [
+        "橄榄油",
+        "橄欖油",
+        "olive oil",
+        "Oil, olive, salad or cooking"
+      ],
+      "category": "fat",
+      "meal_roles": [
+        "lunch",
+        "dinner"
+      ],
+      "preparation": [
+        "ready_to_eat"
+      ],
+      "budget": "ordinary",
+      "portion_ids": [
+        "usda:88667",
+        "usda:88669",
+        "usda:88668"
+      ],
+      "notes": "按记录所示状态称量可食部分；来源份量不是推荐摄入量。"
+    },
+    "usda:170158": {
+      "name_zh": "无盐干烤巴旦木（扁桃仁）",
+      "aliases": [
+        "巴旦木",
+        "扁桃仁",
+        "无盐巴旦木",
+        "無鹽巴旦木",
+        "almonds",
+        "Nuts, almonds, dry roasted, without salt added"
+      ],
+      "category": "fat",
+      "meal_roles": [
+        "breakfast",
+        "snack"
+      ],
+      "preparation": [
+        "ready_to_eat"
+      ],
+      "budget": "ordinary",
+      "portion_ids": [
+        "usda:86148",
+        "usda:86149"
+      ],
+      "notes": "本条为扁桃仁（almonds），不是杏核仁或苦杏仁；按无盐干烤后的可食重量，来源份量不是推荐摄入量。"
+    },
+    "usda:173944": {
+      "name_zh": "生香蕉（可食部分）",
+      "aliases": [
+        "香蕉",
+        "banana",
+        "Bananas, raw"
+      ],
+      "category": "fruit",
+      "meal_roles": [
+        "breakfast",
+        "snack"
+      ],
+      "preparation": [
+        "ready_to_eat"
+      ],
+      "budget": "ordinary",
+      "portion_ids": [
+        "usda:93518",
+        "usda:93517",
+        "usda:93516",
+        "usda:93512",
+        "usda:93514",
+        "usda:93513",
+        "usda:93515",
+        "usda:93511"
+      ],
+      "notes": "按记录所示状态称量可食部分；来源份量不是推荐摄入量。"
+    },
+    "usda:171688": {
+      "name_zh": "带皮生苹果（可食部分）",
+      "aliases": [
+        "苹果",
+        "蘋果",
+        "apple",
+        "Apples, raw, with skin (Includes foods for USDA's Food Distribution Program)"
+      ],
+      "category": "fruit",
+      "meal_roles": [
+        "breakfast",
+        "snack"
+      ],
+      "preparation": [
+        "ready_to_eat"
+      ],
+      "budget": "ordinary",
+      "portion_ids": [
+        "usda:89191",
+        "usda:89193",
+        "usda:89194",
+        "usda:89196",
+        "usda:89190",
+        "usda:89195",
+        "usda:89192"
+      ],
+      "notes": "按记录所示状态称量可食部分；来源份量不是推荐摄入量。"
+    },
+    "usda:169967": {
+      "name_zh": "无盐水煮沥干西兰花",
+      "aliases": [
+        "西兰花",
+        "綠花椰菜",
+        "broccoli",
+        "Broccoli, cooked, boiled, drained, without salt"
+      ],
+      "category": "vegetable",
+      "meal_roles": [
+        "lunch",
+        "dinner"
+      ],
+      "preparation": [
+        "reheat"
+      ],
+      "budget": "ordinary",
+      "portion_ids": [
+        "usda:85773",
+        "usda:85776",
+        "usda:85772",
+        "usda:85774",
+        "usda:85775"
+      ],
+      "notes": "按记录所示状态称量可食部分；来源份量不是推荐摄入量。"
+    },
+    "usda:170394": {
+      "name_zh": "无盐水煮沥干胡萝卜",
+      "aliases": [
+        "胡萝卜",
+        "紅蘿蔔",
+        "carrot",
+        "Carrots, cooked, boiled, drained, without salt"
+      ],
+      "category": "vegetable",
+      "meal_roles": [
+        "lunch",
+        "dinner"
+      ],
+      "preparation": [
+        "reheat"
+      ],
+      "budget": "ordinary",
+      "portion_ids": [
+        "usda:86566",
+        "usda:86564",
+        "usda:86565"
+      ],
+      "notes": "按记录所示状态称量可食部分；来源份量不是推荐摄入量。"
+    },
+    "usda:168463": {
+      "name_zh": "无盐水煮沥干菠菜",
+      "aliases": [
+        "菠菜",
+        "spinach",
+        "Spinach, cooked, boiled, drained, without salt"
+      ],
+      "category": "vegetable",
+      "meal_roles": [
+        "lunch",
+        "dinner"
+      ],
+      "preparation": [
+        "reheat"
+      ],
+      "budget": "ordinary",
+      "portion_ids": [
+        "usda:83136"
+      ],
+      "notes": "按记录所示状态称量可食部分；来源份量不是推荐摄入量。"
+    },
+    "usda:170420": {
+      "name_zh": "无盐水煮沥干豌豆",
+      "aliases": [
+        "豌豆",
+        "green peas",
+        "Peas, green, cooked, boiled, drained, without salt"
+      ],
+      "category": "legume",
+      "meal_roles": [
+        "lunch",
+        "dinner"
+      ],
+      "preparation": [
+        "reheat"
+      ],
+      "budget": "ordinary",
+      "portion_ids": [
+        "usda:86614"
+      ],
+      "notes": "按记录所示状态称量可食部分；来源份量不是推荐摄入量。"
+    },
+    "usda:170457": {
+      "name_zh": "生红番茄",
+      "aliases": [
+        "番茄",
+        "西红柿",
+        "番茄生食",
+        "tomato",
+        "Tomatoes, red, ripe, raw, year round average"
+      ],
+      "category": "vegetable",
+      "meal_roles": [
+        "breakfast",
+        "lunch",
+        "dinner"
+      ],
+      "preparation": [
+        "ready_to_eat"
+      ],
+      "budget": "ordinary",
+      "portion_ids": [
+        "usda:86686",
+        "usda:86687",
+        "usda:86685",
+        "usda:86684",
+        "usda:86683",
+        "usda:86692",
+        "usda:86682",
+        "usda:86689",
+        "usda:86690",
+        "usda:86681",
+        "usda:86691",
+        "usda:86693",
+        "usda:86688"
+      ],
+      "notes": "按记录所示状态称量可食部分；来源份量不是推荐摄入量。"
+    },
+    "usda:168409": {
+      "name_zh": "带皮生黄瓜",
+      "aliases": [
+        "黄瓜",
+        "小黃瓜",
+        "cucumber",
+        "Cucumber, with peel, raw"
+      ],
+      "category": "vegetable",
+      "meal_roles": [
+        "lunch",
+        "dinner",
+        "snack"
+      ],
+      "preparation": [
+        "ready_to_eat"
+      ],
+      "budget": "ordinary",
+      "portion_ids": [
+        "usda:83050",
+        "usda:83049"
+      ],
+      "notes": "按记录所示状态称量可食部分；来源份量不是推荐摄入量。"
+    },
+    "usda:169252": {
+      "name_zh": "无盐水煮沥干白蘑菇",
+      "aliases": [
+        "白蘑菇",
+        "蘑菇",
+        "mushrooms",
+        "Mushrooms, white, cooked, boiled, drained, without salt"
+      ],
+      "category": "vegetable",
+      "meal_roles": [
+        "lunch",
+        "dinner"
+      ],
+      "preparation": [
+        "reheat"
+      ],
+      "budget": "ordinary",
+      "portion_ids": [
+        "usda:84533",
+        "usda:84535",
+        "usda:84534"
+      ],
+      "notes": "按记录所示状态称量可食部分；来源份量不是推荐摄入量。"
+    },
+    "usda:168484": {
+      "name_zh": "去皮水煮红薯",
+      "aliases": [
+        "红薯",
+        "地瓜",
+        "番薯",
+        "sweet potato",
+        "Sweet potato, cooked, boiled, without skin"
+      ],
+      "category": "grain",
+      "meal_roles": [
+        "breakfast",
+        "lunch",
+        "dinner",
+        "snack"
+      ],
+      "preparation": [
+        "reheat"
+      ],
+      "budget": "ordinary",
+      "portion_ids": [
+        "usda:83173",
+        "usda:83172"
+      ],
+      "notes": "按记录所示状态称量可食部分；来源份量不是推荐摄入量。"
+    },
+    "usda:169283": {
+      "name_zh": "无盐煮熟沥干青大豆",
+      "aliases": [
+        "毛豆仁",
+        "青大豆",
+        "毛豆",
+        "edamame",
+        "Soybeans, green, cooked, boiled, drained, without salt"
+      ],
+      "category": "legume",
+      "meal_roles": [
+        "lunch",
+        "dinner",
+        "snack"
+      ],
+      "preparation": [
+        "reheat"
+      ],
+      "budget": "ordinary",
+      "portion_ids": [
+        "usda:84595"
+      ],
+      "notes": "按记录所示状态称量可食部分；来源份量不是推荐摄入量。"
+    },
+    "usda:171284": {
+      "name_zh": "原味全脂酸奶",
+      "aliases": [
+        "全脂酸奶",
+        "原味全脂优格",
+        "原味全脂優格",
+        "whole-milk yogurt",
+        "Yogurt, plain, whole milk"
+      ],
+      "category": "dairy",
+      "meal_roles": [
+        "breakfast",
+        "snack"
+      ],
+      "preparation": [
+        "ready_to_eat"
+      ],
+      "budget": "ordinary",
+      "portion_ids": [
+        "usda:88363",
+        "usda:88362",
+        "usda:88364",
+        "usda:88365"
+      ],
+      "notes": "按记录所示状态称量可食部分；来源份量不是推荐摄入量。"
+    },
+    "usda:169097": {
+      "name_zh": "生橙（可食部分）",
+      "aliases": [
+        "橙子",
+        "柳橙",
+        "orange",
+        "Oranges, raw, all commercial varieties"
+      ],
+      "category": "fruit",
+      "meal_roles": [
+        "breakfast",
+        "snack"
+      ],
+      "preparation": [
+        "ready_to_eat"
+      ],
+      "budget": "ordinary",
+      "portion_ids": [
+        "usda:84229",
+        "usda:84228",
+        "usda:84227",
+        "usda:84230"
+      ],
+      "notes": "按记录所示状态称量可食部分；来源份量不是推荐摄入量。"
+    }
+  }
+}

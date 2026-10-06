@@ -1,6 +1,6 @@
 # 安装与首次试用
 
-当前是开发者预览版，工作名Nutrition Skill，Skill ID为`nutrition-skill`。建议先在独立项目中试用，再决定是否个人全局安装。本页面向macOS/Linux；已公开的0.2.0.dev2在Ubuntu/macOS的Python 3.11/3.14[四组CI](https://github.com/aiiqc/nutrition-skill/actions/runs/37435684685)各187项测试及演示通过，项目安装布局在macOS实测。另已在Codex CLI 0.157.1的app-server项目副本完成实际模型旅程，桌面GUI与其他宿主未验证。需要Python 3.11+和能够执行Python、读取本地文件的宿主。Windows持久存储尚不支持。
+当前功能版为0.3.0，Skill ID为`nutrition-skill`。建议先在独立项目中试用，再决定是否个人全局安装。本页面向macOS/Linux，需要Python 3.11+和能执行Python、读取本地文件的宿主。项目范围Codex旅程和各版CI证据见[验收记录](verification.md)；桌面GUI、其他宿主不外推通过。Windows持久存储尚不支持。
 
 ## 两种使用方式
 
@@ -13,7 +13,7 @@
 
 ## 在独立项目试用
 
-从可信的本项目源包解压得到`nutrition-skill`文件夹。核对随包校验值后，先在终端进入该文件夹，执行：
+从可信的本项目源包解压得到项目文件夹，其中应有`SKILL.md`、`nutrition_core`和`scripts`。分发包提供SHA256时核对其对应校验值；GitHub自动生成ZIP使用[试用指南的固定提交入口](developer-pilot.md#开始前)，不套用其他源包的校验值。先在终端进入该项目文件夹，执行：
 
 ```sh
 python3 --version
@@ -51,6 +51,8 @@ PY
 codex -C ../nutrition-skill-playground
 ```
 
+需要按步骤检查并反馈时，使用[开发者自助试用指南](developer-pilot.md)。它固定受测版本并提供虚构输入；默认仅本次使用，保存与公开反馈分别自愿选择。
+
 首次验证只使用虚构输入：
 
 > 使用 $nutrition-skill。这是虚构试用：成年人，只想了解懒人中式午餐怎么选，先仅本次使用。先检查当前能力；缺少健康信息请指出，不要猜测没有疾病或过敏，也不要保存我的档案。
@@ -65,7 +67,7 @@ codex -C ../nutrition-skill-playground
 
 ## 保存、更新与退出试用
 
-默认仅本次使用。选择本地保存时，另选源码和安装副本之外的专用私有目录，保存成功应返回准确成员、record_id和revision。当前每成员最多50次修订、4MiB；达到上限拒绝新写入，不自动删历史。数据不能跟随源码提交到GitHub。详见[存储契约](m3-contracts.md)及[数据管理说明](../references/storage.md)。
+默认仅本次使用。选择本地保存时，另选源码和安装副本之外的专用私有目录，保存成功应返回准确成员、record_id和revision。默认v2每成员最多50次修订、4MiB；可明确选择启用v3长期分段历史，仍保留旧版。活动日期容量接近时，按已同意的准确日期归档，不能静默删除。详见[长期存储](storage-evolution.md)。数据不能跟随源码提交到GitHub。详见[存储契约](m3-contracts.md)及[数据管理说明](../references/storage.md)。
 
 升级前保留可恢复的旧源包，核对新版本的格式说明；先用合成档案验证，不直接覆盖仍在使用的副本。现有v2档案规则见接口契约；未公开的v1测试文件不自动迁移。0.2.0.dev1可以读取原有反馈，但包含新not_training状态的记录不能交给旧dev0读取；降级必须同时使用匹配的历史数据副本，不能只换旧代码。
 

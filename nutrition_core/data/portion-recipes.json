@@ -1,0 +1,795 @@
+{
+  "schema_version": "portion-recipes-v1",
+  "authorship": "Original project meal combinations, MIT; source nutrient data remain USDA CC0",
+  "recipes": [
+    {
+      "id": "oats-yogurt",
+      "title": "酸奶燕麦水果碗",
+      "meals": [
+        "breakfast",
+        "lunch",
+        "dinner",
+        "snack"
+      ],
+      "cuisines": [
+        "chinese",
+        "western"
+      ],
+      "variables": [
+        [
+          "usda:330137",
+          "80",
+          "500"
+        ],
+        [
+          "usda:173904",
+          "20",
+          "160"
+        ],
+        [
+          "usda:170158",
+          "0",
+          "60"
+        ]
+      ],
+      "fixed": [
+        [
+          "usda:173944",
+          "100"
+        ]
+      ],
+      "preparation": "原味无脂希腊酸奶拌燕麦、香蕉与巴旦木；即食燕麦须按包装说明处理，非即食燕麦先煮熟，燕麦按干重称。",
+      "kitchens": [
+        "microwave",
+        "stove"
+      ],
+      "minutes": 5,
+      "budget": "ordinary"
+    },
+    {
+      "id": "yogurt-toast",
+      "title": "酸奶全麦面包水果餐",
+      "meals": [
+        "breakfast",
+        "lunch",
+        "dinner",
+        "snack"
+      ],
+      "cuisines": [
+        "chinese",
+        "western"
+      ],
+      "variables": [
+        [
+          "usda:330137",
+          "80",
+          "500"
+        ],
+        [
+          "usda:172688",
+          "25",
+          "260"
+        ],
+        [
+          "usda:170158",
+          "0",
+          "60"
+        ]
+      ],
+      "fixed": [
+        [
+          "usda:171688",
+          "150"
+        ]
+      ],
+      "preparation": "全麦面包配原味无脂希腊酸奶、苹果与巴旦木；食品须与目录所示种类匹配。",
+      "kitchens": [
+        "none",
+        "microwave",
+        "stove"
+      ],
+      "minutes": 5,
+      "budget": "ordinary"
+    },
+    {
+      "id": "egg-toast",
+      "title": "鸡蛋全麦面包配番茄",
+      "meals": [
+        "breakfast",
+        "lunch",
+        "dinner",
+        "snack"
+      ],
+      "cuisines": [
+        "chinese",
+        "western"
+      ],
+      "variables": [
+        [
+          "usda:173424",
+          "50",
+          "250"
+        ],
+        [
+          "usda:172688",
+          "25",
+          "260"
+        ],
+        [
+          "usda:171413",
+          "0",
+          "40"
+        ]
+      ],
+      "fixed": [
+        [
+          "usda:170457",
+          "150"
+        ],
+        [
+          "usda:169097",
+          "100"
+        ]
+      ],
+      "preparation": "现成煮熟鸡蛋去壳，面包配番茄与橙；橄榄油拌番茄。鸡蛋按去壳熟重。",
+      "kitchens": [
+        "none",
+        "microwave",
+        "stove"
+      ],
+      "minutes": 5,
+      "budget": "economy"
+    },
+    {
+      "id": "171477-169757",
+      "title": "鸡胸米饭蔬菜餐",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "cuisines": [
+        "chinese"
+      ],
+      "variables": [
+        [
+          "usda:171477",
+          "40",
+          "300"
+        ],
+        [
+          "usda:169757",
+          "60",
+          "600"
+        ],
+        [
+          "usda:171413",
+          "0",
+          "40"
+        ]
+      ],
+      "fixed": [
+        [
+          "usda:169967",
+          "200"
+        ],
+        [
+          "usda:169097",
+          "100"
+        ]
+      ],
+      "preparation": "主食和西兰花预先煮熟；肉类充分做熟后按所列熟重分装，豆腐使用购入状态重量并另行加热。橄榄油拌菜，橙作配果；额外油盐酱汁需另计。",
+      "kitchens": [
+        "stove",
+        "microwave"
+      ],
+      "minutes": 12,
+      "budget": "economy"
+    },
+    {
+      "id": "171477-168928",
+      "title": "鸡胸意面蔬菜餐",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "cuisines": [
+        "western"
+      ],
+      "variables": [
+        [
+          "usda:171477",
+          "40",
+          "300"
+        ],
+        [
+          "usda:168928",
+          "60",
+          "600"
+        ],
+        [
+          "usda:171413",
+          "0",
+          "40"
+        ]
+      ],
+      "fixed": [
+        [
+          "usda:169967",
+          "200"
+        ],
+        [
+          "usda:169097",
+          "100"
+        ]
+      ],
+      "preparation": "主食和西兰花预先煮熟；肉类充分做熟后按所列熟重分装，豆腐使用购入状态重量并另行加热。橄榄油拌菜，橙作配果；额外油盐酱汁需另计。",
+      "kitchens": [
+        "stove",
+        "microwave"
+      ],
+      "minutes": 12,
+      "budget": "economy"
+    },
+    {
+      "id": "171477-170440",
+      "title": "鸡胸土豆蔬菜餐",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "cuisines": [
+        "western"
+      ],
+      "variables": [
+        [
+          "usda:171477",
+          "40",
+          "300"
+        ],
+        [
+          "usda:170440",
+          "100",
+          "700"
+        ],
+        [
+          "usda:171413",
+          "0",
+          "40"
+        ]
+      ],
+      "fixed": [
+        [
+          "usda:169967",
+          "200"
+        ],
+        [
+          "usda:169097",
+          "100"
+        ]
+      ],
+      "preparation": "主食和西兰花预先煮熟；肉类充分做熟后按所列熟重分装，豆腐使用购入状态重量并另行加热。橄榄油拌菜，橙作配果；额外油盐酱汁需另计。",
+      "kitchens": [
+        "stove",
+        "microwave"
+      ],
+      "minutes": 12,
+      "budget": "economy"
+    },
+    {
+      "id": "171477-bread",
+      "title": "鸡胸面包沙拉餐",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "cuisines": [
+        "chinese",
+        "western"
+      ],
+      "variables": [
+        [
+          "usda:171477",
+          "40",
+          "300"
+        ],
+        [
+          "usda:172688",
+          "25",
+          "280"
+        ],
+        [
+          "usda:171413",
+          "0",
+          "40"
+        ]
+      ],
+      "fixed": [
+        [
+          "usda:168409",
+          "150"
+        ],
+        [
+          "usda:170457",
+          "150"
+        ],
+        [
+          "usda:171688",
+          "100"
+        ]
+      ],
+      "preparation": "使用已充分熟制、可即食并按安全条件保存的蛋白食物；豆腐依包装说明处理，不把需烹调豆腐当即食。切黄瓜番茄拌油，配面包苹果。",
+      "kitchens": [
+        "none",
+        "microwave",
+        "stove"
+      ],
+      "minutes": 8,
+      "budget": "economy"
+    },
+    {
+      "id": "175168-169757",
+      "title": "三文鱼米饭蔬菜餐",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "cuisines": [
+        "chinese"
+      ],
+      "variables": [
+        [
+          "usda:175168",
+          "50",
+          "300"
+        ],
+        [
+          "usda:169757",
+          "60",
+          "600"
+        ],
+        [
+          "usda:171413",
+          "0",
+          "40"
+        ]
+      ],
+      "fixed": [
+        [
+          "usda:169967",
+          "200"
+        ],
+        [
+          "usda:169097",
+          "100"
+        ]
+      ],
+      "preparation": "主食和西兰花预先煮熟；肉类充分做熟后按所列熟重分装，豆腐使用购入状态重量并另行加热。橄榄油拌菜，橙作配果；额外油盐酱汁需另计。",
+      "kitchens": [
+        "stove",
+        "microwave"
+      ],
+      "minutes": 12,
+      "budget": "ordinary"
+    },
+    {
+      "id": "175168-168928",
+      "title": "三文鱼意面蔬菜餐",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "cuisines": [
+        "western"
+      ],
+      "variables": [
+        [
+          "usda:175168",
+          "50",
+          "300"
+        ],
+        [
+          "usda:168928",
+          "60",
+          "600"
+        ],
+        [
+          "usda:171413",
+          "0",
+          "40"
+        ]
+      ],
+      "fixed": [
+        [
+          "usda:169967",
+          "200"
+        ],
+        [
+          "usda:169097",
+          "100"
+        ]
+      ],
+      "preparation": "主食和西兰花预先煮熟；肉类充分做熟后按所列熟重分装，豆腐使用购入状态重量并另行加热。橄榄油拌菜，橙作配果；额外油盐酱汁需另计。",
+      "kitchens": [
+        "stove",
+        "microwave"
+      ],
+      "minutes": 12,
+      "budget": "ordinary"
+    },
+    {
+      "id": "175168-170440",
+      "title": "三文鱼土豆蔬菜餐",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "cuisines": [
+        "western"
+      ],
+      "variables": [
+        [
+          "usda:175168",
+          "50",
+          "300"
+        ],
+        [
+          "usda:170440",
+          "100",
+          "700"
+        ],
+        [
+          "usda:171413",
+          "0",
+          "40"
+        ]
+      ],
+      "fixed": [
+        [
+          "usda:169967",
+          "200"
+        ],
+        [
+          "usda:169097",
+          "100"
+        ]
+      ],
+      "preparation": "主食和西兰花预先煮熟；肉类充分做熟后按所列熟重分装，豆腐使用购入状态重量并另行加热。橄榄油拌菜，橙作配果；额外油盐酱汁需另计。",
+      "kitchens": [
+        "stove",
+        "microwave"
+      ],
+      "minutes": 12,
+      "budget": "ordinary"
+    },
+    {
+      "id": "175168-bread",
+      "title": "三文鱼面包沙拉餐",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "cuisines": [
+        "chinese",
+        "western"
+      ],
+      "variables": [
+        [
+          "usda:175168",
+          "50",
+          "300"
+        ],
+        [
+          "usda:172688",
+          "25",
+          "280"
+        ],
+        [
+          "usda:171413",
+          "0",
+          "40"
+        ]
+      ],
+      "fixed": [
+        [
+          "usda:168409",
+          "150"
+        ],
+        [
+          "usda:170457",
+          "150"
+        ],
+        [
+          "usda:171688",
+          "100"
+        ]
+      ],
+      "preparation": "使用已充分熟制、可即食并按安全条件保存的蛋白食物；豆腐依包装说明处理，不把需烹调豆腐当即食。切黄瓜番茄拌油，配面包苹果。",
+      "kitchens": [
+        "none",
+        "microwave",
+        "stove"
+      ],
+      "minutes": 8,
+      "budget": "ordinary"
+    },
+    {
+      "id": "172448-169757",
+      "title": "豆腐米饭蔬菜餐",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "cuisines": [
+        "chinese"
+      ],
+      "variables": [
+        [
+          "usda:172448",
+          "100",
+          "600"
+        ],
+        [
+          "usda:169757",
+          "60",
+          "600"
+        ],
+        [
+          "usda:171413",
+          "0",
+          "40"
+        ]
+      ],
+      "fixed": [
+        [
+          "usda:169967",
+          "200"
+        ],
+        [
+          "usda:169097",
+          "100"
+        ]
+      ],
+      "preparation": "主食和西兰花预先煮熟；肉类充分做熟后按所列熟重分装，豆腐使用购入状态重量并另行加热。橄榄油拌菜，橙作配果；额外油盐酱汁需另计。",
+      "kitchens": [
+        "stove",
+        "microwave"
+      ],
+      "minutes": 12,
+      "budget": "economy"
+    },
+    {
+      "id": "172448-168928",
+      "title": "豆腐意面蔬菜餐",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "cuisines": [
+        "western"
+      ],
+      "variables": [
+        [
+          "usda:172448",
+          "100",
+          "600"
+        ],
+        [
+          "usda:168928",
+          "60",
+          "600"
+        ],
+        [
+          "usda:171413",
+          "0",
+          "40"
+        ]
+      ],
+      "fixed": [
+        [
+          "usda:169967",
+          "200"
+        ],
+        [
+          "usda:169097",
+          "100"
+        ]
+      ],
+      "preparation": "主食和西兰花预先煮熟；肉类充分做熟后按所列熟重分装，豆腐使用购入状态重量并另行加热。橄榄油拌菜，橙作配果；额外油盐酱汁需另计。",
+      "kitchens": [
+        "stove",
+        "microwave"
+      ],
+      "minutes": 12,
+      "budget": "economy"
+    },
+    {
+      "id": "172448-170440",
+      "title": "豆腐土豆蔬菜餐",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "cuisines": [
+        "western"
+      ],
+      "variables": [
+        [
+          "usda:172448",
+          "100",
+          "600"
+        ],
+        [
+          "usda:170440",
+          "100",
+          "700"
+        ],
+        [
+          "usda:171413",
+          "0",
+          "40"
+        ]
+      ],
+      "fixed": [
+        [
+          "usda:169967",
+          "200"
+        ],
+        [
+          "usda:169097",
+          "100"
+        ]
+      ],
+      "preparation": "主食和西兰花预先煮熟；肉类充分做熟后按所列熟重分装，豆腐使用购入状态重量并另行加热。橄榄油拌菜，橙作配果；额外油盐酱汁需另计。",
+      "kitchens": [
+        "stove",
+        "microwave"
+      ],
+      "minutes": 12,
+      "budget": "economy"
+    },
+    {
+      "id": "172448-bread",
+      "title": "豆腐面包沙拉餐",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "cuisines": [
+        "chinese",
+        "western"
+      ],
+      "variables": [
+        [
+          "usda:172448",
+          "100",
+          "600"
+        ],
+        [
+          "usda:172688",
+          "25",
+          "280"
+        ],
+        [
+          "usda:171413",
+          "0",
+          "40"
+        ]
+      ],
+      "fixed": [
+        [
+          "usda:168409",
+          "150"
+        ],
+        [
+          "usda:170457",
+          "150"
+        ],
+        [
+          "usda:171688",
+          "100"
+        ]
+      ],
+      "preparation": "使用已充分熟制、可即食并按安全条件保存的蛋白食物；豆腐依包装说明处理，不把需烹调豆腐当即食。切黄瓜番茄拌油，配面包苹果。",
+      "kitchens": [
+        "stove",
+        "microwave"
+      ],
+      "minutes": 8,
+      "budget": "economy"
+    },
+    {
+      "id": "lentil-chicken-rice",
+      "title": "鸡肉扁豆杂蔬饭",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "cuisines": [
+        "chinese"
+      ],
+      "variables": [
+        [
+          "usda:171477",
+          "40",
+          "280"
+        ],
+        [
+          "usda:169757",
+          "60",
+          "500"
+        ],
+        [
+          "usda:171413",
+          "0",
+          "40"
+        ]
+      ],
+      "fixed": [
+        [
+          "usda:172421",
+          "80"
+        ],
+        [
+          "usda:170394",
+          "150"
+        ],
+        [
+          "usda:168463",
+          "100"
+        ]
+      ],
+      "preparation": "米饭、扁豆、鸡肉与蔬菜分别充分煮熟后按熟重分装，再拌橄榄油；不是同克生熟换算。",
+      "kitchens": [
+        "stove",
+        "microwave"
+      ],
+      "minutes": 12,
+      "budget": "economy"
+    },
+    {
+      "id": "beans-chicken-pasta",
+      "title": "鸡肉黑芸豆蔬菜意面",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "cuisines": [
+        "western"
+      ],
+      "variables": [
+        [
+          "usda:171477",
+          "40",
+          "280"
+        ],
+        [
+          "usda:168928",
+          "60",
+          "500"
+        ],
+        [
+          "usda:171413",
+          "0",
+          "40"
+        ]
+      ],
+      "fixed": [
+        [
+          "usda:173735",
+          "80"
+        ],
+        [
+          "usda:169967",
+          "200"
+        ]
+      ],
+      "preparation": "黑芸豆使用已煮熟沥干的记录；熟意面、熟鸡肉与西兰花按重量混合并拌橄榄油。",
+      "kitchens": [
+        "stove",
+        "microwave"
+      ],
+      "minutes": 12,
+      "budget": "economy"
+    }
+  ]
+}

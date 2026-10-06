@@ -1,22 +1,22 @@
-# GitHub 开发者预览发布记录
+# GitHub 发布记录
 
-当前公开版本：0.2.0.dev2（2026-10-06）；下文保留2026-10-05的dev1首发历史。项目名Nutrition Skill，已确认的公开目标为[aiiqc/nutrition-skill](https://github.com/aiiqc/nutrition-skill)。本文件记录首次公开检查及可选Release文案，不替代[唯一产品规格](product-spec.md)中的需求和当前状态。
+0.3.0为本轮首版功能交付，目标仓库仍为[aiiqc/nutrition-skill](https://github.com/aiiqc/nutrition-skill)。本文件前段保留dev1/dev2的公开历史；0.3.0的范围与核对结果见文末，不将旧测试结果或旧制品当作当前版本。唯一需求正文仍为[产品规格](product-spec.md)。
 
-首发已完成：0.2.0.dev1的59个项目文件已公开到main，初始提交为[91ab29f03a20208f406e4a05e55b22543956ab4a](https://github.com/aiiqc/nutrition-skill/commit/91ab29f03a20208f406e4a05e55b22543956ab4a)。远端59个文件的Git blob SHA与本地发布树逐项一致；[首次CI运行](https://github.com/aiiqc/nutrition-skill/actions/runs/37304774493)为completed/success，Ubuntu/macOS × Python 3.11/3.14四组各166项测试与演示步骤全部成功。tag与GitHub Release尚未创建。
+首发已完成：0.2.0.dev1的59个项目文件已公开到main，初始提交为[91ab29f03a20208f406e4a05e55b22543956ab4a](https://github.com/aiiqc/nutrition-skill/commit/91ab29f03a20208f406e4a05e55b22543956ab4a)。远端59个文件的Git blob SHA与本地发布树逐项一致；[首次CI运行](https://github.com/aiiqc/nutrition-skill/actions/runs/37304774493)为completed/success，Ubuntu/macOS × Python 3.11/3.14四组各166项测试与演示步骤全部成功。当时未创建tag或GitHub Release。
 
-## 首发定位
+## dev1首发定位（历史）
 
 定位为“可复用的日常饮食Agent Skill与确定性计算核心，开发者预览版”。提供清晰交互、可追溯数据、独立核心、结构化契约与真实可重跑的例子，让其他开发者能继续扩充数据或接入App。
 
 首发的价值是可检查和可扩展的实现，不使用“医学认证”“自动个性化处方”“全食品库”“零留存”或“已适合长期生产使用”等未获证据支持的描述。已确认的完整产品方向继续保留；预览版限制不代表取消功能。
 
-建议GitHub About：
+dev1当时的GitHub About：
 
 > Reusable nutrition agent skill with Chinese and Western meal workflows, traceable food calculations, and explicit local records. Developer preview.
 
 当前Topics：`agent-skills`、`nutrition`、`meal-planning`、`python`、`codex`。
 
-## 可以随源代码公开的内容
+## dev1公开内容（历史）
 
 | 内容 | 当前处理 |
 |---|---|
@@ -59,3 +59,15 @@ CI采用GitHub官方checkout/setup-python及现有unittest，避免额外测试�
 限制：精确计算仅五条食品；十三个模板为定性结构。自动营养目标、数值周调整、断食策略与中医处方未启用。无加密、无共享系统账号内的家庭访问隔离；记录容量有限。没有真实用户试用、营养专业审核或临床效果证据。
 
 附件建议：完整源ZIP及SHA256；Python wheel可另外提供给仅接入核心的开发者，不能替代完整Skill源包。公开之前核对所有附件与同一版本来源，不附带work目录、真实档案或账号信息。
+
+## 0.3.0首版功能交付
+
+本轮用户明确授权完成并发布到现有仓库。版本0.3.0交付的是可复用Skill与独立核心，没有转为App、账号服务或健康数据采集平台。
+
+新增一般成人目标估算、有限周调整、30条USDA食品、17个定量组合、带克数与用油的全天餐单、替换后的全天核对、包装标签计算、可选进食时窗和普通食物传统做法。长期v3分段历史保留v2兼容，支持显式日期归档、分页导出和准确删除。临床处方、药材治疗、真实健康效果及未实测宿主不在发布声明中。
+
+本地Python3.12/3.14各286测试与两个演示通过；独立审查发现的5个P2均已修复并复验。标准wheel构建/安装无需网络及运行依赖，48个核心/数据文件一致，禁用网络socket后完整合成流程通过。Codex CLI实际宿主完成6轮主流程与最终副本4轮复验，偏好保存缺口已修复；发布对应的远端证据补入下方，详见[verification](verification.md)。
+
+本轮发布顺序：核对仅项目源文件与许可 → 完成实际宿主验收 → 提交并推送main → 核对该提交四组远端CI → 固定v0.3.0 tag → 创建GitHub Release → 上传完整源码ZIP、Python wheel和SHA256 → 下载核对附件和远端源树。未知结果先查询，不盲目重试写操作。
+
+源码ZIP用于安装完整Skill；wheel仅安装可独立调用的核心。不会附带开发工作目录、模型会话、合成试用档案或标签图片、账号配置与凭据。轮次中的开发证据保留在私有工作目录，公开记录只包含事实摘要。

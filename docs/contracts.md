@@ -82,6 +82,10 @@ python3 -B -m nutrition_core --input examples/check-day-plan.json
 
 从项目目录运行`python3 -m nutrition_core --input examples/calculate.json`，也可从stdin读取。一次读一个JSON对象，上限1MiB，拒绝重复JSON键、非有限值和未知字段。CLI不联网；本页的M2操作不写入档案，M3的save_record/delete_record则按显式目录和确认参数修改受管文件。若用户自行重定向stdout，保存位置由用户控制。
 
-退出码：0=ok；1=输入、资料或读取错误；2=needs_information或conflict（细分状态在JSON中）；3=尚未启用的能力。operation=describe列出当前能力，并通过operation_scopes区分meal、day_plan与supplied_items；保留的limits_scope=meal是旧版餐次操作字段，不能覆盖新操作声明。automatic_targets、weekly_adjustment、fasting、tcm、save_profile均明确unsupported；不是让语言模型补算的入口。
+退出码：0=ok；1=输入、资料或读取错误；2=needs_information或conflict（细分状态在JSON中）；3=尚未启用的能力。operation=describe列出当前能力，并通过operation_scopes区分meal、day_plan与supplied_items；保留的limits_scope=meal是旧版餐次操作字段，不能覆盖新操作声明。0.3.0中automatic_targets、weekly_adjustment、fasting、tcm采用独立契约启用，见文末链接；仅save_profile旧占位操作为unsupported。额外受控退出not_eligible、not_enabled、stopped对应退出码2，不由模型补算绕过。
 
 Python API可传入自定义catalog，调用者负责真实来源与授权。字段验证和SHA256只能发现格式问题或比较固定快照，不能证明第三方的声明真实，也不能防止有权限修改源数据的调用者伪造资料。
+
+## 0.3.0能力扩展
+
+上述M2低层算术和餐次接口保持不变。`automatic_targets`、`weekly_adjustment`、`fasting`及`tcm`已启用独立的输入契约，详见[nutrition-rules](nutrition-rules.md)、[meal-planning](meal-planning.md)与[strategies](strategies.md)。旧`examples/unsupported-target.json`路径为兼容保留，内容已改为资料不足的目标请求，预期`needs_information`（退出码2），不是已取消的能力。仅`save_profile`旧占位操作仍返回unsupported；完整档案使用save_record。
