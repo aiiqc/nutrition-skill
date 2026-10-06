@@ -13,7 +13,7 @@
 
 ## 在独立项目试用
 
-从可信的本项目源包解压得到项目文件夹，其中应有`SKILL.md`、`nutrition_core`和`scripts`。分发包提供SHA256时核对其对应校验值；GitHub自动生成ZIP使用[试用指南的固定提交入口](developer-pilot.md#开始前)，不套用其他源包的校验值。先在终端进入该项目文件夹，执行：
+从可信的本项目源包解压得到项目文件夹，其中应有`SKILL.md`、`nutrition_core`和`scripts`。分发包提供SHA256时核对其对应校验值；GitHub自动生成ZIP使用[试用指南的固定版本入口](developer-pilot.md#开始前)，不套用其他源包的校验值。先在终端进入该项目文件夹，执行：
 
 ```sh
 python3 --version

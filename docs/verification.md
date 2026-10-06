@@ -210,7 +210,8 @@ python3 -B -m nutrition_core --input examples/allergen-unknown.json
 | 图形规格静态同步 | PASS | 唯一产品规格0.9生成HTML，源SHA256一致，含3个SVG流程图、无脚本或外部资源 |
 | 本地HTML浏览器画面 | BLOCKED | 先前浏览器策略拒绝file访问；未通过localhost或另一浏览器绕过，不声称本轮画面验收 |
 | 新安装真实宿主对话 | PASS（已列场景） | 6轮主旅程＋最终副本4轮复验；自然选用、图片确认、目标/菜单/周调整、跨会话读回、偏好复用和不适停用，见下方 |
-| 0.3.0远端CI/Tag/Release | NOT RUN | 本地与宿主验收完成后发布，准确提交和运行链接补入发布记录 |
+| 0.3.0功能提交远端CI | PASS | [7dc2cf5](https://github.com/aiiqc/nutrition-skill/commit/7dc2cf5cdfd219ae57a7627be52ce8030a75b446)对应[运行37446687018](https://github.com/aiiqc/nutrition-skill/actions/runs/37446687018)，Ubuntu/macOS × Python3.11/3.14四组各286项测试和两个演示成功；日志逐组核对 |
+| 0.3.0功能提交公开源树 | PASS | 104个远端文件的Git blob SHA与该本地提交逐项一致 |
 
 一次全套测试在并行修改期间载入了早期低效的大文件测试构造，已中止而未计通过；改为真实同容量但规模受控的档案后，两套最终全套通过。真实宿主首次客户端因stdin未保持而中止，未发用户回合；以可交互客户端重新启动。上述记录均不冒充产品流程成功。
 
@@ -236,3 +237,5 @@ python3 -B -m nutrition_core --input examples/allergen-unknown.json
 最终安装副本另完成4回合：稳定偏好保存→全新会话复用并保存新一天计划→不适停用→另一新会话请求恢复。最后一轮实际返回stopped及restart_allowed=false，即使当天无症状也保留既往停用史；全部受管文件前后SHA256一致，未改写历史。该轮首次读取请求含错误字段，受控返回invalid_fields，模型查询describe后更正，流程完成，没有绕过校验。
 
 第二组共3个临时线程，最终记录版本8；53个核心、数据与入口/流程说明文件与最终候选相同。新一天actuals为空，旧日期、标签粗记、反馈、目标和历史均独立比对保留。停止时只有停用史字段变化；当天症状和能否吃够仍需当次确认。QA客户端只保留派生计数与断言结论，未向公开仓库加入会话、档案或图片。
+
+固定分发及最终发布提交、对应CI、tag和下载制品核对以[v0.3.0 Release](https://github.com/aiiqc/nutrition-skill/releases/tag/v0.3.0)为准。上表功能提交证据不冒充后续文档提交；软件及宿主验收范围仍按本文件分别标注。
